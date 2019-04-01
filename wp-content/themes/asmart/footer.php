@@ -6,8 +6,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <a href="<?php echo home_url(); ?>" class="logo-footer">
-                        <img class="logo-main" src="<?php echo get_theme_file_uri('/assets/images/footer-logo.png') ?>"
-                             alt="логотип">
+<!--                        <img class="logo-main" src="--><?php //echo get_theme_file_uri('/assets/images/footer-logo.png') ?><!--" alt="логотип">-->
                     </a>
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
@@ -52,31 +51,9 @@
 </div><!-- .site-content-contain -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
-<div class="custom-modal">
-    <img class="img-close-modal" src="<?php echo get_theme_file_uri('/assets/images/modal-close.png') ?>"
-         alt="иконка  ">
-    <div class="content-modal">
-        <h3> <?php _e('Оставьте заявку', 'light'); ?></h3>
-        <?= do_shortcode('[contact-form-7 id="68" title="Контактная форма 1"]'); ?>
-    </div>
 
-</div>
 
-<div class="custom-modal2">
-    <img class="img-close-modal" src="<?php echo get_theme_file_uri('/assets/images/modal-close.png') ?>"
-         alt="иконка  ">
-    <div class="content-modal">
-        <h3> <?php _e('Оставьте заявку', 'light'); ?></h3>
-        <?= do_shortcode('[contact-form-7 id="133" title="Предприниматель"]'); ?>
-    </div>
 
-</div>
-
-<div class="modal-succcess-send">
-
-        <h3> <?php _e('Спасибо ваше письмо получено!', 'light'); ?></h3>
-
-</div>
 
 <div class="modal-overlay"></div>
 </body>

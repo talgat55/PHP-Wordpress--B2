@@ -37,6 +37,7 @@ function th_scripts()
     wp_enqueue_style('fontawesome-all', get_theme_file_uri('/assets/css/fontawesome-all.css'), array(), '');
     wp_enqueue_style('normalize', get_theme_file_uri('/assets/css/normalize.css'), array(), '');
     wp_enqueue_style('slick', get_theme_file_uri('/assets/css/slick.css'), array(), '');
+    wp_enqueue_style('jquery.pagepiling', get_theme_file_uri('/assets/css/jquery.pagepiling.css'), array(), '');
 //    wp_enqueue_style('lightgallery', get_theme_file_uri('/assets/css/lightgallery.css'), array(), '');
     wp_enqueue_style('slick-theme', get_theme_file_uri('/assets/css/slick-theme.css'), array(), '');
     wp_enqueue_style('main-style', get_theme_file_uri('/assets/css/style.css'), array(), '5');
@@ -57,7 +58,8 @@ function th_scripts()
 //    wp_enqueue_script('jquery.inputmask', get_theme_file_uri('/assets/js/jquery.inputmask.js'), array(), '');
 //    wp_enqueue_script('lg-thumbnail.min', get_theme_file_uri('/assets/js/lg-thumbnail.min.js'), array(), '');
 //    wp_enqueue_script('functions', get_theme_file_uri('/assets/js/functions.js'), array(), '');
-    wp_enqueue_script('default', get_theme_file_uri('/assets/js/default.js'), array(), '4');
+    wp_enqueue_script('jquery.pagepiling.min', get_theme_file_uri('/assets/js/jquery.pagepiling.min.js'), array(), '1');
+    wp_enqueue_script('default', get_theme_file_uri('/assets/js/default.js'), array(), '1');
 
 
 
@@ -67,18 +69,8 @@ function th_scripts()
 add_action('wp_enqueue_scripts', 'th_scripts');
 
 
-function admin_style() {
-    echo '
-    <style>
-    .post-type-docs .preview.button{
-        display: none;
-    }
-    </style>
-    ';
-}
-add_action('admin_enqueue_scripts', 'admin_style');
 /*
-*  Rgister Post Type  Docs
+*  Rgister Post  Slider
 */
 
 add_action('init', 'post_type_docs');
@@ -87,10 +79,10 @@ function post_type_docs()
 {
 
     $labels = array(
-        'name' => 'Документы',
-        'singular_name' => 'Документы',
-        'all_items' => 'Документы',
-        'menu_name' => 'Документы' // ссылка в меню в админке
+        'name' => 'Главный слайдер',
+        'singular_name' => 'Главный слайдер',
+        'all_items' => 'Главный слайдер',
+        'menu_name' => 'Главный слайдер' // ссылка в меню в админке
     );
 
     $args = array(
@@ -98,14 +90,14 @@ function post_type_docs()
         'public' => true,
         'menu_position' => 5,
         'has_archive' => true,
-        'query_var' => "docs",
+        'query_var' => "sliders",
         'supports' => array(
             'title',
             'editor',
             'thumbnail'
         )
     );
-    register_post_type('docs', $args);
+    register_post_type('sliders', $args);
 }
 
 
@@ -168,27 +160,6 @@ function translate_text($translated) {
     return $translated;
 
 }
-
-
-// REMOVE WP EMOJI
-function disable_wp_emojicons() {
-
-    // all actions related to emojis
-    remove_action( 'admin_print_styles', 'print_emoji_styles' );
-    remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-    remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-    remove_action( 'wp_print_styles', 'print_emoji_styles' );
-    remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-    remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-    remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-
-    // filter to remove TinyMCE emojis
-    add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
-}
-add_action( 'init', 'disable_wp_emojicons' );
-
-
-
 
 
 /**

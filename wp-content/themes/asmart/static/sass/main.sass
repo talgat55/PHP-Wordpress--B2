@@ -1,0 +1,61 @@
+//
+// Home page
+//
+body.home
+  height: 100vh
+
+#section1
+  background: url(../images/slide.jpg) no-repeat!important
+
+
+#section2
+  background: url(../images/slide2.jpg) no-repeat!important
+
+#section3
+  .bg-block:first-child
+    background: url(../images/slide3.jpg) no-repeat!important
+  .bg-block:last-child
+    background: url(../images/slide4.jpg) no-repeat!important
+  .bg-block:first-child,
+  .bg-block:last-child
+    height: 100vh
+    background-size: cover!important
+    background-position: center center!important
+
+#pagepiling
+  .section
+    background-size: cover!important
+    background-position: center center!important
+
+
+
+//
+// Home slider
+//
+.home-slider
+  max-width: 1920px!important
+  height: 100vh
+  width: 100%
+  .item
+    height: 100vh
+.home-slider-walp
+  .arr-slider
+    margin: 0
+    padding: 0
+    position: absolute
+    z-index: 89
+    bottom: 100px
+    right: 0
+    li
+      list-style: none
+      display: inline-block
+      a
+        padding: 20px
+        transition: all .3s
+      a:hover
+        opacity: .5
+
+      .prev
+        img
+          transform: rotateZ(180deg)
+

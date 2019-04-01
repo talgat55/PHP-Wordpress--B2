@@ -1,0 +1,41 @@
+header
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 99
+
+  .top-bar
+    padding: 60px 0
+    .switcher-lang
+      margin: 0
+      padding: 0
+      color: #fff
+      li
+        display: inline-block
+        a
+          text-transform: uppercase
+          font-size: 18px
+          font-family: $font_calibri_regular
+          color: #fff
+        a.active
+          color: $main_color
+
+
+  .menu-link
+    position: absolute
+    top: 36px
+    left: 44px
+    padding: 20px
+    outline: none
+    transition: all .3s
+    i
+      font-size: 23px
+      color: $main_color
+
+    &:hover
+      opacity: .5
+
+
+
+
