@@ -21,11 +21,30 @@ body.home
     height: 100vh
     background-size: cover!important
     background-position: center center!important
+    display: table
 
 #pagepiling
   .section
     background-size: cover!important
-    background-position: center center!important
+    background-position: bottom center!important
+
+
+.third-blocks
+  display: table-cell
+  vertical-align: middle
+  text-align: center
+  h2
+    font-family: $font_blacked_bold
+    font-size: 60px
+    color: #000
+    margin: 0 0 100px
+    height: 132px
+
+
+  >div
+    width: 181px
+    text-align: left
+    margin: 0 auto
 
 
 
@@ -58,4 +77,43 @@ body.home
       .prev
         img
           transform: rotateZ(180deg)
+  .content-slider
+    position: absolute
+    bottom: 95px
 
+    .second-block,
+    .first-block
+      display: inline-block
+      width: 41%
+      padding-right: 9%
+
+      h3
+        font-size: 21px
+        color: $main_color
+        font-family: $font_blacked_bold
+        margin-top: 0
+        margin-bottom: 20px
+
+      .text
+        font-size: 18px
+        color: #fff
+        font-family: $font_calibri_light
+
+//
+//  Full page scroller
+//
+#pp-nav span,
+.pp-slidesNav span
+  border-color: #fff!important
+
+#pp-nav li .active span,
+.pp-slidesNav .active span
+  background: #fff!important
+
+.black #pp-nav span,
+.black .pp-slidesNav span
+  border-color: #000!important
+
+.black #pp-nav li .active span,
+.black .pp-slidesNav .active span
+  background: #000!important

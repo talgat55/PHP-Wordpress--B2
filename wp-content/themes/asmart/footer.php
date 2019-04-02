@@ -55,6 +55,6 @@
 
 
 
-<div class="modal-overlay"></div>
+<div class="menu-overlay"></div>
 </body>
 </html>

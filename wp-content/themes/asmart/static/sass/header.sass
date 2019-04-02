@@ -21,6 +21,10 @@ header
         a.active
           color: $main_color
 
+    .switcher-lang.active a,
+    .switcher-lang.active
+      color: #000
+
 
   .menu-link
     position: absolute
@@ -29,13 +33,135 @@ header
     padding: 20px
     outline: none
     transition: all .3s
+    text-decoration: none
     i
       font-size: 23px
       color: $main_color
+    i.fa-times
+      display: none
 
     &:hover
       opacity: .5
+      text-decoration: none
 
+    &.active
+      i.fa-th-large
+        display: none
+      i.fa-times
+        display: block
+        color: red
+
+.black
+  .switcher-lang a,
+  .switcher-lang
+    color: #000!important
+  a.active
+    color: $main_color!important
+
+
+//
+// Menu
+//
+.menu-bar
+  width: 465px
+  padding: 70px 30px
+  height: 100%
+  background: #fff
+  text-align: center
+  position: fixed
+  z-index: 97
+  top: 0
+  left: -465px
+  //-webkit-transition: all 500ms cubic-bezier(0.675, 0.255, 0.445, 0.670)
+  //-moz-transition: all 500ms cubic-bezier(0.675, 0.255, 0.445, 0.670)
+  //-o-transition: all 500ms cubic-bezier(0.675, 0.255, 0.445, 0.670)
+  //transition: all 500ms cubic-bezier(0.675, 0.255, 0.445, 0.670)
+  transition: all .6s ease-in-out
+  &.active
+    left: 0
+
+  &:after
+    content: " "
+    display: block
+    position: absolute
+    bottom: 0
+    right: 0
+    background: url(../images/logo-bg.png) no-repeat!important
+    width: 320px
+    height: 335px
+
+  .link-rezerv
+    display: block
+    position: absolute
+    bottom: 59px
+    width: 245px
+    left: 50%
+    transform: translateX(-50%)
+    letter-spacing: 2px
+    color: #fff
+    font-family: $font_calibri_regular
+    padding: 10px 30px
+    background-color: $main_color
+    transition: all .3s
+    z-index: 10
+    border-radius: 5px
+    &:hover
+      background-color: #000
+      text-decoration: none
+      color: #fff
+
+
+
+//
+// Nav
+//
+.top-main-container
+  margin: 0 auto
+  padding: 100px 0 0 0
+  width: 245px
+  text-align: left
+  position: relative
+  >li
+    border-bottom: 1.5px dotted #dedede
+  li
+    list-style: none
+
+    a
+      font-size: 21px
+      font-family: $font_calibri_light
+      color: #000
+      display: block
+      padding: 5px 0
+      transition: all .3s
+
+    a:hover
+      color: $main_color
+
+
+    .sub-menu
+      padding-left: 19px
+      li
+        position: relative
+        ::before
+          content: " "
+          display: block
+          position: absolute
+          top: 17px
+          left: -18px
+          width: 6px
+          height: 6px
+          border-radius: 50%
+          background-color: $main_color
+
+  &::after
+    content: " "
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    width: 145px
+    height: 100%
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
 
 
 

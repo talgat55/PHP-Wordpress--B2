@@ -39,7 +39,7 @@
 <!--                        </a>-->
 <!--                    </div>-->
 <!--                    <div class="navigation-block">-->
-<!--                        --><?php //wp_nav_menu('menu_id=menu-main&menu_class=top-main-container clearfix&theme_location=top_menu'); ?>
+
 <!--                    </div>-->
 <!--                    </div>-->
 <!--                </div>-->
@@ -66,16 +66,38 @@
                             </ul>
                         </div>
                     </div>
+                     <div class="col-sm-6 col-xs-12">
+                        <div class="row text-right">
+                             <a href="#" class="audio-btn">
+                                    <img  src="<?php echo get_theme_file_uri('/assets/images/sound.png') ?>" alt="иконка">
+                             </a>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
             </div>
 
         </div>
         <a href="#" class="menu-link">
             <i class="fas fa-th-large"></i>
+            <i class="fas fa-times"></i>
         </a>
 
     </header><!-- #masthead -->
-
+    <div class="menu-bar">
+        <a href="<?= home_url(); ?>" class="logo">
+            <img  src="<?php echo get_theme_file_uri('/assets/images/Logo.png') ?>" alt="логотип">
+        </a>
+        <nav>
+            <?php wp_nav_menu('menu_id=menu-main&menu_class=top-main-container clearfix&theme_location=top_menu'); ?>
+        </nav>
+        <a href="#" class="link-rezerv">
+            Зарезервировать
+        </a>
+    </div>
 
     <div class="site-content-contain">
         <div id="content" class="site-content">
