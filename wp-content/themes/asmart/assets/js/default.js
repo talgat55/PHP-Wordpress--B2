@@ -51,9 +51,10 @@ jQuery(document).ready(function () {
     // jQuery('.block-event-text-block,  .block-event-walp , .match-height, .news-img-block ').matchHeight();
 
 
-
+    FixwidthSlider();
     HomeFullpageSlider();
     MenuToggle();
+
 
 // end redy function
 });
@@ -128,6 +129,20 @@ function MenuToggle(){
         jQuery('.menu-bar, .menu-overlay, .switcher-lang, .menu-link').toggleClass('active');
 
     });
+
+}
+
+//------------------------
+//  Fix wdith slider
+//----------------------------------
+function FixwidthSlider(){
+    "use strict";
+    let $width = jQuery(window).width();
+   if( $width < 1369){
+
+       jQuery('.home-slider').css('width',$width);
+
+   }
 
 }
 

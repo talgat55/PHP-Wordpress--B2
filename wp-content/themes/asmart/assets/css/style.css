@@ -353,3 +353,13 @@ header {
     background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
     background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%); }
+
+@media (max-width: 1368px) {
+  header .menu-link {
+    top: 40px; }
+  .top-main-container {
+    padding-top: 25px; }
+  .home-slider-walp .arr-slider {
+    right: 0; }
+  .home-slider {
+    max-width: 1368px !important; } }
