@@ -54,7 +54,7 @@ jQuery(document).ready(function () {
     FixwidthSlider();
     HomeFullpageSlider();
     MenuToggle();
-
+    Ymaps();
 
 // end redy function
 });
@@ -141,6 +141,67 @@ function FixwidthSlider(){
    if( $width < 1369){
 
        jQuery('.home-slider').css('width',$width);
+
+   }
+
+}
+
+//------------------------
+//  Maps
+//----------------------------------
+function Ymaps(){
+    "use strict";
+    let $map = jQuery('#map');
+
+
+   if($map.length){
+       ymaps.ready(function () {
+           var myMap = new ymaps.Map('map', {
+                   center: [54.967990, 73.381635],
+                   zoom: 15,
+                   controls: []
+               }, {
+                   // searchControlProvider: 'yandex#search'
+               }),
+
+               // Создаём макет содержимого.
+               /*  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                     '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+                 ),*/
+
+               myPlacemark = new ymaps.Placemark([54.967990, 73.381635], {
+                   id: '1'
+               }, {
+
+                   // Опции.
+                   // Необходимо указать данный тип макета.
+                   iconLayout: 'default#image',
+                   // Своё изображение иконки метки.
+                   //
+                   iconImageHref: 'http://batler.lightxdesign.ru/wp-content/themes/asmart/assets/images/location.png',
+                   // // Размеры метки.
+                   iconImageSize: [77, 105],
+                   // // Смещение левого верхнего угла иконки относительно
+                   // // её "ножки" (точки привязки).
+                   iconImageOffset: [-36, -105]
+               });
+
+
+           myMap.geoObjects
+
+               .add(myPlacemark);
+
+           myMap.behaviors.disable('scrollZoom');
+           myMap.behaviors.disable('multiTouch');
+           if(jQuery(window).width() < 769){
+               myMap.behaviors.disable('drag');
+           }
+
+
+
+       });
+
+
 
    }
 
