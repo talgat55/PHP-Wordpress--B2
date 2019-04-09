@@ -240,6 +240,23 @@ body.home {
           font-family: "Calibri Light";
           font-size: 21px;
           color: #000; }
+  .first-wrap .link.feedback {
+    letter-spacing: 2px;
+    font-family: "Calibri Regualar";
+    font-size: 18px;
+    color: #fff;
+    background-color: #c4a669;
+    display: inline-block;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    padding: 13px 40px;
+    margin-top: 60px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .first-wrap .link.feedback:hover {
+      background-color: #000;
+      text-decoration: none; }
 
 .page-template-page-contacts .switcher-lang {
   color: #000 !important; }
@@ -247,6 +264,19 @@ body.home {
     color: #000 !important; }
   .page-template-page-contacts .switcher-lang a.active {
     color: #c4a669 !important; }
+
+.site-content {
+  position: relative; }
+  .site-content:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 195px;
+    height: 100vh;
+    background: url("../images/right-bg.png") no-repeat !important;
+    background-position: center center !important; }
 
 header {
   position: absolute;
@@ -399,6 +429,48 @@ header {
     background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
     background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 100%);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%); }
+
+.site-footer .wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 40px 0 60px 0 !important;
+  font-family: "Blacker-Text-Book";
+  font-size: 18px;
+  color: #000; }
+  .site-footer .wrap p {
+    margin-bottom: 0;
+    height: 50px;
+    vertical-align: middle;
+    display: table-cell; }
+  .site-footer .wrap .soc-links {
+    margin: 0 auto;
+    padding: 10px 0;
+    display: block;
+    text-align: right; }
+    .site-footer .wrap .soc-links li {
+      display: inline-block; }
+      .site-footer .wrap .soc-links li a {
+        padding: 0 5px;
+        -webkit-transition: all .4s;
+        -o-transition: all .4s;
+        transition: all .4s;
+        text-decoration: none; }
+        .site-footer .wrap .soc-links li a:hover {
+          text-decoration: none;
+          opacity: .5; }
+  .site-footer .wrap .policy-footer-link {
+    font-size: 16px;
+    width: 225px;
+    display: block;
+    color: #c4a669; }
+  .site-footer .wrap .bootom-copyright {
+    font-size: 16px;
+    color: #000;
+    padding: 14px 0;
+    display: block; }
 
 @media (max-width: 1368px) {
   header .menu-link {

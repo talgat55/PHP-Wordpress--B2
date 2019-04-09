@@ -157,6 +157,21 @@ body.home
           font-family: $font_calibri_light
           font-size: 21px
           color: #000
+  .link.feedback
+    letter-spacing: 2px
+    font-family: $font_calibri_regular
+    font-size: 18px
+    color: #fff
+    background-color: $main_color
+    display: inline-block
+    border-radius: 5px
+    padding: 13px 40px
+    margin-top: 60px
+    transition: all .3s
+    &:hover
+      background-color: #000
+      text-decoration: none
+
 
 
 .page-template-page-contacts
@@ -167,4 +182,17 @@ body.home
     a.active
       color: $main_color!important
 
+
+.site-content
+  position: relative
+  &:before
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 195px
+    height: 100vh
+    background: url("../images/right-bg.png") no-repeat!important
+    background-position: center center!important
 

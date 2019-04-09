@@ -60,6 +60,12 @@ get_header(); ?>
 
                                 </ul>
 
+
+
+                                <a href="#" class="link feedback">
+                                    Написать нам
+                                </a>
+
                             </div>
                             <div class="col-sm-6 col-xs-12">
 
