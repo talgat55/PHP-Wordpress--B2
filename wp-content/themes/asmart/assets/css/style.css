@@ -104,6 +104,9 @@
 .page-template-page-atmosfera {
   overflow-y: hidden; }
 
+#pagepiling .section {
+  height: 100vh; }
+
 body.home {
   height: 100vh; }
 
