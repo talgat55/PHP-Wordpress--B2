@@ -29,6 +29,14 @@ add_image_size( 'product-item', 244, 300, true );
  */
 function th_scripts()
 {
+
+    if(is_page_template('page-atmosfera.php') || is_home()){
+
+       $slick = true;
+    }else{
+        $slick = false;
+    }
+
     // Theme stylesheet.
     wp_enqueue_style('bootstrapcdn', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '');
     wp_enqueue_style('th-style', get_stylesheet_uri(), array(), '5');
@@ -36,17 +44,24 @@ function th_scripts()
 
     wp_enqueue_style('fontawesome-all', get_theme_file_uri('/assets/css/fontawesome-all.css'), array(), '');
     wp_enqueue_style('normalize', get_theme_file_uri('/assets/css/normalize.css'), array(), '');
-    wp_enqueue_style('slick', get_theme_file_uri('/assets/css/slick.css'), array(), '');
-    wp_enqueue_style('jquery.pagepiling', get_theme_file_uri('/assets/css/jquery.pagepiling.css'), array(), '');
+
+    if(is_home()){
+        wp_enqueue_style('jquery.pagepiling', get_theme_file_uri('/assets/css/jquery.pagepiling.css'), array(), '');
+    }
+
 //    wp_enqueue_style('lightgallery', get_theme_file_uri('/assets/css/lightgallery.css'), array(), '');
-    wp_enqueue_style('slick-theme', get_theme_file_uri('/assets/css/slick-theme.css'), array(), '');
+
+    if($slick){
+        wp_enqueue_style('slick', get_theme_file_uri('/assets/css/slick.css'), array(), '');
+        wp_enqueue_style('slick-theme', get_theme_file_uri('/assets/css/slick-theme.css'), array(), '');
+    }
     wp_enqueue_style('main-style', get_theme_file_uri('/assets/css/style.css'), array(), '5');
 
 
 
 
     wp_enqueue_script('jquery', get_theme_file_uri('/assets/js/jquery-3.2.1.min.js'), array(), '');
-    wp_enqueue_script('slick.min', get_theme_file_uri('/assets/js/slick.min.js'), array(), '');
+
 //    wp_enqueue_script('js.cookie.min', get_theme_file_uri('/assets/js/js.cookie.min.js'), array(), '');
 //    wp_enqueue_script('jquery.matchHeight', get_theme_file_uri('/assets/js/jquery.matchHeight.js'), array(), '');
 //
@@ -62,6 +77,10 @@ function th_scripts()
 
         wp_enqueue_script('yandex-maps', '//api-maps.yandex.ru/2.1/?lang=ru_RU', array(), '');
 
+    }
+
+    if($slick){
+        wp_enqueue_script('slick.min', get_theme_file_uri('/assets/js/slick.min.js'), array(), '');
     }
     wp_enqueue_script('jquery.pagepiling.min', get_theme_file_uri('/assets/js/jquery.pagepiling.min.js'), array(), '1');
     wp_enqueue_script('default', get_theme_file_uri('/assets/js/default.js'), array(), '1');
@@ -108,18 +127,18 @@ function post_type_docs()
 
 
 /*
-*  Rgister Post Type  Qa
+*  Rgister Post Type  atmosfera
 */
 
-add_action('init', 'post_type_media');
+add_action('init', 'post_type_atmosfera');
 
-function post_type_media()
+function post_type_atmosfera()
 {
     $labels = array(
-        'name' => 'Медиа',
-        'singular_name' => 'Медиа',
-        'all_items' => 'Медиа',
-        'menu_name' => 'Медиа' // ссылка в меню в админке
+        'name' => 'Атмосфера',
+        'singular_name' => 'Атмосфера',
+        'all_items' => 'Атмосфера',
+        'menu_name' => 'Атмосфера' // ссылка в меню в админке
     );
     $args = array(
         'labels' => $labels,

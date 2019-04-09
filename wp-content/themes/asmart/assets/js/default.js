@@ -50,7 +50,7 @@ jQuery(document).ready(function () {
     */
     // jQuery('.block-event-text-block,  .block-event-walp , .match-height, .news-img-block ').matchHeight();
 
-
+    AtmSlider();
     FixwidthSlider();
     HomeFullpageSlider();
     MenuToggle();
@@ -119,7 +119,15 @@ function MenuToggle(){
 
     jQuery('.top-main-container a  ').click(function(e) {
 
-        e.preventDefault();
+        if(jQuery(this).next('.sub-menu').length ){
+            e.preventDefault();
+            console.log('1');
+        }else{
+            console.log('0');
+            window.location.href = jQuery(this).attr('href');
+
+        }
+
         jQuery(this).next().stop().slideToggle();
     }).next().stop().hide();
 
@@ -207,3 +215,26 @@ function Ymaps(){
 
 }
 
+//------------------------
+// Atmosfer    slider
+//----------------------------------
+function AtmSlider(){
+    "use strict";
+
+    let main_class = '.slider-atm';
+    if(jQuery(main_class).length){
+        jQuery(main_class).slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 700,
+            dots: false,
+            //  autoplay: true,
+            prevArrow: jQuery('.atm-controllers .prev'),
+            nextArrow: jQuery('.atm-controllers .next')
+
+        });
+
+    }
+
+}

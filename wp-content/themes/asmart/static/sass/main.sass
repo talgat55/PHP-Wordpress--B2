@@ -137,7 +137,6 @@ body.home
     vertical-align: middle
     display: table-cell
 
-
   .list-contact-informaion
     margin: 80px 0 0 0
     padding: 0
@@ -157,6 +156,14 @@ body.home
           font-family: $font_calibri_light
           font-size: 21px
           color: #000
+        &:hover
+          color: $main_color
+          p
+            color: $main_color
+
+
+
+
   .link.feedback
     letter-spacing: 2px
     font-family: $font_calibri_regular
@@ -173,7 +180,7 @@ body.home
       text-decoration: none
 
 
-
+.page-template-page-atmosfera,
 .page-template-page-contacts
   .switcher-lang
     color: #000!important
@@ -192,7 +199,33 @@ body.home
     top: 0
     left: 0
     width: 195px
-    height: 100vh
+    height: 100%
     background: url("../images/right-bg.png") no-repeat!important
     background-position: center center!important
+
+
+//
+// Atmosfera
+//
+.page-template-page-atmosfera
+  .site-content-contain
+    margin-top: 140px
+
+
+  .slider-atm
+    .item
+      display: inline-block
+  .site-footer .wrap
+    position: relative
+
+  .atm-controllers
+    padding: 50px 0
+    .prev,
+    .next
+      padding: 10px 0
+      transition: all .3s
+      &:hover
+        opacity: .5
+
+
 

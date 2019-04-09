@@ -98,6 +98,12 @@
   font-family: "Blacker-Text-Bold";
   margin-top: 0; }
 
+.page-template-page-contacts .site-content {
+  height: 100vh; }
+
+.page-template-page-atmosfera {
+  overflow-y: hidden; }
+
 body.home {
   height: 100vh; }
 
@@ -240,6 +246,10 @@ body.home {
           font-family: "Calibri Light";
           font-size: 21px;
           color: #000; }
+        .first-wrap .list-contact-informaion li a:hover {
+          color: #c4a669; }
+          .first-wrap .list-contact-informaion li a:hover p {
+            color: #c4a669; }
   .first-wrap .link.feedback {
     letter-spacing: 2px;
     font-family: "Calibri Regualar";
@@ -258,10 +268,13 @@ body.home {
       background-color: #000;
       text-decoration: none; }
 
+.page-template-page-atmosfera .switcher-lang,
 .page-template-page-contacts .switcher-lang {
   color: #000 !important; }
+  .page-template-page-atmosfera .switcher-lang a,
   .page-template-page-contacts .switcher-lang a {
     color: #000 !important; }
+  .page-template-page-atmosfera .switcher-lang a.active,
   .page-template-page-contacts .switcher-lang a.active {
     color: #c4a669 !important; }
 
@@ -274,9 +287,30 @@ body.home {
     top: 0;
     left: 0;
     width: 195px;
-    height: 100vh;
+    height: 100%;
     background: url("../images/right-bg.png") no-repeat !important;
     background-position: center center !important; }
+
+.page-template-page-atmosfera .site-content-contain {
+  margin-top: 140px; }
+
+.page-template-page-atmosfera .slider-atm .item {
+  display: inline-block; }
+
+.page-template-page-atmosfera .site-footer .wrap {
+  position: relative; }
+
+.page-template-page-atmosfera .atm-controllers {
+  padding: 50px 0; }
+  .page-template-page-atmosfera .atm-controllers .prev,
+  .page-template-page-atmosfera .atm-controllers .next {
+    padding: 10px 0;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .page-template-page-atmosfera .atm-controllers .prev:hover,
+    .page-template-page-atmosfera .atm-controllers .next:hover {
+      opacity: .5; }
 
 header {
   position: absolute;
@@ -436,7 +470,7 @@ header {
   left: 0;
   right: 0;
   background: #fff;
-  padding: 40px 0 60px 0 !important;
+  padding: 40px 0 40px 0 !important;
   font-family: "Blacker-Text-Book";
   font-size: 18px;
   color: #000; }
@@ -489,4 +523,10 @@ header {
   .top-main-container li a {
     font-size: 15px; }
   .menu-bar {
-    width: 300px; } }
+    width: 300px; }
+  .first-wrap .list-contact-informaion {
+    margin-top: 25px; }
+  .first-wrap .link.feedback {
+    margin-top: 20px; }
+  .first-wrap .list-contact-informaion li {
+    margin-bottom: 15px; } }
