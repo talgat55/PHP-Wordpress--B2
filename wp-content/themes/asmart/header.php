@@ -24,7 +24,20 @@
 
 
 </head>
+<?php if (is_home()) {  ?>
+<div id="hola">
+<div id="preloader">
+    <div class="preloader-logo">
+        <img  src="<?php echo get_theme_file_uri('/assets/images/Logo.png') ?>" alt="логотип">
+    </div>
+    <div class="preloader-bar">
+        <span></span>
+        <span></span>
+    </div>
 
+</div>
+</div>
+<?php  } ?>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
@@ -68,9 +81,9 @@
                     </div>
                      <div class="col-sm-6 col-xs-12">
                         <div class="row text-right">
-                             <a href="#" class="audio-btn">
-                                    <img  src="<?php echo get_theme_file_uri('/assets/images/sound.png') ?>" alt="иконка">
-                             </a>
+<!--                             <a href="#" class="audio-btn">-->
+<!--                                    <img  src="--><?php //echo get_theme_file_uri('/assets/images/sound.png') ?><!--" alt="иконка">-->
+<!--                             </a>-->
                         </div>
                     </div>
 

@@ -60,7 +60,37 @@ jQuery(document).ready(function () {
 });
 jQuery(window).load(function() {
     HomeSlider();
+    Preloader();
 });
+
+//------------------------
+// Preloader
+//----------------------------------
+function Preloader(){
+    "use strict";
+    let main_class = '#preloader';
+    if(jQuery(main_class).length){
+        jQuery('#preloader').velocity({
+            opacity : 0.1,
+        }, {
+            duration: 400,
+            complete: function(){
+                jQuery('#hola').velocity({
+                    translateY : "-100%"
+                }, {
+                    duration: 1000,
+                    easing: [0.7,0,0.3,1],
+                    complete: function(){
+                        jQuery('body').addClass('animate-done');
+                    }
+                })
+            }
+        })
+    }
+
+}
+
+
 //------------------------
 // Home full page slider
 //----------------------------------

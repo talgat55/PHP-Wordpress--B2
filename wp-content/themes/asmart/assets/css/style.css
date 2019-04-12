@@ -423,7 +423,8 @@ header {
   padding: 100px 0 0 0;
   width: 245px;
   text-align: left;
-  position: relative; }
+  position: relative;
+  z-index: 99; }
   .top-main-container > li {
     border-bottom: 1.5px dotted #dedede; }
   .top-main-container li {
