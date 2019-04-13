@@ -1,8 +1,7 @@
 *,
 *:focus,
 *:active {
-  outline: none;
-  line-height: 1.5; }
+  outline: none; }
 
 .hide-title {
   margin: 0;
@@ -271,12 +270,15 @@ body.home {
       background-color: #000;
       text-decoration: none; }
 
+.page-template-page-menu .switcher-lang,
 .page-template-page-atmosfera .switcher-lang,
 .page-template-page-contacts .switcher-lang {
   color: #000 !important; }
+  .page-template-page-menu .switcher-lang a,
   .page-template-page-atmosfera .switcher-lang a,
   .page-template-page-contacts .switcher-lang a {
     color: #000 !important; }
+  .page-template-page-menu .switcher-lang a.active,
   .page-template-page-atmosfera .switcher-lang a.active,
   .page-template-page-contacts .switcher-lang a.active {
     color: #c4a669 !important; }
@@ -297,8 +299,19 @@ body.home {
 .page-template-page-atmosfera .site-content-contain {
   margin-top: 140px; }
 
+.page-template-page-atmosfera .controll.center {
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .page-template-page-atmosfera .controll.center:hover {
+    opacity: .5; }
+
+.page-template-page-atmosfera .atmosfera-block {
+  overflow: hidden; }
+
 .page-template-page-atmosfera .slider-atm .item {
-  display: inline-block; }
+  display: inline-block;
+  float: left; }
 
 .page-template-page-atmosfera .site-footer .wrap {
   position: relative; }
@@ -314,6 +327,91 @@ body.home {
     .page-template-page-atmosfera .atm-controllers .prev:hover,
     .page-template-page-atmosfera .atm-controllers .next:hover {
       opacity: .5; }
+
+.page-template-page-menu .site-footer .wrap {
+  position: relative; }
+
+.page-template-page-menu .bg-img {
+  height: 380px;
+  -webkit-background-size: cover !important;
+          background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important; }
+
+.page-template-page-menu .item {
+  padding: 0 !important; }
+
+.page-template-page-menu .item:nth-of-type(5n+1) .bg-img {
+  height: 44vh; }
+
+.page-template-page-menu .item:nth-of-type(5n+2) .bg-img,
+.page-template-page-menu .item:nth-of-type(5n+3) .bg-img {
+  height: 30vh; }
+
+.page-template-page-menu .item:nth-of-type(5n+4) .bg-img,
+.page-template-page-menu .item:nth-of-type(5n+5) .bg-img {
+  height: 26vh; }
+
+.page-template-page-menu .cont-menu {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 125px; }
+
+.page-template-page-menu .slider-menu .item {
+  float: left; }
+
+.page-template-page-menu .slider-menu h2 {
+  font-family: "Blacker-Text-Bold";
+  font-size: 25px;
+  color: #c4a669;
+  border-bottom: 2px solid #c4a669;
+  border-top: 2px solid #c4a669;
+  margin: 0;
+  padding: 15px 0; }
+
+.page-template-page-menu .slider-menu .list-menu {
+  margin: 60px 0 0 0;
+  padding: 0; }
+  .page-template-page-menu .slider-menu .list-menu li {
+    list-style: none;
+    font-size: 18px;
+    color: #000;
+    font-family: "Calibri Regualar";
+    margin-bottom: 40px; }
+
+.page-template-page-menu .slider-menu .slick-dots {
+  text-align: left;
+  padding-left: 130px; }
+  .page-template-page-menu .slider-menu .slick-dots li {
+    background: #000;
+    width: 11px;
+    height: 11px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%; }
+  .page-template-page-menu .slider-menu .slick-dots .slick-active {
+    background: #c4a669; }
+  .page-template-page-menu .slider-menu .slick-dots .slick-dots li button:before {
+    display: none; }
+
+.page-template-page-menu .arrow-menu {
+  position: absolute;
+  bottom: -8px; }
+  .page-template-page-menu .arrow-menu a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px; }
+    .page-template-page-menu .arrow-menu a .active {
+      display: none; }
+  .page-template-page-menu .arrow-menu .prev img {
+    -webkit-transform: rotateZ(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotateZ(180deg); }
+  .page-template-page-menu .arrow-menu a:hover .active {
+    display: inline-block; }
+  .page-template-page-menu .arrow-menu a:hover .inactive {
+    display: none; }
 
 header {
   position: absolute;

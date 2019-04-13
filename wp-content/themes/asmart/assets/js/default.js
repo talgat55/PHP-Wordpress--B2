@@ -6,55 +6,12 @@ jQuery(document).ready(function () {
     "use strict";
 
 
-
-    // jQuery('body').on('click', '.home-text-slider .slider-text-walpaper',function(){
-    //
-    //     var currentIndex = jQuery(this).index();
-    //
-    //     jQuery('.home-image-slider').slick('slickGoTo', currentIndex);
-    //
-    // });
-    /*
-    * Replace test search in menu for mobile
-     */
-
-
-    // jQuery('.responsive-menu-search-box').attr("placeholder", "Поиск");
-    /*
-    *   modal
-    */
-    // jQuery('body').on('click', '.modal-main i, .overlay-modal-layer',function(){
-    //
-    //     jQuery('.modal-main').fadeOut();
-    //     jQuery('.overlay-modal-layer').fadeOut();
-    //
-    // });
-    //
-    // jQuery('body').on('click', '.call-link',function(){
-    //
-    //     jQuery('.modal-main').fadeIn();
-    //     jQuery('.overlay-modal-layer').fadeIn();
-    //     return false;
-    //
-    // });
-
-
-    /*
-    * Input telephone mask
-    */
-
-    // jQuery('.one-but-phone, #billing_phone, #tel').inputmask({"mask": "+7 (999) 999-9999"});
-
-    /*
-    *  Match height
-    */
-    // jQuery('.block-event-text-block,  .block-event-walp , .match-height, .news-img-block ').matchHeight();
-
     AtmSlider();
     FixwidthSlider();
     HomeFullpageSlider();
     MenuToggle();
     Ymaps();
+    SliderMenu();
 
 // end redy function
 });
@@ -264,6 +221,34 @@ function AtmSlider(){
             nextArrow: jQuery('.atm-controllers .next')
 
         });
+        jQuery('.controll.center ').click(function(e) {
+            e.preventDefault();
+            jQuery(main_class).slick('slickGoTo', 0);
+        });
+
+    }
+
+}
+//------------------------
+// Menu    slider
+//----------------------------------
+function SliderMenu(){
+    "use strict";
+
+    let main_class = '.slider-menu';
+    if(jQuery(main_class).length){
+        jQuery(main_class).slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 700,
+            dots: true,
+            //  autoplay: true,
+            prevArrow: jQuery('.arrow-menu .prev'),
+            nextArrow: jQuery('.arrow-menu .next')
+
+        });
+
 
     }
 

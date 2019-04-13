@@ -30,7 +30,7 @@ add_image_size( 'product-item', 244, 300, true );
 function th_scripts()
 {
 
-    if(is_page_template('page-atmosfera.php') || is_home()){
+    if(is_page_template('page-atmosfera.php') || is_home()  || is_page_template('page-menu.php')){
 
        $slick = true;
     }else{
@@ -166,22 +166,77 @@ function post_type_atmosfera()
 }
 
 
+/*
+*  Rgister Post Type  atmosfera
+*/
+
+add_action('init', 'post_type_menusc');
+
+function post_type_menusc()
+{
+    $labels = array(
+        'name' => 'Меню',
+        'singular_name' => 'Меню',
+        'all_items' => 'Меню',
+        'menu_name' => 'Меню' // ссылка в меню в админке
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'menu_position' => 5,
+        'has_archive' => true,
+        'query_var' => "menus",
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        ),
+        'taxonomies'=> array( 'category_menu' )
+    );
+    register_post_type('menus', $args);
+}
+
+add_action('init', 'create_products_taxonomy', 0);
+function create_products_taxonomy()
+{
+// Labels part for the GUI
+    $labels = array(
+        'name' => _x('Разделы меню', 'light'),
+        'singular_name' => _x('Разделы меню', 'light'),
+        'search_items' => __('Поиск Разделы меню'),
+        'popular_items' => __('Разделы меню'),
+        'all_items' => __('Разделы меню'),
+        'parent_item' => null,
+        'parent_item_colon' => null,
+        'menu_name' => __('Разделы меню'),
+    );
+// Now register the non-hierarchical taxonomy like tag
+    register_taxonomy('category_menu', 'menus', array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'update_count_callback' => '_update_post_term_count',
+        'query_var' => true,
+        'rewrite' => array('slug' => 'category_menu'),
+    ));
+}
 
 /*
 *  Rgister Post Type Settings
 */
-//if (function_exists('acf_add_options_page')) {
-//
-//    // Let's add our Options Page
-//    acf_add_options_page(array(
-//        'page_title' => 'Настройки Темы',
-//        'menu_title' => 'Настройки Темы',
-//        'menu_slug' => 'theme-options',
-//        'capability' => 'edit_posts'
-//    ));
-//
-//
-//}
+if (function_exists('acf_add_options_page')) {
+
+    // Let's add our Options Page
+    acf_add_options_page(array(
+        'page_title' => 'Настройки Темы',
+        'menu_title' => 'Настройки Темы',
+        'menu_slug' => 'theme-options',
+        'capability' => 'edit_posts'
+    ));
+
+
+}
 
 
 add_filter('gettext', 'translate_text');

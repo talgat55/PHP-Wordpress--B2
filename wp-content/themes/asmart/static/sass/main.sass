@@ -179,7 +179,7 @@ body.home
       background-color: #000
       text-decoration: none
 
-
+.page-template-page-menu,
 .page-template-page-atmosfera,
 .page-template-page-contacts
   .switcher-lang
@@ -210,11 +210,17 @@ body.home
 .page-template-page-atmosfera
   .site-content-contain
     margin-top: 140px
-
+  .controll.center
+    transition: all .3s
+    &:hover
+      opacity: .5
+  .atmosfera-block
+    overflow: hidden
 
   .slider-atm
     .item
       display: inline-block
+      float: left
   .site-footer .wrap
     position: relative
 
@@ -227,5 +233,88 @@ body.home
       &:hover
         opacity: .5
 
+
+//
+// Menu
+//
+.page-template-page-menu
+  .site-footer .wrap
+    position: relative
+  .bg-img
+    height: 380px
+    background-size: cover!important
+    background-position:  center center!important
+    background-repeat: no-repeat!important
+  .item
+    padding: 0!important
+
+  .item:nth-of-type(5n+1) .bg-img
+    height: 44vh
+  .item:nth-of-type(5n+2) .bg-img,
+  .item:nth-of-type(5n+3) .bg-img
+    height: 30vh
+  .item:nth-of-type(5n+4) .bg-img,
+  .item:nth-of-type(5n+5) .bg-img
+    height: 26vh
+  .cont-menu
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    padding-top: 125px
+  .slider-menu
+    .item
+      float: left
+    h2
+      font-family: $font_blacked_bold
+      font-size: 25px
+      color: $main_color
+      border-bottom: 2px solid $main_color
+      border-top: 2px solid $main_color
+      margin: 0
+      padding: 15px 0
+    .list-menu
+      margin: 60px 0 0 0
+      padding: 0
+      li
+        list-style: none
+        font-size: 18px
+        color: #000
+        font-family: $font_calibri_regular
+        margin-bottom: 40px
+
+
+    .slick-dots
+      text-align: left
+      padding-left: 130px
+      li
+        background: #000
+        width: 11px
+        height: 11px
+        border-radius: 50%
+      .slick-active
+        background: $main_color
+
+      .slick-dots li button:before
+        display: none
+
+
+  .arrow-menu
+    position: absolute
+    bottom: -8px
+    a
+      display: inline-block
+      text-decoration: none
+      padding: 15px
+      .active
+        display: none
+    .prev
+      img
+        transform: rotateZ(180deg)
+    a:hover
+      .active
+        display: inline-block
+      .inactive
+        display: none
 
 
