@@ -5,13 +5,13 @@
 jQuery(document).ready(function () {
     "use strict";
 
-
     AtmSlider();
     FixwidthSlider();
     HomeFullpageSlider();
     MenuToggle();
     Ymaps();
     SliderMenu();
+    MaskFields();
 
 // end redy function
 });
@@ -190,54 +190,6 @@ function Ymaps(){
            });
        }
 
-       // ymaps.ready(function () {
-       //     var myMap = new ymaps.Map('map', {
-       //             center: [54.967990, 73.381635],
-       //             zoom: 18,
-       //             controls: []
-       //         }, {
-       //
-       //         }),
-       //
-       //         // Создаём макет содержимого.
-       //         /*  MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-       //               '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-       //           ),*/
-       //
-       //         myPlacemark = new ymaps.Placemark([54.967990, 73.381635], {
-       //             id: '1'
-       //         }, {
-       //
-       //             // Опции.
-       //             // Необходимо указать данный тип макета.
-       //             iconLayout: 'default#image',
-       //             // Своё изображение иконки метки.
-       //             //
-       //             iconImageHref: 'http://batler.lightxdesign.ru/wp-content/themes/asmart/assets/images/location.png',
-       //             // // Размеры метки.
-       //             iconImageSize: [77, 105],
-       //             // // Смещение левого верхнего угла иконки относительно
-       //             // // её "ножки" (точки привязки).
-       //             iconImageOffset: [-36, -105]
-       //         });
-       //
-       //
-       //     myMap.geoObjects
-       //
-       //         .add(myPlacemark);
-       //
-       //     myMap.behaviors.disable('scrollZoom');
-       //     myMap.behaviors.disable('multiTouch');
-       //     if(jQuery(window).width() < 769){
-       //         myMap.behaviors.disable('drag');
-       //     }
-       //
-       //
-       //
-       // });
-       // ymaps.options.set('yandexMapDisablePoiInteractivity', true);
-
-
    }
 
 }
@@ -291,5 +243,55 @@ function SliderMenu(){
 
 
     }
+
+}
+//------------------------
+// Input telephone mask
+//----------------------------------
+
+
+
+
+function MaskFields(){
+    "use strict";
+
+    let phone_class = '.phone-field';
+    let time_class = '.time-field';
+    let date_class = '.date-field';
+    if(jQuery(phone_class).length){
+        jQuery(phone_class).inputmask({"mask": "+7 (999) 999-9999"});
+
+    }
+
+
+    //  in mobile work native UI
+    if(jQuery(window).width() > 1024 ){
+        if(jQuery(time_class).length){
+            jQuery(time_class).datepicker({
+                dateFormat: ' ',
+                timepicker: true,
+                classes: 'only-timepicker',
+                autoClose: true
+            });
+
+        }
+
+        if(jQuery(date_class).length){
+            jQuery(date_class).datepicker({
+                dateFormat: 'dd.mm.yyyy',
+                timepicker: false,
+                autoClose: true
+            });
+
+        }
+
+    }else{
+
+        jQuery(time_class).attr('type', 'time');
+        jQuery(date_class).attr('type', 'date');
+
+    }
+
+
 
 }

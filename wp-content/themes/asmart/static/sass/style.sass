@@ -9,6 +9,15 @@ $font_calibri_bold: 'Calibri Bold'
 $font_calibri_light: 'Calibri Light'
 $main_color: #c4a669
 
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
 
 *,
 *:focus,
@@ -80,7 +89,10 @@ $main_color: #c4a669
   -webkit-align-items: center
   -ms-flex-align: center
   align-items: center
-
+.page-template-page-booking,
+.page-template-page-menu
+  .site-footer .wrap
+    position: relative
 
 .menu-overlay
   position: fixed
@@ -97,8 +109,11 @@ $main_color: #c4a669
   &.active
     opacity: 1
     visibility: visible
-
-
+.only-timepicker .datepicker--nav,
+.only-timepicker .datepicker--content
+  display: none
+.only-timepicker .datepicker--time
+  border-top: none
 .page-title
   font-size: 33px
   color: #000

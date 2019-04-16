@@ -178,7 +178,7 @@ body.home
     &:hover
       background-color: #000
       text-decoration: none
-
+.page-template-page-booking,
 .page-template-page-menu,
 .page-template-page-atmosfera,
 .page-template-page-contacts
@@ -238,8 +238,6 @@ body.home
 // Menu
 //
 .page-template-page-menu
-  .site-footer .wrap
-    position: relative
   .bg-img
     height: 380px
     background-size: cover!important
@@ -317,4 +315,76 @@ body.home
       .inactive
         display: none
 
+//
+// Booking
+//
+.page-template-page-booking
+  min-height: 100vh
+  .image-block-bg
+    position: absolute
+    top: 0
+    width: 100%
+    left: 0
+  .cont-mains
+    position: relative
+    padding-top: 170px
+  .contact-form-booking
+    textarea,
+    input
+      font-family: $font_calibri_light
+      font-size: 20px
+      color: #000000
+      border: none
+      border-bottom: 1.5px solid #d4d4d4
+      padding: 7px 0
+      margin-bottom: 20px
+      width: 100%
+      @include placeholder
+        font-family: $font_calibri_light
+        font-size: 20px
+        color: #000000
+    textarea
+      color: #b6b6b6
+      margin-bottom: 30px
+      @include placeholder
+        color: #b6b6b6
+    .subscribe-block
+      line-height: 60px
+      input
+        float: left
+        width: auto
+        position: relative
+        top: 19px
+      p
+        margin-bottom: 0
+        font-family: $font_calibri_light
+        font-size: 18px
+        color: #000000
+        margin-left: 30px
 
+    .wpcf7-submit
+      font-family: $font_calibri_regular
+      font-size: 20px
+      color: #fff
+      display: table
+      margin: 0 0 0 auto
+      padding: 15px 70px
+      width: auto
+      -webkit-border-radius: 5px
+      border-radius: 5px
+      letter-spacing: 2px
+      outline: none
+      -webkit-transition: all .3s
+      -o-transition: all .3s
+      transition: all .3s
+      background-color: $main_color
+      border: none
+      &:hover
+        background-color: #000
+  .page-title
+    margin-bottom: 90px
+  .wpcf7-response-output
+    background: #fff
+    position: absolute
+    bottom: -34px
+    z-index: 9

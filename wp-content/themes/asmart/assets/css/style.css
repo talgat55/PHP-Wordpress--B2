@@ -74,6 +74,10 @@
   -webkit-box-align: center;
           align-items: center; }
 
+.page-template-page-booking .site-footer .wrap,
+.page-template-page-menu .site-footer .wrap {
+  position: relative; }
+
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -90,6 +94,13 @@
   .menu-overlay.active {
     opacity: 1;
     visibility: visible; }
+
+.only-timepicker .datepicker--nav,
+.only-timepicker .datepicker--content {
+  display: none; }
+
+.only-timepicker .datepicker--time {
+  border-top: none; }
 
 .page-title {
   font-size: 33px;
@@ -270,14 +281,17 @@ body.home {
       background-color: #000;
       text-decoration: none; }
 
+.page-template-page-booking .switcher-lang,
 .page-template-page-menu .switcher-lang,
 .page-template-page-atmosfera .switcher-lang,
 .page-template-page-contacts .switcher-lang {
   color: #000 !important; }
+  .page-template-page-booking .switcher-lang a,
   .page-template-page-menu .switcher-lang a,
   .page-template-page-atmosfera .switcher-lang a,
   .page-template-page-contacts .switcher-lang a {
     color: #000 !important; }
+  .page-template-page-booking .switcher-lang a.active,
   .page-template-page-menu .switcher-lang a.active,
   .page-template-page-atmosfera .switcher-lang a.active,
   .page-template-page-contacts .switcher-lang a.active {
@@ -327,9 +341,6 @@ body.home {
     .page-template-page-atmosfera .atm-controllers .prev:hover,
     .page-template-page-atmosfera .atm-controllers .next:hover {
       opacity: .5; }
-
-.page-template-page-menu .site-footer .wrap {
-  position: relative; }
 
 .page-template-page-menu .bg-img {
   height: 380px;
@@ -412,6 +423,97 @@ body.home {
     display: inline-block; }
   .page-template-page-menu .arrow-menu a:hover .inactive {
     display: none; }
+
+.page-template-page-booking {
+  min-height: 100vh; }
+  .page-template-page-booking .image-block-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0; }
+  .page-template-page-booking .cont-mains {
+    position: relative;
+    padding-top: 170px; }
+  .page-template-page-booking .contact-form-booking textarea,
+  .page-template-page-booking .contact-form-booking input {
+    font-family: "Calibri Light";
+    font-size: 20px;
+    color: #000000;
+    border: none;
+    border-bottom: 1.5px solid #d4d4d4;
+    padding: 7px 0;
+    margin-bottom: 20px;
+    width: 100%; }
+    .page-template-page-booking .contact-form-booking textarea::-webkit-input-placeholder,
+    .page-template-page-booking .contact-form-booking input::-webkit-input-placeholder {
+      font-family: "Calibri Light";
+      font-size: 20px;
+      color: #000000; }
+    .page-template-page-booking .contact-form-booking textarea:-moz-placeholder,
+    .page-template-page-booking .contact-form-booking input:-moz-placeholder {
+      font-family: "Calibri Light";
+      font-size: 20px;
+      color: #000000; }
+    .page-template-page-booking .contact-form-booking textarea::-moz-placeholder,
+    .page-template-page-booking .contact-form-booking input::-moz-placeholder {
+      font-family: "Calibri Light";
+      font-size: 20px;
+      color: #000000; }
+    .page-template-page-booking .contact-form-booking textarea:-ms-input-placeholder,
+    .page-template-page-booking .contact-form-booking input:-ms-input-placeholder {
+      font-family: "Calibri Light";
+      font-size: 20px;
+      color: #000000; }
+  .page-template-page-booking .contact-form-booking textarea {
+    color: #b6b6b6;
+    margin-bottom: 30px; }
+    .page-template-page-booking .contact-form-booking textarea::-webkit-input-placeholder {
+      color: #b6b6b6; }
+    .page-template-page-booking .contact-form-booking textarea:-moz-placeholder {
+      color: #b6b6b6; }
+    .page-template-page-booking .contact-form-booking textarea::-moz-placeholder {
+      color: #b6b6b6; }
+    .page-template-page-booking .contact-form-booking textarea:-ms-input-placeholder {
+      color: #b6b6b6; }
+  .page-template-page-booking .contact-form-booking .subscribe-block {
+    line-height: 60px; }
+    .page-template-page-booking .contact-form-booking .subscribe-block input {
+      float: left;
+      width: auto;
+      position: relative;
+      top: 19px; }
+    .page-template-page-booking .contact-form-booking .subscribe-block p {
+      margin-bottom: 0;
+      font-family: "Calibri Light";
+      font-size: 18px;
+      color: #000000;
+      margin-left: 30px; }
+  .page-template-page-booking .contact-form-booking .wpcf7-submit {
+    font-family: "Calibri Regualar";
+    font-size: 20px;
+    color: #fff;
+    display: table;
+    margin: 0 0 0 auto;
+    padding: 15px 70px;
+    width: auto;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    outline: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    background-color: #c4a669;
+    border: none; }
+    .page-template-page-booking .contact-form-booking .wpcf7-submit:hover {
+      background-color: #000; }
+  .page-template-page-booking .page-title {
+    margin-bottom: 90px; }
+  .page-template-page-booking .wpcf7-response-output {
+    background: #fff;
+    position: absolute;
+    bottom: -34px;
+    z-index: 9; }
 
 header {
   position: absolute;

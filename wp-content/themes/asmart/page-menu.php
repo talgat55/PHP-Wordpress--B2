@@ -4,8 +4,12 @@
  */
 
 get_header();
+if(!empty($_REQUEST['menu'])){
+    $req = $_REQUEST['menu'];
+}else{
+    $req = '';
+}
 
-$req = $_REQUEST['menu'];
 ?>
 
     <div id="primary" class="content-area  ">
