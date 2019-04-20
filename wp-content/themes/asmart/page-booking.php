@@ -10,14 +10,12 @@ get_header(); ?>
                 <div class="col-sm-7 col-xs-12">
 
                 </div>
-                <div class="col-sm-5 col-xs-12  hidden-xs">
-                    <div class="row">
-                        <?php
-                                $banner = get_field('banner_image_booking', 'option');
+                <?php
+                $banner = get_field('banner_image_booking', 'option');
 
-                        ?>
-                        <img class="booking-img" src="<?=$banner; ?>" alt="Картинка" />
-                    </div>
+                ?>
+                <div class="col-sm-5 col-xs-12  hidden-xs  booking-img " style="background: url(<?=$banner; ?>);">
+
 
                 </div>
             </div>

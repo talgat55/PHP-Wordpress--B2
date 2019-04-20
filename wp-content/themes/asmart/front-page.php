@@ -87,7 +87,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="section" id="section2">
-             <a href="#" class="one-type-link"  >
+             <a href="/atmosfera" class="one-type-link"  >
                  Атмосфера заведения
              </a>
         </div>
@@ -98,7 +98,7 @@ get_header(); ?>
                         <h2 class="center-flex">
                             Меню
                         </h2>
-                        <a href="#" class="two-type-link">
+                        <a href="http://batler.lightxdesign.ru/wp-content/uploads/2019/04/Menyu_mr_Batler.pdf" class="two-type-link">
                             посмотреть
                         </a>
                     </div>

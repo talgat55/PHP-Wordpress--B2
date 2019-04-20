@@ -21,19 +21,19 @@
                     <div class="text-right col-lg-2 col-md-2 col-sm-12 col-xs-12">
                         <ul class="soc-links">
                             <li>
-                                <a href="#">
+                                <a target="_blank" href="https://vk.com/batlerbar">
                                     <img src="<?php echo get_theme_file_uri('/assets/images/vk.jpg') ?>"
                                          alt="иконка">
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a  target="_blank" href="https://www.instagram.com/batlerbar/">
                                     <img src="<?php echo get_theme_file_uri('/assets/images/inst.png') ?>"
                                          alt="иконка">
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a target="_blank"  href="https://web.facebook.com/batlerbar/">
                                     <img src="<?php echo get_theme_file_uri('/assets/images/fb.png') ?>"
                                          alt="иконка">
                                 </a>

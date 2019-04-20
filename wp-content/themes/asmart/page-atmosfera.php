@@ -29,7 +29,7 @@ get_header(); ?>
 
                                 <div  class="item">
 
-                                    <img src="<?=wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full')[0];?>"
+                                    <img  src="<?php echo get_theme_file_uri('/assets/images/loading2.gif') ?>"    data-lazy="<?=wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full')[0];?>"
                                          alt="слайд"/>
                                 </div>
 

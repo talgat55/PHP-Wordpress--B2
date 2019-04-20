@@ -281,16 +281,19 @@ body.home {
       background-color: #000;
       text-decoration: none; }
 
+.page-template-page-about .switcher-lang,
 .page-template-page-booking .switcher-lang,
 .page-template-page-menu .switcher-lang,
 .page-template-page-atmosfera .switcher-lang,
 .page-template-page-contacts .switcher-lang {
   color: #000 !important; }
+  .page-template-page-about .switcher-lang a,
   .page-template-page-booking .switcher-lang a,
   .page-template-page-menu .switcher-lang a,
   .page-template-page-atmosfera .switcher-lang a,
   .page-template-page-contacts .switcher-lang a {
     color: #000 !important; }
+  .page-template-page-about .switcher-lang a.active,
   .page-template-page-booking .switcher-lang a.active,
   .page-template-page-menu .switcher-lang a.active,
   .page-template-page-atmosfera .switcher-lang a.active,
@@ -326,6 +329,9 @@ body.home {
 .page-template-page-atmosfera .slider-atm .item {
   display: inline-block;
   float: left; }
+  .page-template-page-atmosfera .slider-atm .item img {
+    height: 550px;
+    margin: 0 auto; }
 
 .page-template-page-atmosfera .site-footer .wrap {
   position: relative; }
@@ -342,6 +348,13 @@ body.home {
     .page-template-page-atmosfera .atm-controllers .next:hover {
       opacity: .5; }
 
+.page-template-page-menu .bg-menu-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .page-template-page-menu .bg-img {
   height: 380px;
   -webkit-background-size: cover !important;
@@ -352,22 +365,26 @@ body.home {
 .page-template-page-menu .item {
   padding: 0 !important; }
 
-.page-template-page-menu .item:nth-of-type(5n+1) .bg-img {
-  height: 44vh; }
+.page-template-page-menu .item:nth-of-type(5n+1) {
+  height: 44%; }
+  .page-template-page-menu .item:nth-of-type(5n+1) .bg-img {
+    height: 100%; }
 
-.page-template-page-menu .item:nth-of-type(5n+2) .bg-img,
-.page-template-page-menu .item:nth-of-type(5n+3) .bg-img {
-  height: 30vh; }
+.page-template-page-menu .item:nth-of-type(5n+2),
+.page-template-page-menu .item:nth-of-type(5n+3) {
+  height: 30%; }
+  .page-template-page-menu .item:nth-of-type(5n+2) .bg-img,
+  .page-template-page-menu .item:nth-of-type(5n+3) .bg-img {
+    height: 100%; }
 
-.page-template-page-menu .item:nth-of-type(5n+4) .bg-img,
-.page-template-page-menu .item:nth-of-type(5n+5) .bg-img {
-  height: 26vh; }
+.page-template-page-menu .item:nth-of-type(5n+4),
+.page-template-page-menu .item:nth-of-type(5n+5) {
+  height: 26%; }
+  .page-template-page-menu .item:nth-of-type(5n+4) .bg-img,
+  .page-template-page-menu .item:nth-of-type(5n+5) .bg-img {
+    height: 100%; }
 
 .page-template-page-menu .cont-menu {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   padding-top: 125px; }
 
 .page-template-page-menu .slider-menu .item {
@@ -430,10 +447,20 @@ body.home {
     position: absolute;
     top: 0;
     width: 100%;
-    left: 0; }
+    left: 0;
+    height: 100%;
+    overflow: hidden; }
+    .page-template-page-booking .image-block-bg .booking-img {
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      -webkit-background-size: cover !important;
+              background-size: cover !important;
+      height: 100%; }
   .page-template-page-booking .cont-mains {
     position: relative;
     padding-top: 170px; }
+    .page-template-page-booking .cont-mains .col-sm-7 .row {
+      margin-right: 0; }
   .page-template-page-booking .contact-form-booking textarea,
   .page-template-page-booking .contact-form-booking input {
     font-family: "Calibri Light";
@@ -443,7 +470,8 @@ body.home {
     border-bottom: 1.5px solid #d4d4d4;
     padding: 7px 0;
     margin-bottom: 20px;
-    width: 100%; }
+    width: 100%;
+    background: transparent; }
     .page-template-page-booking .contact-form-booking textarea::-webkit-input-placeholder,
     .page-template-page-booking .contact-form-booking input::-webkit-input-placeholder {
       font-family: "Calibri Light";
@@ -512,8 +540,55 @@ body.home {
   .page-template-page-booking .wpcf7-response-output {
     background: #fff;
     position: absolute;
-    bottom: -34px;
+    bottom: -56px;
     z-index: 9; }
+
+.page-template-page-about .image-block-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  .page-template-page-about .image-block-bg .booking-img {
+    height: 100%;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    -webkit-background-size: cover !important;
+            background-size: cover !important; }
+
+.page-template-page-about .cont-mains {
+  padding-top: 140px; }
+
+.page-template-page-about .navigation-tabs {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px; }
+  .page-template-page-about .navigation-tabs li {
+    display: inline-block; }
+    .page-template-page-about .navigation-tabs li a {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 26px;
+      color: #000;
+      font-family: "Calibri Regualar"; }
+      .page-template-page-about .navigation-tabs li a:hover, .page-template-page-about .navigation-tabs li a.active {
+        border-bottom: 2px solid #c4a669; }
+  .page-template-page-about .navigation-tabs li:last-child a {
+    margin-left: 40px; }
+
+.page-template-page-about .content-tabs {
+  font-family: "Calibri Regualar";
+  font-size: 18px; }
+  .page-template-page-about .content-tabs .list {
+    margin: 0;
+    padding: 0; }
+    .page-template-page-about .content-tabs .list li {
+      display: block;
+      list-style: none; }
+    .page-template-page-about .content-tabs .list > li {
+      display: none; }
+    .page-template-page-about .content-tabs .list .active {
+      display: block; }
 
 header {
   position: absolute;
@@ -591,8 +666,8 @@ header {
     bottom: 0;
     right: 0;
     background: url(../images/logo-bg.png) no-repeat !important;
-    width: 320px;
-    height: 335px; }
+    width: 270px;
+    height: 290px; }
   .menu-bar .link-rezerv {
     display: block;
     position: absolute;
@@ -669,7 +744,7 @@ header {
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 100%); }
 
 .site-footer .wrap {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
@@ -710,7 +785,10 @@ header {
     padding: 14px 0;
     display: block; }
 
-@media (max-width: 1368px) {
+.page-template-page-contacts .site-footer .wrap {
+  position: absolute; }
+
+@media (max-width: 1590px) {
   header .menu-link {
     top: 40px; }
   .top-main-container {
@@ -733,4 +811,24 @@ header {
   .first-wrap .link.feedback {
     margin-top: 20px; }
   .first-wrap .list-contact-informaion li {
-    margin-bottom: 15px; } }
+    margin-bottom: 15px; }
+  .menu-bar:after {
+    width: 237px;
+    height: 198px; }
+  .menu-bar .link-rezerv {
+    bottom: 40px; }
+  header .top-bar {
+    padding: 20px 0; }
+  header .menu-link {
+    top: 1px; }
+  .page-template-page-atmosfera .site-content-contain {
+    margin-top: 75px; }
+  .page-template-page-about .cont-mains,
+  .page-template-page-booking .cont-mains {
+    padding-top: 75px; }
+  .page-template-page-booking .page-title {
+    margin-bottom: 40px; } }
+
+@media (max-width: 1360px) {
+  header .menu-link {
+    left: 10px; } }

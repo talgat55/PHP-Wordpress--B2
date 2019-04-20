@@ -13,56 +13,58 @@ if(!empty($_REQUEST['menu'])){
 ?>
 
     <div id="primary" class="content-area  ">
-        <div class="row relative">
-            <div class="col-sm-7 col-xs-12">
-
-            </div>
-            <div class="col-sm-5 col-xs-12  hidden-xs">
-                <div class="row">
-                    <?php
-
-                    $gallery_cook = get_field('gallery_cook', 'option');
-                    $gallery_bar = get_field('gallery_bar', 'option');
-
-                    if ($req == 'cook') {
-                        $redy_gallery = $gallery_cook;
-                    } else {
-                        $redy_gallery = $gallery_bar;
-                    }
-                    $i = 1;
-                    foreach ($redy_gallery as $value) {
-                        if ($i == 1) {
-                            $col = '12';
-                        } elseif ($i == 2) {
-                            $col = '7';
-                        } elseif ($i == 3) {
-                            $col = '5';
-                        } elseif ($i == 4) {
-                            $col = '5';
-                        } elseif ($i == 5) {
-                            $col = '7';
-                        }
-                        echo '
-                                                    <div class="item  col-sm-' . $col . '"> 
-                                                        <div class="bg-img" style="background-image: url(' . $value["url"] . ');"></div>
-                                                    </div>
-                                                
-                                                ';
-
-
-                        $i++;
-                    }
-
-                    ?>
+        <div class="row  relative  ">
+            <div class="bg-menu-wrapper">
+                <div class="col-sm-7 col-xs-12">
 
                 </div>
+                <div class="col-sm-5 col-xs-12  hidden-xs">
+                    <div class="row"  style="    height: 870px;">
+                        <?php
 
+                        $gallery_cook = get_field('gallery_cook', 'option');
+                        $gallery_bar = get_field('gallery_bar', 'option');
+
+                        if ($req == 'cook') {
+                            $redy_gallery = $gallery_cook;
+                        } else {
+                            $redy_gallery = $gallery_bar;
+                        }
+                        $i = 1;
+                        foreach ($redy_gallery as $value) {
+                            if ($i == 1) {
+                                $col = '12';
+                            } elseif ($i == 2) {
+                                $col = '7';
+                            } elseif ($i == 3) {
+                                $col = '5';
+                            } elseif ($i == 4) {
+                                $col = '5';
+                            } elseif ($i == 5) {
+                                $col = '7';
+                            }
+                            echo '
+                                                        <div class="item  col-sm-' . $col . '"> 
+                                                            <div class="bg-img" style="background-image: url(' . $value["url"] . ');"></div>
+                                                        </div>
+                                                    
+                                                    ';
+
+
+                            $i++;
+                        }
+
+                        ?>
+
+                    </div>
+
+                </div>
             </div>
+
             <div class="cont-menu">
                 <div class="container">
-                    <div class="row">
+                    <div class="row" >
                         <div class="col-sm-7 col-xs-12">
-                            <div class="row">
                                 <h1 class="page-title">
                                     <?php
 
@@ -141,7 +143,6 @@ if(!empty($_REQUEST['menu'])){
                                 </div>
 
 
-                            </div>
                         </div>
 
                     </div>

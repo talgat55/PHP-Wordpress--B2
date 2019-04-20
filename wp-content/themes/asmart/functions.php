@@ -89,6 +89,12 @@ function th_scripts()
 
     }
 
+    if (  is_page_template('page-about.php')) {
+
+        wp_enqueue_script('query-object', get_theme_file_uri('/assets/js/jquery.query-object.js'), array(), '');
+
+    }
+
 
 
     if($slick){

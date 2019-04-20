@@ -12,7 +12,8 @@ jQuery(document).ready(function () {
     Ymaps();
     SliderMenu();
     MaskFields();
-
+    ClickAboutPage();
+    ChangeUrlAboutPage();
 // end redy function
 });
 jQuery(window).load(function() {
@@ -104,16 +105,12 @@ function HomeSlider(){
 function MenuToggle(){
     "use strict";
 
-    jQuery('.top-main-container a  ').click(function(e) {
-
-        if(jQuery(this).next('.sub-menu').length ){
+    jQuery('#menu-item-15 a  ').click(function(e) {
             e.preventDefault();
-            console.log('1');
-        }else{
-            console.log('0');
-            window.location.href = jQuery(this).attr('href');
+            if(jQuery(this).parent().parent().is('.sub-menu')){
+                window.open(jQuery(this).attr('href'), '_blank');
+            }
 
-        }
 
         jQuery(this).next().stop().slideToggle();
     }).next().stop().hide();
@@ -174,12 +171,12 @@ function Ymaps(){
            // Create the Google Map using our element and options defined above
            var map = new google.maps.Map(mapElement, mapOptions);
            var image = {
-               url: 'http://batler.lightxdesign.ru/wp-content/themes/asmart/assets/images/location.png',
-               size: new google.maps.Size(77, 105),
+               url: 'http://batler.lightxdesign.ru/wp-content/themes/asmart/assets/images/marker.png',
+               size: new google.maps.Size(80, 109),
                // The origin for this image is (0, 0).
                origin: new google.maps.Point(0, 0),
                // The anchor for this image is the base of the flagpole at (0, 32).
-               anchor: new google.maps.Point(0, 105)
+               anchor: new google.maps.Point(0, 109)
            };
            // Let's also add a marker while we're at it
            var marker = new google.maps.Marker({
@@ -205,6 +202,7 @@ function AtmSlider(){
         jQuery(main_class).slick({
             infinite: true,
             slidesToShow: 1,
+            lazyLoad: 'ondemand',
             slidesToScroll: 1,
             speed: 700,
             dots: false,
@@ -292,6 +290,58 @@ function MaskFields(){
 
     }
 
+}
+//------------------------
+// Click About page
+//----------------------------------
+
+function ClickAboutPage() {
+    "use strict";
+    var main_class = '.item-tab' ;
+    var content_class = '.list li' ;
+
+    jQuery(main_class).click(function(e) {
+            var $this = jQuery(this);
+            jQuery(main_class).removeClass('active');
+            jQuery($this).addClass('active');
+
+            if(jQuery($this).hasClass('shef')){
+                jQuery('.list .about').slideUp();
+                jQuery('.list .chief').slideDown();
+            }else{
+                jQuery('.list .about').slideDown();
+                jQuery('.list .chief').slideUp();
+            }
+
+
+        return false;
+    });
+}
+
+//------------------------
+// Change Url About page
+//----------------------------------
+
+function ChangeUrlAboutPage() {
+    "use strict";
+
+    var main_class = '.item-tab' ;
+
+    jQuery(main_class).click(function(e) {
+
+        var $this = jQuery(this);
+        // clear state
+
+        var stateUrl = jQuery($this).data('url');
+
+        var redyurl = jQuery.query.SET('type', stateUrl).toString();
+
+        var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + redyurl;
+        window.history.pushState({path: newurl}, '', newurl);
+    });
+
 
 
 }
+
+
