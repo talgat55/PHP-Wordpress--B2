@@ -49,9 +49,7 @@ get_header(); ?>
                                 </a>
                             </div>
                             <div class="text-center col-sm-4 col-xs-12">
-                                <a href="#" class="controll center">
-                                    <img  src="<?php echo get_theme_file_uri('/assets/images/rotate.png') ?>" alt="иконка">
-                                </a>
+
                             </div>
                             <div class="text-right col-sm-4 col-xs-12">
                                 <a href="#" class="controll next">

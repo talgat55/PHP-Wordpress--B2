@@ -219,6 +219,7 @@ body.home
       opacity: .5
   .atmosfera-block
     overflow: hidden
+    position: relative
 
   .slider-atm
     .item
@@ -232,7 +233,11 @@ body.home
     position: relative
 
   .atm-controllers
+    position: absolute
+    top: 50%
+    width: 100%
     padding: 50px 0
+    transform: translateY(-50%)
     .prev,
     .next
       padding: 10px 0

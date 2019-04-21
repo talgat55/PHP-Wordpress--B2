@@ -330,7 +330,8 @@ body.home {
     opacity: .5; }
 
 .page-template-page-atmosfera .atmosfera-block {
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .page-template-page-atmosfera .slider-atm .item {
   display: inline-block;
@@ -343,7 +344,13 @@ body.home {
   position: relative; }
 
 .page-template-page-atmosfera .atm-controllers {
-  padding: 50px 0; }
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding: 50px 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
   .page-template-page-atmosfera .atm-controllers .prev,
   .page-template-page-atmosfera .atm-controllers .next {
     padding: 10px 0;
