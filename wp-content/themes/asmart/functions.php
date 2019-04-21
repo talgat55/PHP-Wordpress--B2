@@ -322,3 +322,47 @@ function be_ajax_load_media()
 }
 add_action('wp_ajax_be_ajax_load_media', 'be_ajax_load_media');
 add_action('wp_ajax_nopriv_be_ajax_load_media', 'be_ajax_load_media');
+
+
+
+function get_latest_post_link(){
+    global $post;
+    $current_permalink = get_permalink();
+    $placeholder = $post;
+    $args = array(
+        'numberposts'     => 1,
+        'offset'          => 0,
+        'orderby'         => 'post_date',
+        'order'           => 'DESC',
+        'post_status'     => 'publish' );
+    $sorted_posts = get_posts( $args );
+    $permalink = get_permalink($sorted_posts[0]->ID);
+    if ($permalink == $current_permalink)
+        return;
+    $post = $placeholder;
+    $latest_link_html = $permalink;
+    return $latest_link_html;
+}
+function post_pagination() {
+    global $wp_query;
+    $pager = 999999999; // need an unlikely integer
+
+    echo paginate_links( array(
+        'base' => str_replace( $pager, '%#%', esc_url( get_pagenum_link( $pager ) ) ),
+        'format' => '?paged=%#%',
+        'current' => max( 1, get_query_var('paged') ),
+        'total' => $wp_query->max_num_pages
+    ) );
+}
+
+
+function pagination_nav($wp_query) {
+
+
+    if ( $wp_query->max_num_pages > 1 ) { ?>
+        <nav class="pagination" role="navigation">
+            <div class="nav-previous"><?php next_posts_link( '&larr; Older posts' ); ?></div>
+            <div class="nav-next"><?php previous_posts_link( 'Newer posts &rarr;' ); ?></div>
+        </nav>
+    <?php }
+}

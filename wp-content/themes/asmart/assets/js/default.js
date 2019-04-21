@@ -14,6 +14,7 @@ jQuery(document).ready(function () {
     MaskFields();
     ClickAboutPage();
     ChangeUrlAboutPage();
+    ClickSingleNews();
 // end redy function
 });
 jQuery(window).load(function() {
@@ -298,7 +299,6 @@ function MaskFields(){
 function ClickAboutPage() {
     "use strict";
     var main_class = '.item-tab' ;
-    var content_class = '.list li' ;
 
     jQuery(main_class).click(function(e) {
             var $this = jQuery(this);
@@ -338,6 +338,36 @@ function ChangeUrlAboutPage() {
 
         var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + redyurl;
         window.history.pushState({path: newurl}, '', newurl);
+    });
+
+
+
+}
+
+
+//------------------------
+// Single page news arrow
+//----------------------------------
+
+function ClickSingleNews() {
+    "use strict";
+
+    var main_class = '.nav-page.single a';
+
+    jQuery(main_class).click(function(e) {
+        e.preventDefault();
+        var $this = jQuery(this);
+
+        if($this.hasClass('prev')){
+            var redylink = jQuery('.time-line').find('.active').parent().prev().find('a').attr('href');
+
+        }else{
+            var redylink = jQuery('.time-line').find('.active').parent().next().find('a').attr('href');
+        }
+        if(redylink.length){
+            window.location.href = redylink;
+        }
+
     });
 
 
