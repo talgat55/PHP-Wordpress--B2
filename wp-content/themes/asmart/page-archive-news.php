@@ -40,7 +40,7 @@ get_header(); ?>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" class="item-tab  archive  active">
+                                            <a href="/arhiv-novostej/" class="item-tab  archive  active">
                                                 Архив
                                             </a>
                                         </li>
@@ -53,7 +53,7 @@ get_header(); ?>
                                             <?php
 
                                             $args = array(
-                                                'posts_per_page' => '4',
+                                                'posts_per_page' => '10',
                                                 'post_type' => 'post',
                                                 'orderby' => 'date',
                                                 'order' => 'DESC',

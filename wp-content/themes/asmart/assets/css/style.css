@@ -165,7 +165,9 @@ body.home {
   height: 100vh;
   width: 100%; }
   .home-slider .item {
-    height: 100vh; }
+    height: 100vh;
+    position: relative;
+    z-index: 10; }
 
 .home-slider-walp .arr-slider {
   margin: 0;
@@ -209,6 +211,11 @@ body.home {
       font-size: 18px;
       color: #fff;
       font-family: "Calibri Light"; }
+
+.home-slider-walp .video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 #pp-nav span,
 .pp-slidesNav span {
@@ -740,6 +747,11 @@ body.home {
       font-family: "Blacker-Text-Bold";
       font-size: 25px;
       color: #000; }
+
+.page-template-page-archive-news .content-list li a {
+  font-size: 18px !important;
+  margin-bottom: 17px;
+  display: inline-block; }
 
 header {
   position: absolute;

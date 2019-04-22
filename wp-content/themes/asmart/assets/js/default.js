@@ -158,7 +158,7 @@ function Ymaps(){
                zoom: 17,
 
                // The latitude and longitude to center the map (always required)
-               center: new google.maps.LatLng(54.967948, 73.381493), // New York
+               center: new google.maps.LatLng(54.968454, 73.382231), // New York
 
                // How you would like to style the map.
                // This is where you would paste any style found on Snazzy Maps.
@@ -172,16 +172,16 @@ function Ymaps(){
            // Create the Google Map using our element and options defined above
            var map = new google.maps.Map(mapElement, mapOptions);
            var image = {
-               url: 'http://batler.lightxdesign.ru/wp-content/themes/asmart/assets/images/marker.png',
-               size: new google.maps.Size(80, 109),
+               url: 'http://batler.lightxdesign.ru/wp-content/themes/asmart/assets/images/marker2.png',
+               size: new google.maps.Size(79, 108),
                // The origin for this image is (0, 0).
                origin: new google.maps.Point(0, 0),
                // The anchor for this image is the base of the flagpole at (0, 32).
-               anchor: new google.maps.Point(0, 109)
+               anchor: new google.maps.Point(39, 108)
            };
            // Let's also add a marker while we're at it
            var marker = new google.maps.Marker({
-               position: new google.maps.LatLng(54.967948, 73.381493),
+               position: new google.maps.LatLng(54.968454, 73.382231),
                map: map,
                icon: image,
                title: 'Батлер'
@@ -299,23 +299,28 @@ function MaskFields(){
 function ClickAboutPage() {
     "use strict";
     var main_class = '.item-tab' ;
+    var LayoutClass = '.page-template-page-about' ;
 
-    jQuery(main_class).click(function(e) {
+    if(jQuery(LayoutClass).length) {
+
+        jQuery(main_class).click(function (e) {
             var $this = jQuery(this);
             jQuery(main_class).removeClass('active');
             jQuery($this).addClass('active');
 
-            if(jQuery($this).hasClass('shef')){
+            if (jQuery($this).hasClass('shef')) {
                 jQuery('.list .about').slideUp();
                 jQuery('.list .chief').slideDown();
-            }else{
+            } else {
                 jQuery('.list .about').slideDown();
                 jQuery('.list .chief').slideUp();
             }
 
 
-        return false;
-    });
+            return false;
+        });
+
+    }
 }
 
 //------------------------

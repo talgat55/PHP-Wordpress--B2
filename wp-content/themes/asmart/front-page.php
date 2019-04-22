@@ -26,10 +26,31 @@ get_header(); ?>
                     $text_one   = get_field('text_one');
                     $title_two  = get_field('title_two');
                     $text_two   = get_field('text_two');
+                    $video_mp4  = get_field('slider_video_mp4');
+                    $video_webm = get_field('slider_video_webm');
 
+                    if(empty($video_mp4)){
+
+                        $back = 'style="background: url('.wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "full")[0].') no-repeat!important;"';
+
+                    }else{
+
+                        $back = '';
+
+                    }
 
                     ?>
-                    <div class="item" style="background: url(<?=wp_get_attachment_image_src(get_post_thumbnail_id($post_id), 'full')[0]; ?>) no-repeat!important;">
+                    <div class="item" <?=$back; ?>>
+                        <?php
+                    if(!empty($video_mp4)) { ?>
+                        <div class="video-wrapper">
+                            <video autoplay loop controls="controls" poster="<?=wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "full")[0];?>"  preload="none" muted>
+                                <source src="<?=$video_mp4; ?>" type='video/mp4'>
+                                <source src="<?=$video_webm;?>" type='video/webm'>
+                            </video>
+                        </div>
+                    <?php } ?>
+
                         <div class="container  relative-slider">
                             <div class="row">
                                 <div class="content-slider">

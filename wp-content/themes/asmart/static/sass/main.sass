@@ -57,6 +57,8 @@ body.home
   width: 100%
   .item
     height: 100vh
+    position: relative
+    z-index: 10
 .home-slider-walp
   .arr-slider
     margin: 0
@@ -98,7 +100,10 @@ body.home
         font-size: 18px
         color: #fff
         font-family: $font_calibri_light
-
+  .video-wrapper
+    position: absolute
+    top: 0
+    left: 0
 //
 //  Full page scroller
 //
@@ -594,6 +599,13 @@ body.home
         color: #000
 
 
+.page-template-page-archive-news
+  .content-list
+    li
+      a
+        font-size: 18px!important
+        margin-bottom: 17px
+        display: inline-block
 
 
 
