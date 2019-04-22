@@ -117,6 +117,28 @@
 #pagepiling .section {
   height: 100vh; }
 
+#pp-nav span,
+.pp-slidesNav span {
+  width: 12px;
+  height: 12px; }
+
+.pp-tableCell .bg-block:last-child .third-blocks > div {
+  width: 212px; }
+
+.error404 .content-area {
+  height: 80vh; }
+
+.error404 .content-custom {
+  margin-top: 140px; }
+  .error404 .content-custom .error-page-text {
+    font-family: "Calibri Regualar";
+    font-size: 16px; }
+  .error404 .content-custom .page-title {
+    font-size: 100px; }
+
+.page-template-default .content-custom {
+  margin-top: 140px; }
+
 body.home {
   height: 100vh; }
 
@@ -156,8 +178,8 @@ body.home {
     margin: 0 0 100px;
     height: 132px; }
   .third-blocks > div {
-    width: 181px;
-    text-align: left;
+    width: 247px;
+    text-align: center;
     margin: 0 auto; }
 
 .home-slider {
@@ -168,6 +190,18 @@ body.home {
     height: 100vh;
     position: relative;
     z-index: 10; }
+    .home-slider .item .overlay-img,
+    .home-slider .item .overlay-color {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 9; }
+    .home-slider .item .overlay-color {
+      background: rgba(0, 0, 0, 0.4); }
+    .home-slider .item .overlay-img {
+      background: url(../images/gridtile.png); }
 
 .home-slider-walp .arr-slider {
   margin: 0;
@@ -193,7 +227,8 @@ body.home {
 
 .home-slider-walp .content-slider {
   position: absolute;
-  bottom: 95px; }
+  bottom: 95px;
+  z-index: 11; }
   .home-slider-walp .content-slider .second-block,
   .home-slider-walp .content-slider .first-block {
     display: inline-block;
@@ -288,6 +323,8 @@ body.home {
       background-color: #000;
       text-decoration: none; }
 
+.error404 .switcher-lang,
+.page-template-default .switcher-lang,
 .page-template-page-archive-news .switcher-lang,
 .single-post .switcher-lang,
 .page-template-page-about .switcher-lang,
@@ -296,6 +333,8 @@ body.home {
 .page-template-page-atmosfera .switcher-lang,
 .page-template-page-contacts .switcher-lang {
   color: #000 !important; }
+  .error404 .switcher-lang a,
+  .page-template-default .switcher-lang a,
   .page-template-page-archive-news .switcher-lang a,
   .single-post .switcher-lang a,
   .page-template-page-about .switcher-lang a,
@@ -304,6 +343,8 @@ body.home {
   .page-template-page-atmosfera .switcher-lang a,
   .page-template-page-contacts .switcher-lang a {
     color: #000 !important; }
+  .error404 .switcher-lang a.active,
+  .page-template-default .switcher-lang a.active,
   .page-template-page-archive-news .switcher-lang a.active,
   .single-post .switcher-lang a.active,
   .page-template-page-about .switcher-lang a.active,
@@ -751,7 +792,8 @@ body.home {
 .page-template-page-archive-news .content-list li a {
   font-size: 18px !important;
   margin-bottom: 17px;
-  display: inline-block; }
+  display: inline-block;
+  font-family: "Calibri Regualar"; }
 
 header {
   position: absolute;
@@ -951,6 +993,9 @@ header {
 .page-template-page-contacts .site-footer .wrap {
   position: absolute; }
 
+.switcher-lang li:last-child {
+  pointer-events: none; }
+
 @media (max-width: 1590px) {
   header .menu-link {
     top: 40px; }
@@ -984,6 +1029,8 @@ header {
     padding: 20px 0; }
   header .menu-link {
     top: 1px; }
+  .page-template-default .content-custom,
+  .content-area .content-custom,
   .page-template-page-atmosfera .site-content-contain {
     margin-top: 75px; }
   .page-template-page-about .cont-mains,

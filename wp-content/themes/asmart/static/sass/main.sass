@@ -42,8 +42,8 @@ body.home
 
 
   >div
-    width: 181px
-    text-align: left
+    width: 247px
+    text-align: center
     margin: 0 auto
 
 
@@ -59,6 +59,18 @@ body.home
     height: 100vh
     position: relative
     z-index: 10
+    .overlay-img,
+    .overlay-color
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 9
+    .overlay-color
+      background: rgba(0,0,0,.4)
+    .overlay-img
+      background: url(../images/gridtile.png)
 .home-slider-walp
   .arr-slider
     margin: 0
@@ -82,6 +94,7 @@ body.home
   .content-slider
     position: absolute
     bottom: 95px
+    z-index: 11
 
     .second-block,
     .first-block
@@ -183,6 +196,8 @@ body.home
     &:hover
       background-color: #000
       text-decoration: none
+.error404,
+.page-template-default,
 .page-template-page-archive-news,
 .single-post,
 .page-template-page-about,
@@ -196,6 +211,8 @@ body.home
       color: #000!important
     a.active
       color: $main_color!important
+
+
 
 
 .site-content
@@ -606,6 +623,7 @@ body.home
         font-size: 18px!important
         margin-bottom: 17px
         display: inline-block
+        font-family: $font_calibri_regular
 
 
 

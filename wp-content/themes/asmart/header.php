@@ -107,7 +107,7 @@
         <nav>
             <?php wp_nav_menu('menu_id=menu-main&menu_class=top-main-container clearfix&theme_location=top_menu'); ?>
         </nav>
-        <a href="#" class="link-rezerv">
+        <a href="/booking/" class="link-rezerv">
             Зарезервировать
         </a>
     </div>

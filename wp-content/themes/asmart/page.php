@@ -16,16 +16,14 @@
  */
 
 get_header(); ?>
-
     <div id="primary" class="content-area  ">
-        <div class="bredscrumb">
-            <h1 class="page-title-main">
-                <?php echo get_the_title(); ?>
-            </h1>
-        </div>
+
         <div class="container">
-            <div class="row">
-                <div class="start-content">
+            <div class="row relative">
+                <div class="content-custom">
+                    <h1 class="page-title">
+                        <?php echo get_the_title(); ?>
+                    </h1>
                     <?php
                     while (have_posts()) : the_post();
 
@@ -35,6 +33,6 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-
     </div>
+
 <?php get_footer();

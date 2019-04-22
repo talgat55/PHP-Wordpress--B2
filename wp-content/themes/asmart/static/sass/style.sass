@@ -129,10 +129,41 @@ $main_color: #c4a669
 
 #pagepiling .section
   height: 100vh
+#pp-nav span,
+.pp-slidesNav span
+  width: 12px
+  height: 12px
+
+.pp-tableCell
+  .bg-block:last-child
+    .third-blocks
+      >div
+        width: 212px
+.error404
+  .content-area
+    height: 80vh
+  .content-custom
+    margin-top: 140px
+    .error-page-text
+      font-family: $font_calibri_regular
+      font-size: 16px
+    .page-title
+      font-size: 100px
+.page-template-default
+  .content-custom
+    margin-top: 140px
 
 @import "main.sass"
 @import "header.sass"
 @import "footer.sass"
+
+
+//
+//  Temporary disable link en
+//
+.switcher-lang
+  li:last-child
+    pointer-events: none
 
 
 
@@ -174,6 +205,8 @@ $main_color: #c4a669
     padding: 20px 0
   header .menu-link
     top: 1px
+  .page-template-default  .content-custom,
+  .content-area .content-custom ,
   .page-template-page-atmosfera .site-content-contain
     margin-top: 75px
   .page-template-page-about .cont-mains,

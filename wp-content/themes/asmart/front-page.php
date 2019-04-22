@@ -43,6 +43,8 @@ get_header(); ?>
                     <div class="item" <?=$back; ?>>
                         <?php
                     if(!empty($video_mp4)) { ?>
+                        <div class="overlay-img"></div>
+                        <div class="overlay-color"></div>
                         <div class="video-wrapper">
                             <video autoplay loop controls="controls" poster="<?=wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "full")[0];?>"  preload="none" muted>
                                 <source src="<?=$video_mp4; ?>" type='video/mp4'>
