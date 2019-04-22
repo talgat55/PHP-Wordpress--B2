@@ -34,7 +34,9 @@
         <span></span>
         <span></span>
     </div>
-
+    <a href="#" class="close-preloader">
+        Закрыть прелоадер
+    </a>
 </div>
 </div>
 <?php  } ?>

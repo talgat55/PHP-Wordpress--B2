@@ -993,6 +993,23 @@ header {
 .page-template-page-contacts .site-footer .wrap {
   position: absolute; }
 
+.close-preloader {
+  display: table;
+  text-align: center;
+  margin: 10px auto 0;
+  background: #c4a669;
+  color: #fff;
+  padding: 10px 20px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+  .close-preloader:hover {
+    background: red;
+    text-decoration: none;
+    color: #fff; }
+
 .switcher-lang li:last-child {
   pointer-events: none; }
 

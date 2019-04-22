@@ -44,7 +44,20 @@ function Preloader(){
                     }
                 })
             }
-        })
+        });
+        jQuery('.close-preloader').click(function(e) {
+            e.preventDefault();
+            jQuery('#hola').velocity({
+                translateY : "-100%"
+            }, {
+                duration: 1000,
+                easing: [0.7,0,0.3,1],
+                complete: function(){
+                    jQuery('body').addClass('animate-done');
+                }
+            })
+        });
+
     }
 
 }
