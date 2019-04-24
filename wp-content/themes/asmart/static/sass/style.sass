@@ -170,7 +170,10 @@ $main_color: #c4a669
     background: red
     text-decoration: none
     color: #fff
-
+  &:active,
+  &:focus
+    text-decoration: none
+    color: #fff
 //
 //  Temporary disable link en
 //
@@ -230,6 +233,109 @@ $main_color: #c4a669
 @media(max-width: 1360px)
   header .menu-link
     left: 10px
+    position: fixed
+@media(max-width: 1295px)
+  header .top-bar
+    padding: 20px 75px
 
 
+@media(max-width: 1024px)
+  html, body
+    overflow: auto!important
+  .home-slider-walp .content-slider .second-block,
+  .home-slider-walp .content-slider .first-block
+    width: 48%
+    padding-right: 3%
+  .home-slider-walp .content-slider .second-block
+    padding-right: 0
+    padding-left: 3%
+  .site-footer
+    .col-xs-12
+      text-align: center
+    .wrap
+      p
+        display: table
+        margin: 0 auto
+      .soc-links
+        display: table
+        text-align: center
 
+  #section2
+    height: auto!important
+    padding: 150px 0
+  #section3
+    .third-blocks h2
+      font-size: 40px
+      margin: 0 0 25px
+
+@media(max-width: 800px)
+  .home-slider-walp .content-slider
+    margin: 0 15px
+  .home-slider-walp .content-slider .second-block,
+  .home-slider-walp .content-slider .first-block
+    width: 100%
+    padding-right: 0
+    padding-left: 0
+  .home-slider-walp .content-slider .second-block .text,
+  .home-slider-walp .content-slider .first-block .text
+    margin-bottom: 20px
+  .page-template-page-archive-news .cont-mains,
+  .single-post .cont-mains,
+  .page-template-page-about .cont-mains,
+  .page-template-page-booking .cont-mains
+    padding-left: 30px
+    padding-right: 30px
+@media(max-width: 600px)
+  .home-slider-walp .content-slider
+    padding: 0 15px
+  .page-template-page-atmosfera .atmosfera-block
+    margin: 0 15px
+  .atm-controllers
+    .col-xs-12
+      display: inline-block
+    .text-right
+      position: absolute
+      right: 0
+  .page-template-page-atmosfera .slider-atm .item img
+    height: auto
+    width: 100%
+  #page
+    overflow-x: hidden
+  .page-template-page-archive-news .cont-mains .content-news > div,
+  .single-post .cont-mains .content-news > div
+    display: block
+  .page-template-page-archive-news .cont-mains .content-news .time-line .list li,
+  .single-post .cont-mains .content-news .time-line .list li
+    display: inline-block
+  .page-template-page-archive-news .cont-mains .nav-page,
+  .single-post .cont-mains .nav-page
+    text-align: right
+  .page-template-page-archive-news .cont-mains .content-news .content,
+  .single-post .cont-mains .content-news .content
+    padding-left: 0
+  .page-template-page-booking .contact-form-booking .subscribe-block
+    width: 233px
+    margin: 0 auto
+  .page-template-page-booking .contact-form-booking .wpcf7-submit
+    margin: 0 auto
+  .page-template-page-contacts .site-content
+    height: auto
+
+  #map
+    height: 300px
+    margin-top: 72px
+  #section3
+    height: auto!important
+    .bg-block:first-child,
+    .bg-block:last-child
+      height: 300px
+  .page-template-page-contacts
+    .first-wrap
+      height: auto
+      position: relative
+      padding: 30px 15px
+  .page-template-page-contacts .site-footer .wrap
+    position: relative
+
+  header .top-bar
+    position: fixed

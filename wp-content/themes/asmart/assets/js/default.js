@@ -21,7 +21,10 @@ jQuery(window).load(function() {
     HomeSlider();
     Preloader();
 });
+jQuery(window).resize(function() {
+    HomeFullpageSlider();
 
+});
 //------------------------
 // Preloader
 //----------------------------------
@@ -70,6 +73,8 @@ function HomeFullpageSlider(){
     "use strict";
     let main_class = '#pagepiling';
     if(jQuery(main_class).length){
+    if(jQuery(window).width() > 1024){
+
         jQuery(main_class).pagepiling({
             sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4'],
             navigation: {
@@ -87,6 +92,7 @@ function HomeFullpageSlider(){
 
             }
         });
+    }
     }
 
 }
