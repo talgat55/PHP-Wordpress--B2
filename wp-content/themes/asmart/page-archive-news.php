@@ -84,6 +84,9 @@ get_header(); ?>
 
                                                 <?php
                                                 endwhile;
+                                            else:
+
+                                                echo "<p class='not-found-articles'>Записей не найдено</p>";
 
                                             endif;
                                             ?>

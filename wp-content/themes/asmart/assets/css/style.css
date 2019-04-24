@@ -146,7 +146,7 @@ body.home {
   background: url(../images/slide.jpg) no-repeat !important; }
 
 #section2 {
-  background: url(../images/slide2.jpg) no-repeat !important; }
+  background: url(../images/slide2_2.jpg) no-repeat !important; }
 
 #section3 .bg-block:first-child {
   background: url(../images/slide3.jpg) no-repeat !important; }
@@ -577,6 +577,8 @@ body.home {
       font-size: 18px;
       color: #000000;
       margin-left: 30px; }
+  .page-template-page-booking .contact-form-booking .col-sm-6.col-xs-12 {
+    padding-right: 0; }
   .page-template-page-booking .contact-form-booking .wpcf7-submit {
     font-family: "Calibri Regualar";
     font-size: 20px;
@@ -650,6 +652,18 @@ body.home {
       display: none; }
     .page-template-page-about .content-tabs .list .active {
       display: block; }
+    .page-template-page-about .content-tabs .list .chief img {
+      max-width: 100%;
+      height: auto; }
+
+.page-template-page-about .title-about-page {
+  margin-top: 0;
+  font-size: 36px;
+  font-family: "Blacker-Text-Bold";
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  padding-bottom: 15px;
+  margin-bottom: 30px; }
 
 .page-template-page-archive-news .image-block-bg,
 .single-post .image-block-bg {
@@ -1013,6 +1027,11 @@ header {
     text-decoration: none;
     color: #fff; }
 
+.not-found-articles {
+  min-height: 300px;
+  font-size: 16px;
+  font-family: "Calibri Regualar"; }
+
 .switcher-lang li:last-child {
   pointer-events: none; }
 
@@ -1112,15 +1131,21 @@ header {
     padding-right: 30px; } }
 
 @media (max-width: 600px) {
+  .not-found-articles {
+    min-height: 100px; }
   .home-slider-walp .content-slider {
     padding: 0 15px; }
   .page-template-page-atmosfera .atmosfera-block {
     margin: 0 15px; }
   .atm-controllers .col-xs-12 {
-    display: inline-block; }
+    display: inline-block;
+    width: auto; }
   .atm-controllers .text-right {
     position: absolute;
     right: 0; }
+  .atm-controllers .text-left {
+    position: absolute;
+    left: 0; }
   .page-template-page-atmosfera .slider-atm .item img {
     height: auto;
     width: 100%; }
@@ -1160,4 +1185,5 @@ header {
   .page-template-page-contacts .site-footer .wrap {
     position: relative; }
   header .top-bar {
-    position: fixed; } }
+    position: fixed;
+    top: 0; } }

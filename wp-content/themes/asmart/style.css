@@ -377,7 +377,7 @@ body.home{
 #preloader {
     position:relative;
     width: 245px;
-    height: 320px;
+    height: 400px;
     top: 50%;
     margin: 0 auto;
     transform: translateY(-50%);

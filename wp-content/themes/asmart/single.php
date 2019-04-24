@@ -18,11 +18,10 @@ get_header(); ?>
 
                 </div>
                 <?php
+                $img_url = wp_get_attachment_url(get_post_thumbnail_id($single_id), 'full');
                 $banner_about = get_field('banner_image_about', 'option');
                 $banner_booking = get_field('banner_image_booking', 'option');
-
-                $redy_url = $banner_about ? $banner_about : $banner_booking;
-
+                $redy_url = $img_url ? $img_url : $banner_booking;
                 ?>
                 <div class="col-sm-5 col-xs-12  hidden-xs  booking-img " style="background: url(<?= $redy_url; ?>);">
 
