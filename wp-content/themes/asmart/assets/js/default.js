@@ -15,6 +15,7 @@ jQuery(document).ready(function () {
     ClickAboutPage();
     ChangeUrlAboutPage();
     ClickSingleNews();
+    footerBottom();
 // end redy function
 });
 jQuery(window).load(function() {
@@ -304,7 +305,7 @@ function MaskFields(){
         }
 
     }else{
-
+        jQuery('input').removeAttr('placeholder');
         jQuery(time_class).attr('type', 'time');
         jQuery(date_class).attr('type', 'date');
 
@@ -317,29 +318,48 @@ function MaskFields(){
 
 function ClickAboutPage() {
     "use strict";
-    var main_class = '.item-tab' ;
+
+    var main_class  = '.item-tab' ;
     var LayoutClass = '.page-template-page-about' ;
+    var AboutClass  = '.list .about' ;
+    var ChiefClass  = '.list .chief' ;
+    var ImgBg       = '.booking-img' ;
+    var redyUrl;
+
 
     if(jQuery(LayoutClass).length) {
-
         jQuery(main_class).click(function (e) {
             var $this = jQuery(this);
             jQuery(main_class).removeClass('active');
             jQuery($this).addClass('active');
 
             if (jQuery($this).hasClass('shef')) {
-                jQuery('.list .about').slideUp();
-                jQuery('.list .chief').slideDown();
+                jQuery(AboutClass).slideUp();
+                jQuery(ChiefClass).slideDown();
+                redyUrl =   jQuery(ChiefClass).attr('data-url');
+
             } else {
-                jQuery('.list .about').slideDown();
-                jQuery('.list .chief').slideUp();
+                jQuery(AboutClass).slideDown();
+                jQuery(ChiefClass).slideUp();
+                redyUrl =   jQuery(AboutClass).attr('data-url');
             }
 
+            // change bg
+            jQuery(ImgBg).fadeOut();
+            setTimeout(function(){
+                jQuery(ImgBg).css("background-image",'url(' + redyUrl + ')' );
+            }, 400);
+
+            setTimeout(function(){
+                jQuery(ImgBg).fadeIn();
+            }, 400);
 
             return false;
         });
 
+
     }
+
 }
 
 //------------------------
@@ -399,3 +419,31 @@ function ClickSingleNews() {
 }
 
 
+//----------------------------------
+//   footer attach bottom  for news , about
+//------------------------------------
+function footerBottom(){
+    "use strict";
+    let NewsClass = '.single-post';
+    let AboutClass = '.page-template-page-about';
+    let AtmosferaClass = '.page-template-page-atmosfera';
+    let classContent = '.site-content';
+    let footerHeight = jQuery('footer').height();
+    let headerHeight = jQuery('header').height();
+    let contentHeight = jQuery(classContent).height();
+
+    if(jQuery(NewsClass).length  ||   jQuery(AboutClass).length ||   jQuery(AtmosferaClass).length ){
+            console.log( contentHeight+ headerHeight + footerHeight);
+            console.log( jQuery(window).height());
+
+        if( contentHeight+ headerHeight + footerHeight  < jQuery(window).height()   ||   jQuery(AboutClass).length ){
+            jQuery(classContent).css('min-height', (
+                jQuery(window).height()
+                - headerHeight
+                - footerHeight
+                + 147
+            ));
+        }
+    }
+
+}

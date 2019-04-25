@@ -175,6 +175,8 @@ $main_color: #c4a669
     text-decoration: none
     color: #fff
 
+.mobile-field
+  display: none
 
 .not-found-articles
   min-height: 300px
@@ -292,6 +294,41 @@ $main_color: #c4a669
     padding-left: 30px
     padding-right: 30px
 @media(max-width: 600px)
+  .logo
+    margin-top: 0
+  .top-main-container::after
+    display: none
+  .menu-bar .link-rezerv
+    bottom: 0
+    position: relative
+    transform: none
+    margin-top: 50px
+  .mobile-field
+    display: block
+  .single-post .cont-mains
+    padding-top: 65px
+  .page-template-page-about .navigation-tabs li,
+  .page-template-page-archive-news .cont-mains .navigation-tabs li,
+  .single-post .cont-mains .navigation-tabs li
+    display: block
+    list-style: none
+  .page-template-page-about .navigation-tabs li:last-child a
+      margin-left: 0
+
+  .page-template-page-archive-news .cont-mains .navigation-tabs li:last-child,
+  .single-post .cont-mains .navigation-tabs li:last-child
+    padding-left: 0
+  .home-slider-walp
+    .content-slider
+      .second-block .text,
+      .first-block .text
+        font-size: 14px
+      .second-block h3,
+      .first-block h3
+        margin-bottom: 15px
+  .home-slider-walp .content-slider
+    bottom: 15px
+
   .not-found-articles
     min-height: 100px
   .home-slider-walp .content-slider
@@ -352,3 +389,11 @@ $main_color: #c4a669
   header .top-bar
     position: fixed
     top: 0
+
+@media(max-width: 390px)
+  .menu-bar .link-rezerv
+    bottom: 0
+    position: relative
+    transform: none
+    left: 0
+    margin-top: 20px
