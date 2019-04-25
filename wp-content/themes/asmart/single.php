@@ -91,6 +91,7 @@ get_header(); ?>
                                                     endwhile;
 
                                                 endif;
+                                                wp_reset_query();
                                                 ?>
 
                                             </ul>
@@ -123,7 +124,7 @@ get_header(); ?>
                                             </h1>
 
                                             <div class="text">
-                                                <?= get_the_content($single_id); ?>
+                                                <?php   the_content(); ?>
 
                                             </div>
                                         </div>
