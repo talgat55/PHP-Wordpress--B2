@@ -77,5 +77,12 @@ get_header(); ?>
             </div>
         </div>
     </div>
+<div class="custom-modal">
+    <h3>
+        Написать нам
+    </h3>
+    <i class="fas fa-times"></i>
+    <?= do_shortcode('[contact-form-7 id="225" title="Написать нам"   html_class="form contact-form-about"]'); ?>
+</div>
 
 <?php get_footer();

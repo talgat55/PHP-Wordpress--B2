@@ -639,3 +639,68 @@ body.home
 
 
 
+//
+// Modal
+//
+.custom-modal
+
+  display: none
+  position: fixed
+  top: 50%
+  left: 50%
+  z-index: 999
+  background: #fff
+  transform: translateX(-50%) translateY(-50%)
+  padding: 30px
+  i
+    position: absolute
+    top: 30px
+    padding: 10px
+    right: 27px
+    cursor: pointer
+    transition: all  .3s
+    &:hover
+      color: red
+
+  h3
+    font-size: 30px
+    color: #000
+    font-family: $font_blacked_bold
+    margin-top: 0
+
+  textarea,
+  input
+    font-family: $font_calibri_light
+    font-size: 20px
+    color: #000000
+    border: none
+    border-bottom: 1.5px solid #d4d4d4
+    padding: 7px 0
+    margin-bottom: 20px
+    width: 100%
+    background: transparent
+    @include placeholder
+      font-family: $font_calibri_light
+      font-size: 20px
+      color: #000000
+  .wpcf7-submit
+    font-family: $font_calibri_regular
+    font-size: 20px
+    color: #fff
+    display: table
+    margin: 0 0 0 auto
+    padding: 15px 70px
+    width: auto
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    letter-spacing: 2px
+    outline: none
+    -webkit-transition: all .3s
+    -o-transition: all .3s
+    transition: all .3s
+    background-color: $main_color
+    border: none
+    &:hover
+      background-color: #000
+  form
+    width: 500px

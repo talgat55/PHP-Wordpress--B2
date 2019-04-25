@@ -80,7 +80,7 @@ function th_scripts()
 
     }
 
-    if (  is_page_template('page-booking.php')) {
+    if (  is_page_template('page-booking.php')  ||  is_page_template('page-contacts.php') ) {
 
         wp_enqueue_script('jquery.inputmask', get_theme_file_uri('/assets/js/jquery.inputmask.js'), array(), '');
         wp_enqueue_script('datepicker.js', get_theme_file_uri('/assets/js/datepicker.min.js'), array(), '');

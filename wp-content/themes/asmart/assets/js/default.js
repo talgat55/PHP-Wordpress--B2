@@ -16,6 +16,7 @@ jQuery(document).ready(function () {
     ChangeUrlAboutPage();
     ClickSingleNews();
     footerBottom();
+    ModalContactPage();
 // end redy function
 });
 jQuery(window).load(function() {
@@ -447,3 +448,42 @@ function footerBottom(){
     }
 
 }
+
+
+//----------------------------------
+//  Modal Contact page
+//------------------------------------
+function ModalContactPage(){
+    "use strict";
+
+
+
+    let ContactClass    = '.page-template-page-contacts';
+    let LinkClass       = '.link.feedback';
+    let ModalClass       = '.custom-modal';
+    let LayerClass       = '.menu-overlay ';
+
+    if(jQuery(ContactClass).length  ){
+        // open
+        jQuery(LinkClass).click(function(e) {
+            e.preventDefault();
+
+            jQuery(ModalClass).fadeIn();
+            jQuery(LayerClass).addClass('active');
+
+        });
+
+        // close
+
+        jQuery(ModalClass + ' i ' ).click(function(e) {
+            e.preventDefault();
+
+            jQuery(ModalClass).fadeOut();
+            jQuery(LayerClass).removeClass('active');
+
+        });
+
+    }
+
+}
+

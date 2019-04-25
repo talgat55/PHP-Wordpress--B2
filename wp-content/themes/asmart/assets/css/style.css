@@ -807,6 +807,86 @@ body.home {
   display: inline-block;
   font-family: "Calibri Regualar"; }
 
+.custom-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  background: #fff;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  padding: 30px; }
+  .custom-modal i {
+    position: absolute;
+    top: 30px;
+    padding: 10px;
+    right: 27px;
+    cursor: pointer;
+    -webkit-transition: all  .3s;
+    -o-transition: all  .3s;
+    transition: all  .3s; }
+    .custom-modal i:hover {
+      color: red; }
+  .custom-modal h3 {
+    font-size: 30px;
+    color: #000;
+    font-family: "Blacker-Text-Bold";
+    margin-top: 0; }
+  .custom-modal textarea,
+  .custom-modal input {
+    font-family: "Calibri Light";
+    font-size: 20px;
+    color: #000000;
+    border: none;
+    border-bottom: 1.5px solid #d4d4d4;
+    padding: 7px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    background: transparent; }
+    .custom-modal textarea::-webkit-input-placeholder,
+    .custom-modal input::-webkit-input-placeholder {
+      font-family: "Calibri Light";
+      font-size: 20px;
+      color: #000000; }
+    .custom-modal textarea:-moz-placeholder,
+    .custom-modal input:-moz-placeholder {
+      font-family: "Calibri Light";
+      font-size: 20px;
+      color: #000000; }
+    .custom-modal textarea::-moz-placeholder,
+    .custom-modal input::-moz-placeholder {
+      font-family: "Calibri Light";
+      font-size: 20px;
+      color: #000000; }
+    .custom-modal textarea:-ms-input-placeholder,
+    .custom-modal input:-ms-input-placeholder {
+      font-family: "Calibri Light";
+      font-size: 20px;
+      color: #000000; }
+  .custom-modal .wpcf7-submit {
+    font-family: "Calibri Regualar";
+    font-size: 20px;
+    color: #fff;
+    display: table;
+    margin: 0 0 0 auto;
+    padding: 15px 70px;
+    width: auto;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    outline: none;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    background-color: #c4a669;
+    border: none; }
+    .custom-modal .wpcf7-submit:hover {
+      background-color: #000; }
+  .custom-modal form {
+    width: 500px; }
+
 header {
   position: absolute;
   left: 0;
@@ -1220,7 +1300,16 @@ header {
     position: relative; }
   header .top-bar {
     position: fixed;
-    top: 0; } }
+    top: 0; }
+  .custom-modal {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    top: 0;
+    left: 0;
+    overflow-y: auto; }
+  .custom-modal form {
+    width: 100%; } }
 
 @media (max-width: 390px) {
   .menu-bar .link-rezerv {
