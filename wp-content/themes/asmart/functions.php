@@ -6,9 +6,7 @@
 if (function_exists('register_nav_menus')) {
 
     $menu_arr = array(
-        'top_menu' => 'Топ Меню',
-        'footer_one_menu' => 'Футер  Меню 1',
-        'footer_two_menu' => 'Футер Меню 2'
+        'top_menu' => 'Топ Меню'
     );
 
 
@@ -94,8 +92,6 @@ function th_scripts()
         wp_enqueue_script('query-object', get_theme_file_uri('/assets/js/jquery.query-object.js'), array(), '');
 
     }
-
-
 
     if($slick){
         wp_enqueue_script('slick.min', get_theme_file_uri('/assets/js/slick.min.js'), array(), '');
@@ -247,81 +243,8 @@ if (function_exists('acf_add_options_page')) {
 }
 
 
-add_filter('gettext', 'translate_text');
-add_filter('ngettext', 'translate_text');
-
-function translate_text($translated) {
-    $translated = str_ireplace('Oops! That page can&rsquo;t be found.', 'К сожалению! Эта страница не может быть найдена.', $translated);
-    $translated = str_ireplace('It looks like nothing was found at this location', 'Похоже, что ничего не было найдено по данному запросу', $translated);
-
-    return $translated;
-
-}
 
 
-/**
- * AJAX
- */
-function be_ajax_load_media()
-{
-
-
-
-    $arg = array(
-        'posts_per_page' => '10',
-        'post_type' => 'media',
-        'status' => 'publish',
-        'paged' => ($_POST['count']) ? $_POST['count'] : 1
-    );
-    if(isset($_POST['term'])  AND   $_POST['term'] !='all'){
-        $arg['meta_key'] =  'type';
-        $arg['meta_value'] = $_POST['term'];
-        $arg['meta_compare'] = '==';
-    }
-
-
-    ob_start();
-    $loop = new WP_Query($arg);
-
-    if($_POST['term'] !='all'  ||  $_POST['term'] !='video' ){
-        echo '<div class="row"><ul class="media-row-gallery"> ';
-    }
-
-    if ($loop->have_posts()): while ($loop->have_posts()): $loop->the_post();
-        if($_POST['term'] =='all'){
-            $type = get_field('type');
-
-            if($type == 'video') {
-                get_template_part('inc/video-media-fitrows');
-
-            }else{
-                set_query_var( 'col','4');
-                get_template_part('inc/gallery-media-fitrows');
-
-            }
-        }elseif($_POST['term'] =='video'){
-            get_template_part('inc/video-media-fitrows');
-        }else{
-
-            get_template_part('inc/gallery-media-fitrows');
-
-        }
-
-
-
-    endwhile; endif;
-
-    if($_POST['term'] !='all'  ||  $_POST['term'] !='video' ){
-        echo '</ul></div>';
-    }
-
-    wp_reset_postdata();
-    $data = ob_get_clean();
-    wp_send_json_success($data);
-    wp_die();
-}
-add_action('wp_ajax_be_ajax_load_media', 'be_ajax_load_media');
-add_action('wp_ajax_nopriv_be_ajax_load_media', 'be_ajax_load_media');
 
 
 
@@ -366,6 +289,7 @@ function pagination_nav($wp_query) {
         </nav>
     <?php }
 }
+
 //
 //  Link Last News
 //
