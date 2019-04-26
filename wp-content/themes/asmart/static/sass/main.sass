@@ -108,6 +108,12 @@ body.home
         font-family: $font_blacked_bold
         margin-top: 0
         margin-bottom: 20px
+        a
+          color: $main_color
+          &:hover
+            color: $main_color
+
+
 
       .text
         font-size: 18px
@@ -436,7 +442,9 @@ body.home
       border: none
       &:hover
         background-color: #000
-
+    .div.wpcf7 .ajax-loader
+      position: absolute
+      bottom: 15px
   .page-title
     margin-bottom: 90px
   .wpcf7-response-output

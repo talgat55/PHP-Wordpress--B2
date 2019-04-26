@@ -241,6 +241,12 @@ body.home {
       font-family: "Blacker-Text-Bold";
       margin-top: 0;
       margin-bottom: 20px; }
+      .home-slider-walp .content-slider .second-block h3 a,
+      .home-slider-walp .content-slider .first-block h3 a {
+        color: #c4a669; }
+        .home-slider-walp .content-slider .second-block h3 a:hover,
+        .home-slider-walp .content-slider .first-block h3 a:hover {
+          color: #c4a669; }
     .home-slider-walp .content-slider .second-block .text,
     .home-slider-walp .content-slider .first-block .text {
       font-size: 18px;
@@ -598,6 +604,9 @@ body.home {
     border: none; }
     .page-template-page-booking .contact-form-booking .wpcf7-submit:hover {
       background-color: #000; }
+  .page-template-page-booking .contact-form-booking .div.wpcf7 .ajax-loader {
+    position: absolute;
+    bottom: 15px; }
   .page-template-page-booking .page-title {
     margin-bottom: 90px; }
   .page-template-page-booking .wpcf7-response-output {
@@ -1113,6 +1122,46 @@ header {
   font-size: 16px;
   font-family: "Calibri Regualar"; }
 
+.wpcf7-mail-sent-ok {
+  display: none !important; }
+
+.success-modal {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  z-index: 99999;
+  background: url(../images/success.jpg);
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  -webkit-background-size: cover !important;
+          background-size: cover !important;
+  padding: 130px 45px; }
+  .success-modal .content {
+    padding: 20px 50px;
+    font-size: 33px;
+    color: #fff;
+    font-family: "Blacker-Text-Bold";
+    text-align: center;
+    background-color: #c4a669; }
+    .success-modal .content span {
+      display: block;
+      width: 100%;
+      margin-bottom: 25px; }
+    .success-modal .content .close-modal {
+      font-size: 16px;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      margin-left: -34px;
+      color: #a3a3a1;
+      font-family: "Calibri Light"; }
+      .success-modal .content .close-modal:hover {
+        color: red; }
+
 .switcher-lang li:last-child {
   pointer-events: none; }
 
@@ -1295,7 +1344,8 @@ header {
   .page-template-page-contacts .first-wrap {
     height: auto;
     position: relative;
-    padding: 30px 15px; }
+    padding: 30px 15px;
+    text-align: center; }
   .page-template-page-contacts .site-footer .wrap {
     position: relative; }
   header .top-bar {
@@ -1309,7 +1359,13 @@ header {
     left: 0;
     overflow-y: auto; }
   .custom-modal form {
-    width: 100%; } }
+    width: 100%; }
+  .page-template-page-atmosfera .atm-controllers {
+    position: relative;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    padding: 30px 0; } }
 
 @media (max-width: 390px) {
   .menu-bar .link-rezerv {

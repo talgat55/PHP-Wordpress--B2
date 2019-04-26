@@ -44,7 +44,7 @@
                     <div class="text-right col-lg-4 col-md-4 col-sm-12 col-xs-12">
 
                                 <a target="_blank" class="bootom-copyright" title="Перейти на сайт разработчика"
-                                   href="http://asmart-group.ru/">Сайт разработан IT company <span>ASMART</span></a>
+                                   href="http://asmart-group.ru/">Сайт разработан IT-company <span>ASMART</span></a>
 
 
                     </div>
@@ -63,5 +63,16 @@
 
 
 <div class="menu-overlay"></div>
+<div class="success-modal">
+    <div class="content">
+        Спасибо за ваш выбор!
+       <span></span>
+        С вами свяжется наш<br>
+        менеджер для подтверждения<br>
+        бронирования!
+        <a href="#" class="close-modal">Закрыть</a>
+    </div>
+</div>
+
 </body>
 </html>

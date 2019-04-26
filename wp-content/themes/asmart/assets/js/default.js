@@ -17,6 +17,7 @@ jQuery(document).ready(function () {
     ClickSingleNews();
     footerBottom();
     ModalContactPage();
+    CloseModalSuccess();
 // end redy function
 });
 jQuery(window).load(function() {
@@ -428,12 +429,13 @@ function footerBottom(){
     let NewsClass = '.single-post';
     let AboutClass = '.page-template-page-about';
     let AtmosferaClass = '.page-template-page-atmosfera';
+    let ArchievClass = '.page-template-page-archive-news';
     let classContent = '.site-content';
     let footerHeight = jQuery('footer').height();
     let headerHeight = jQuery('header').height();
     let contentHeight = jQuery(classContent).height();
 
-    if(jQuery(NewsClass).length  ||   jQuery(AboutClass).length ||   jQuery(AtmosferaClass).length ){
+    if(jQuery(NewsClass).length  ||   jQuery(AboutClass).length   ||   jQuery(AtmosferaClass).length ||   jQuery(ArchievClass).length ){
             console.log( contentHeight+ headerHeight + footerHeight);
             console.log( jQuery(window).height());
 
@@ -486,4 +488,44 @@ function ModalContactPage(){
     }
 
 }
+
+//----------------------------------
+//  Modal Contact page
+//------------------------------------
+function CloseModalSuccess(){
+    "use strict";
+
+        let LayerClass       = '.menu-overlay ';
+
+        jQuery('.close-modal').click(function(e) {
+            e.preventDefault();
+
+            jQuery('.success-modal').fadeOut();
+            jQuery('.custom-modal').fadeOut();
+            jQuery(LayerClass).removeClass('active');
+
+        });
+
+}
+
+
+
+//----------------------------------
+// add modal success
+//------------------------------------
+document.addEventListener('wpcf7mailsent', function(event) {
+
+
+    jQuery('.success-modal').fadeIn();
+    jQuery('.menu-overlay').addClass('active');
+
+    setTimeout(function(){
+        jQuery('.success-modal').fadeOut();
+        jQuery('.custom-modal').fadeOut();
+        jQuery('.menu-overlay').removeClass('active');
+
+    },2000);
+
+
+}, false);
 

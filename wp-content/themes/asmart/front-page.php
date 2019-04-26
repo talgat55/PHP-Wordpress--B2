@@ -29,6 +29,9 @@ get_header(); ?>
                     $video_mp4  = get_field('slider_video_mp4');
                     $video_webm = get_field('slider_video_webm');
 
+                    $link_one       = get_field('link_one');
+                    $link_two       = get_field('link_two');
+
                     if(empty($video_mp4)){
 
                         $back = 'style="background: url('.wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "full")[0].') no-repeat!important;"';
@@ -60,7 +63,10 @@ get_header(); ?>
                                     <div class="row">
                                         <div class="first-block">
                                             <h3>
-                                                <?=$title_one; ?>
+                                                <a href="<?=$link_one; ?>" >
+                                                    <?=$title_one; ?>
+                                                </a>
+
                                             </h3>
                                             <div class="text">
                                                 <?=$text_one; ?>
@@ -68,7 +74,9 @@ get_header(); ?>
                                         </div>
                                          <div class="second-block">
                                              <h3>
-                                                 <?=$title_two; ?>
+                                                 <a href="<?=$link_two; ?>" >
+                                                     <?=$title_two; ?>
+                                                 </a>
                                              </h3>
                                              <div class="text">
                                                  <?=$text_two; ?>
