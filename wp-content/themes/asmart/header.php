@@ -24,42 +24,29 @@
 
 
 </head>
+
+
+<body <?php body_class(); ?>>
 <?php if (is_home()) {  ?>
 <div id="hola">
-<div id="preloader">
-    <div class="preloader-logo">
-        <img  src="<?php echo get_theme_file_uri('/assets/images/Logo.png') ?>" alt="логотип">
+    <div id="preloader">
+        <div class="preloader-logo">
+            <img  src="<?php echo get_theme_file_uri('/assets/images/Logo.png') ?>" alt="логотип">
+        </div>
+        <div class="preloader-bar">
+            <span></span>
+            <span></span>
+        </div>
+        <a href="#" class="close-preloader">
+            Закрыть прелоадер
+        </a>
     </div>
-    <div class="preloader-bar">
-        <span></span>
-        <span></span>
-    </div>
-    <a href="#" class="close-preloader">
-        Закрыть прелоадер
-    </a>
-</div>
 </div>
 <?php  } ?>
-<body <?php body_class(); ?>>
 <div id="page" class="site">
 
     <header id="masthead" class="site-header clearfix">
-<!--        <div class="top-header">-->
-<!--            <div class="container">-->
-<!--                <div class="row">-->
-<!--                <div class="row-header">-->
-<!--                    <div class="logo-block">-->
-<!--                        <a href="--><?php //echo home_url(); ?><!--" class="logo">-->
-<!--                            <img   class="logo-busines" src="--><?php //echo get_theme_file_uri('/assets/images/logo-busines.png') ?><!--" alt="Логотип мой бизнес "> -->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                    <div class="navigation-block">-->
 
-<!--                    </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
         <div class="top-bar">
             <div class="container">
                 <div class="row">

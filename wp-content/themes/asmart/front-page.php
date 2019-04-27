@@ -17,7 +17,7 @@ get_header(); ?>
                     'post_status' => 'publish'
                 );
                 $the_query = new WP_Query($args);
-
+                $detect = new Mobile_Detect();
                 while ($the_query->have_posts()) :
                     $the_query->the_post();
                     $post_id = $the_query->post->ID;
@@ -48,12 +48,17 @@ get_header(); ?>
                     if(!empty($video_mp4)) { ?>
                         <div class="overlay-img"></div>
                         <div class="overlay-color"></div>
-                        <div class="video-wrapper">
-                            <video autoplay loop controls="controls" poster="<?=wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "full")[0];?>"  preload="none" muted>
-                                <source src="<?=$video_mp4; ?>" type='video/mp4'>
-                                <source src="<?=$video_webm;?>" type='video/webm'>
-                            </video>
-                        </div>
+                        <?php if (!$detect->isMobile()) {   ?>
+                            <div class="video-wrapper">
+
+                                <video autoplay loop controls="controls" poster="<?=wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "full")[0];?>"  preload="none" muted>
+                                    <source src="<?=$video_mp4; ?>" type='video/mp4'>
+                                    <source src="<?=$video_webm;?>" type='video/webm'>
+                                </video>
+
+                            </div>
+                        <?php }  ?>
+
                     <?php } ?>
 
                         <div class="container  relative-slider">
@@ -61,7 +66,7 @@ get_header(); ?>
                                 <div class="content-slider">
 
                                     <div class="row">
-                                        <div class="first-block">
+                                        <div class="first-block " >
                                             <h3>
                                                 <a href="<?=$link_one; ?>" >
                                                     <?=$title_one; ?>
@@ -72,7 +77,7 @@ get_header(); ?>
                                                 <?=$text_one; ?>
                                             </div>
                                         </div>
-                                         <div class="second-block">
+                                         <div class="second-block  ">
                                              <h3>
                                                  <a href="<?=$link_two; ?>" >
                                                      <?=$title_two; ?>

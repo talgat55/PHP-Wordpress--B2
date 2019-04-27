@@ -47,6 +47,17 @@ function Preloader(){
                     easing: [0.7,0,0.3,1],
                     complete: function(){
                         jQuery('body').addClass('animate-done');
+                        setTimeout(function(){
+
+                            jQuery('.content-slider .first-block').addClass('fadeInUp animated');
+
+
+                        }, 300);
+                        setTimeout(function(){
+
+                            jQuery('.content-slider .second-block').addClass('fadeInUp animated');
+
+                        }, 600);
                     }
                 })
             }
@@ -137,7 +148,7 @@ function MenuToggle(){
 
         jQuery(this).next().stop().slideToggle();
     }).next().stop().hide();
-
+        // open menu
     jQuery('.menu-link, .menu-overlay').click(function(e) {
         e.preventDefault();
 

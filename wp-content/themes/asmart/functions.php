@@ -1,5 +1,9 @@
 <?php
 
+
+
+
+require_once "inc/Mobile_Detect.php";
 /*
 * Register nav menu
 */

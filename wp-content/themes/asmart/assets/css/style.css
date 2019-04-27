@@ -233,7 +233,9 @@ body.home {
   .home-slider-walp .content-slider .first-block {
     display: inline-block;
     width: 41%;
-    padding-right: 9%; }
+    padding-right: 9%;
+    position: relative;
+    opacity: 0; }
     .home-slider-walp .content-slider .second-block h3,
     .home-slider-walp .content-slider .first-block h3 {
       font-size: 21px;
@@ -897,7 +899,7 @@ body.home {
     width: 500px; }
 
 header {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -922,14 +924,15 @@ header {
       color: #000; }
   header .menu-link {
     position: absolute;
-    top: 36px;
+    top: 42px;
     left: 44px;
     padding: 20px;
     outline: none;
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s;
-    text-decoration: none; }
+    text-decoration: none;
+    z-index: 100; }
     header .menu-link i {
       font-size: 23px;
       color: #c4a669; }
@@ -1261,10 +1264,21 @@ header {
     padding-right: 30px; } }
 
 @media (max-width: 600px) {
+  .success-modal {
+    padding: 37px 15px; }
+    .success-modal .content {
+      font-size: 20px; }
+  header {
+    z-index: 192; }
+  body.home {
+    height: auto !important; }
   .logo {
     margin-top: 0; }
   .top-main-container::after {
     display: none; }
+  .menu-bar {
+    z-index: 190;
+    height: 120%; }
   .menu-bar .link-rezerv {
     bottom: 0;
     position: relative;
