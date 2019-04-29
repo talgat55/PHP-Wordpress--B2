@@ -50,7 +50,7 @@
         <div class="top-bar">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-xs-12">
+                    <div class="col-sm-6 col-xs-6">
                         <div class="row">
                             <ul class="switcher-lang">
                                 <li>
@@ -68,7 +68,7 @@
                             </ul>
                         </div>
                     </div>
-                     <div class="col-sm-6 col-xs-12">
+                     <div class="col-sm-6 col-xs-6">
                         <div class="row text-right">
                              <a href="<?=home_url(); ?>" class="mobile-logo" style="display: none;" title="Главная страница">
                                     <img  src="<?php echo get_theme_file_uri('/assets/images/logo-mobile.png') ?>" alt="логотип">

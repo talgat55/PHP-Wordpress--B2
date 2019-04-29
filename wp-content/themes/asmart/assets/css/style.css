@@ -1374,7 +1374,8 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #fff; }
+    background: #fff;
+    padding: 20px 30px 20px 75px; }
     header .top-bar .switcher-lang {
       color: #000; }
       header .top-bar .switcher-lang li a {
@@ -1382,8 +1383,8 @@ header {
     header .top-bar .mobile-logo {
       display: inline-block !important;
       position: absolute;
-      top: -36px;
-      left: 210px;
+      top: -6px;
+      right: 0;
       opacity: 1;
       -webkit-transition: all .5s;
       -o-transition: all .5s;
