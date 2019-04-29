@@ -18,6 +18,7 @@ jQuery(document).ready(function () {
     footerBottom();
     ModalContactPage();
     CloseModalSuccess();
+    LightxBox();
 // end redy function
 });
 jQuery(window).load(function() {
@@ -516,6 +517,24 @@ function CloseModalSuccess(){
             jQuery(LayerClass).removeClass('active');
 
         });
+
+}
+
+//----------------------------------
+//  Lightbox
+//------------------------------------
+function LightxBox(){
+    "use strict";
+    let GalleryClass = '.slider-atm';
+    if(jQuery(GalleryClass).length  ) {
+
+        jQuery(GalleryClass).lightGallery({
+            download: false,
+            selector: '.item a',
+            thumbnail: false,
+            zoom: true,
+        });
+    }
 
 }
 
