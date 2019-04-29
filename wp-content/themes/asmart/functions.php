@@ -45,6 +45,10 @@ function th_scripts()
 
 
     wp_enqueue_style('fontawesome-all', get_theme_file_uri('/assets/css/fontawesome-all.css'), array(), '');
+    if (  is_page_template('login-page.php')) {
+        wp_enqueue_style('login-page', get_theme_file_uri('/assets/css/login-page.css'), array(), '');
+    }
+
     wp_enqueue_style('normalize', get_theme_file_uri('/assets/css/normalize.css'), array(), '');
 
     if(is_home()){
@@ -336,3 +340,41 @@ function replace_placeholder_nav_menu_item_with_latest_post( $items, $menu, $arg
     // Return the modified (or maybe unmodified) menu items array
     return $items;
 }
+
+
+function redirect_login_page() {
+    $login_page  = home_url( '/login-page/' ); //Укажите URL страницы входа, которую создали в админке
+    $page_viewed = basename($_SERVER['REQUEST_URI']);
+    if( $page_viewed == "wp-login.php" && $_SERVER['REQUEST_METHOD'] == 'GET') {
+        wp_redirect($login_page);
+        exit;
+    }
+}
+add_action('init','redirect_login_page');
+
+function login_failed() {
+    $login_page  = home_url( '/login-page/' ); //Укажите URL страницы входа, которую создали в админке
+    wp_redirect( $login_page . '?login=failed' );
+    exit;
+}
+add_action( 'wp_login_failed', 'login_failed' );
+
+function verify_username_password( $user, $username, $password ) {
+    $login_page  = home_url( '/login-page/' ); //Укажите URL страницы входа, которую создали в админке
+    if( $username == "" || $password == "" ) {
+        wp_redirect( $login_page . "?login=empty" );
+        exit;
+    }
+}
+add_filter( 'authenticate', 'verify_username_password', 1, 3);
+function admin_default_page() {
+    return '/wp-admin';
+}
+
+add_filter('login_redirect', 'admin_default_page');
+function logout_page() {
+    $login_page  = home_url( '/login-page/' ); //Укажите URL страницы входа, которую создали в админке
+    wp_redirect( $login_page . "?login=false" );
+    exit;
+}
+add_action('wp_logout','logout_page');
