@@ -154,6 +154,7 @@ function MenuToggle(){
         e.preventDefault();
 
         jQuery('.menu-bar, .menu-overlay, .switcher-lang, .menu-link').toggleClass('active');
+        jQuery('header').toggleClass('active-menu');
 
     });
 

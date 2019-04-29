@@ -70,9 +70,9 @@
                     </div>
                      <div class="col-sm-6 col-xs-12">
                         <div class="row text-right">
-<!--                             <a href="#" class="audio-btn">-->
-<!--                                    <img  src="--><?php //echo get_theme_file_uri('/assets/images/sound.png') ?><!--" alt="иконка">-->
-<!--                             </a>-->
+                             <a href="<?=home_url(); ?>" class="mobile-logo" style="display: none;" title="Главная страница">
+                                    <img  src="<?php echo get_theme_file_uri('/assets/images/logo-mobile.png') ?>" alt="логотип">
+                             </a>
                         </div>
                     </div>
 
