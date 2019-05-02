@@ -392,12 +392,16 @@ body.home {
   overflow: hidden;
   position: relative; }
 
-.page-template-page-atmosfera .slider-atm .item {
-  display: inline-block;
-  float: left; }
-  .page-template-page-atmosfera .slider-atm .item img {
-    height: 550px;
-    margin: 0 auto; }
+.page-template-page-atmosfera .slider-atm {
+  margin: 0 auto;
+  width: 61%;
+  z-index: 2;
+  cursor: pointer; }
+  .page-template-page-atmosfera .slider-atm .item {
+    display: inline-block;
+    float: left; }
+    .page-template-page-atmosfera .slider-atm .item img {
+      width: 100%; }
 
 .page-template-page-atmosfera .site-footer .wrap {
   position: relative; }
@@ -1267,7 +1271,9 @@ header {
   .page-template-page-about .cont-mains,
   .page-template-page-booking .cont-mains {
     padding-left: 30px;
-    padding-right: 30px; } }
+    padding-right: 30px; }
+  .slider-atm {
+    width: 100% !important; } }
 
 @media (max-width: 600px) {
   .menu-bar .link-rezerv {
