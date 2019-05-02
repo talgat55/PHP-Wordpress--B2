@@ -30,7 +30,7 @@ get_header(); ?>
                                             </div>
 
                                             <p>
-                                                пр. Карла Маркса, 16/1 - 3 этаж
+                                                <?php  _e('пр. Карла Маркса, 16/1 - 3 этаж', 'light'); ?>
                                             </p>
                                         </a>
                                     </li>
@@ -63,7 +63,7 @@ get_header(); ?>
 
 
                                 <a href="#" class="link feedback">
-                                    Написать нам
+                                    <?php  _e('Написать нам', 'light'); ?>
                                 </a>
 
                             </div>
@@ -79,10 +79,10 @@ get_header(); ?>
     </div>
 <div class="custom-modal">
     <h3>
-        Написать нам
+        <?php  _e('Написать нам', 'light'); ?>
     </h3>
     <i class="fas fa-times"></i>
-    <?= do_shortcode('[contact-form-7 id="225" title="Написать нам"   html_class="form contact-form-about"]'); ?>
+    <?= ChangeContactFrom('contact'); ?>
 </div>
 
 <?php get_footer();

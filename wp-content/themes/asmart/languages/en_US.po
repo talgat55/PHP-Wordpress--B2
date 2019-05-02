@@ -1,0 +1,191 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Light\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-02 16:06+0000\n"
+"PO-Revision-Date: 2019-05-02 16:07+0000\n"
+"Last-Translator: admin <lightx_design@yahoo.com>\n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-4.9.9"
+
+#. Name of the template
+msgid "Страница контактов"
+msgstr ""
+
+#: page-contacts.php:33
+msgid "пр. Карла Маркса, 16/1 - 3 этаж"
+msgstr "Karl Marx Avenue, 16/1 - 3rd floor"
+
+#: page-contacts.php:66 page-contacts.php:82
+msgid "Написать нам"
+msgstr "Write to us"
+
+#. Name of the template
+msgid "Login Page"
+msgstr ""
+
+#: header.php:41
+msgid "Закрыть прелоадер"
+msgstr "Close preloader"
+
+#: header.php:101
+msgid "Зарезервировать"
+msgstr "Booking"
+
+#. Name of the template
+msgid "Страница о ресторане"
+msgstr ""
+
+#: page-about.php:53
+msgid "О ресторане"
+msgstr "About"
+
+#: page-about.php:58
+msgid "шеф повар"
+msgstr "Chief"
+
+#. Name of the template
+msgid "Страница бронирования"
+msgstr ""
+
+#. Name of the template
+msgid "Страница меню"
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Результаты поиска: %s"
+msgstr ""
+
+#: single.php:41 page-archive-news.php:39
+msgid "Актуальные"
+msgstr "Topical"
+
+#: single.php:46 page-archive-news.php:45
+msgid "Архив"
+msgstr "Archieve"
+
+#. Name of the template
+msgid "Страница новостей"
+msgstr ""
+
+#: page-news.php:39
+msgid "ссылка на новость"
+msgstr ""
+
+#: page-news.php:68
+msgid "Предыдущая страница"
+msgstr ""
+
+#: page-news.php:69
+msgid "Следующая страница"
+msgstr ""
+
+#: page-news.php:72
+msgid " "
+msgstr ""
+
+#: footer.php:17
+msgid "Политика конфиденциальности"
+msgstr "Privacy policy"
+
+#: footer.php:47
+msgid "Сайт разработан IT-company"
+msgstr "Site developed by IT-company"
+
+#: footer.php:68
+msgid "Спасибо за ваш выбор!"
+msgstr "Thank you for your choice!"
+
+#: footer.php:71
+msgid ""
+"С вами свяжется наш<br>\n"
+"        менеджер для подтверждения<br>\n"
+"        бронирования!"
+msgstr ""
+"You will be contacted by our <br>\n"
+"         manager for confirmation <br>\n"
+"         reservation!"
+
+#: footer.php:74
+msgid "Закрыть"
+msgstr "Close"
+
+#. Name of the template
+msgid "Страница атмосфера"
+msgstr ""
+
+#: 404.php:25
+msgid ""
+" Добро пожаловать на страницу 404! Вы находитесь здесь, потому что ввели "
+"адрес страницы, которая уже не существует или была перемещена по другому "
+"адресу"
+msgstr ""
+"Welcome to 404! You are here because you have entered the address of a page "
+"that no longer exists or has been moved to a different address."
+
+#. Name of the template
+msgid "Страница  архиа новостей"
+msgstr ""
+
+#: page-archive-news.php:90
+msgid "Записей не найдено"
+msgstr "No Records Found"
+
+#. Name of the template
+msgid "Домашняя страница"
+msgstr "Home page"
+
+#: front-page.php:8
+msgid "Главная страница"
+msgstr "Main page"
+
+#: front-page.php:127
+msgid "Атмосфера заведения"
+msgstr "Restaurant atmosphere"
+
+#: front-page.php:135
+msgid "Меню"
+msgstr "Menu"
+
+#: front-page.php:139 front-page.php:154
+msgid "посмотреть"
+msgstr "view"
+
+#: front-page.php:149
+msgid ""
+"Барная\n"
+"                            карта"
+msgstr "Bar  card"
+
+#: inc/gallery-media-fitrows.php:13 inc/video-media-masonry.php:26
+#: inc/video-media-fitrows.php:14
+msgid "ссылка на медиа"
+msgstr ""
+
+#: inc/gallery-media-fitrows.php:20
+msgid "открыть альбом"
+msgstr ""
+
+#. Name of the theme
+msgid "Light"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"With a focus on business sites, it features multiple sections on the front "
+"page as well as widgets, navigation and social menus, a logo, and more. "
+"Personalize its asymmetrical grid with a custom color scheme and showcase "
+"your multimedia content with post formats. Our default theme for 2017 works "
+"great in many languages, for any abilities, and on any device."
+msgstr ""
+
+#. Author of the theme
+msgid "Asmart"
+msgstr ""

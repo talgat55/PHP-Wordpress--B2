@@ -1,0 +1,73 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Light\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-02 10:29+0000\n"
+"PO-Revision-Date: 2019-05-02 10:30+0000\n"
+"Last-Translator: admin <lightx_design@yahoo.com>\n"
+"Language-Team: Русский\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.2; wp-4.9.9"
+
+#. Name of the template
+msgid "Домашняя страница"
+msgstr "Home page"
+
+#: front-page.php:8
+msgid "Главная страница"
+msgstr ""
+
+#. Name of the template
+msgid "Страница меню"
+msgstr ""
+
+#. Name of the template
+msgid "Страница контактов"
+msgstr ""
+
+#. Name of the template
+msgid "Страница атмосфера"
+msgstr ""
+
+#. Name of the template
+msgid "Страница бронирования"
+msgstr ""
+
+#. Name of the template
+msgid "Страница  архиа новостей"
+msgstr ""
+
+#. Name of the template
+msgid "Login Page"
+msgstr ""
+
+#: footer.php:17
+msgid "Политика конфиденциальности"
+msgstr ""
+
+#. Name of the template
+msgid "Страница о ресторане"
+msgstr ""
+
+#. Name of the theme
+msgid "Light"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"With a focus on business sites, it features multiple sections on the front "
+"page as well as widgets, navigation and social menus, a logo, and more. "
+"Personalize its asymmetrical grid with a custom color scheme and showcase "
+"your multimedia content with post formats. Our default theme for 2017 works "
+"great in many languages, for any abilities, and on any device."
+msgstr ""
+
+#. Author of the theme
+msgid "Asmart"
+msgstr ""

@@ -38,12 +38,12 @@ get_header(); ?>
                                     <ul class="navigation-tabs">
                                         <li>
                                             <a href="#" class="item-tab  new  active">
-                                                Актуальные
+                                                <?php  _e('Актуальные', 'light'); ?>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/arhiv-novostej" class="item-tab  archive ">
-                                                Архив
+                                            <a href="<?=ChangeUrlForPages('news');?>" class="item-tab  archive ">
+                                                <?php  _e('Архив', 'light'); ?>
                                             </a>
                                         </li>
 

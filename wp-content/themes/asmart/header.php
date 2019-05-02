@@ -38,12 +38,12 @@
             <span></span>
         </div>
         <a href="#" class="close-preloader">
-            Закрыть прелоадер
+            <?php  _e('Закрыть прелоадер', 'light'); ?>
         </a>
     </div>
 </div>
 <?php  } ?>
-<div id="page" class="site">
+<div id="page" class="site  <?=get_locale(); ?>">
 
     <header id="masthead" class="site-header clearfix">
 
@@ -53,14 +53,24 @@
                     <div class="col-sm-6 col-xs-6">
                         <div class="row">
                             <ul class="switcher-lang">
+                                <?php
+                                if (get_locale() == 'en_US') {
+                                    $classEng = 'class="active"';
+                                    $classRu = '';
+                                } else {
+                                    $classRu = 'class="active"';
+                                    $classEng = '';
+                                }
+
+                                ?>
                                 <li>
-                                    <a href="#" class="active" >
+                                    <a href="#"  <?=$classRu;?>  data-type="ru" >
                                         рус
                                     </a>
                                 </li>
                                 /
                                  <li>
-                                    <a href="#" >
+                                    <a href="#"  <?=$classEng;?> data-type="en" >
                                         eng
                                     </a>
                                 </li>
@@ -70,7 +80,8 @@
                     </div>
                      <div class="col-sm-6 col-xs-6">
                         <div class="row text-right">
-                             <a href="<?=home_url(); ?>" class="mobile-logo" style="display: none;" title="Главная страница">
+
+                             <a href="<?=home_url(ChangeUrl()); ?>" class="mobile-logo" style="display: none;" title="Главная страница">
                                     <img  src="<?php echo get_theme_file_uri('/assets/images/logo-mobile.png') ?>" alt="логотип">
                              </a>
                         </div>
@@ -90,14 +101,14 @@
 
     </header><!-- #masthead -->
     <div class="menu-bar">
-        <a href="<?= home_url(); ?>" class="logo">
+        <a href="<?= home_url(ChangeUrl()); ?>" class="logo">
             <img  src="<?php echo get_theme_file_uri('/assets/images/Logo.png') ?>" alt="логотип">
         </a>
         <nav>
             <?php wp_nav_menu('menu_id=menu-main&menu_class=top-main-container clearfix&theme_location=top_menu'); ?>
         </nav>
-        <a href="/booking/" class="link-rezerv">
-            Зарезервировать
+        <a href="<?=ChangeUrlForPages('booking');?>" class="link-rezerv">
+            <?php  _e('Зарезервировать', 'light'); ?>
         </a>
     </div>
 

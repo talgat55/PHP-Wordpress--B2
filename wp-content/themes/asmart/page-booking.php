@@ -27,7 +27,7 @@ get_header(); ?>
                                 <h1 class="page-title">
                                     <?php echo get_the_title(); ?>
                                 </h1>
-                                <?= do_shortcode('[contact-form-7 id="76" title="бронирование"  html_class="form contact-form-booking"]'); ?>
+                                <?= ChangeContactFrom('booking'); ?>
                             </div>
                         </div>
 

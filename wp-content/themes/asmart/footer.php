@@ -12,7 +12,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                         <p>
-                            <a href="/privacy-policy" class="policy-footer-link" >
+                            <a href="<?=ChangeUrlForPages('privacy-policy');?>" class="policy-footer-link" >
 
                                 <?php _e('Политика конфиденциальности', 'light'); ?>
                             </a>
@@ -44,7 +44,7 @@
                     <div class="text-right col-lg-4 col-md-4 col-sm-12 col-xs-12">
 
                                 <a target="_blank" class="bootom-copyright" title="Перейти на сайт разработчика"
-                                   href="http://asmart-group.ru/">Сайт разработан IT-company <span>ASMART</span></a>
+                                   href="http://asmart-group.ru/"><?php  _e('Сайт разработан IT-company', 'light'); ?> <span>ASMART</span></a>
 
 
                     </div>
@@ -65,12 +65,13 @@
 <div class="menu-overlay"></div>
 <div class="success-modal">
     <div class="content">
-        Спасибо за ваш выбор!
+        <?php  _e('Спасибо за ваш выбор!', 'light'); ?>
        <span></span>
-        С вами свяжется наш<br>
+
+        <?php  _e('С вами свяжется наш<br>
         менеджер для подтверждения<br>
-        бронирования!
-        <a href="#" class="close-modal">Закрыть</a>
+        бронирования!', 'light'); ?>
+        <a href="#" class="close-modal"><?php  _e('Закрыть', 'light'); ?></a>
     </div>
 </div>
 

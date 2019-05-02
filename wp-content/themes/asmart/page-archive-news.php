@@ -36,12 +36,13 @@ get_header(); ?>
                                     <ul class="navigation-tabs">
                                         <li>
                                             <a href="<?=get_latest_post_link(); ?>" class="item-tab  new  ">
-                                                Актуальные
+                                                <?php  _e('Актуальные', 'light'); ?>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="/arhiv-novostej/" class="item-tab  archive  active">
-                                                Архив
+                                            <a href="<?=ChangeUrlForPages('news');?>" class="item-tab  archive  active">
+
+                                                <?php  _e('Архив', 'light'); ?>
                                             </a>
                                         </li>
 
@@ -86,7 +87,7 @@ get_header(); ?>
                                                 endwhile;
                                             else:
 
-                                                echo "<p class='not-found-articles'>Записей не найдено</p>";
+                                                echo "<p class='not-found-articles'>".__('Записей не найдено', 'light')."</p>";
 
                                             endif;
                                             ?>

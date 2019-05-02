@@ -19,6 +19,7 @@ jQuery(document).ready(function () {
     ModalContactPage();
     CloseModalSuccess();
     LightxBox();
+    ChangeLangByClick();
 // end redy function
 });
 jQuery(window).load(function() {
@@ -140,7 +141,7 @@ function HomeSlider(){
 function MenuToggle(){
     "use strict";
 
-    jQuery('#menu-item-15 a  ').click(function(e) {
+    jQuery('#menu-item-15 a  , #menu-item-271 a').click(function(e) {
             e.preventDefault();
             if(jQuery(this).parent().parent().is('.sub-menu')){
                 window.open(jQuery(this).attr('href'), '_blank');
@@ -536,6 +537,30 @@ function LightxBox(){
             zoom: true,
         });
     }
+
+}
+//----------------------------------
+//  Change lang by click
+//------------------------------------
+function ChangeLangByClick(){
+    "use strict";
+    var LinkClass = '.switcher-lang a';
+    jQuery(LinkClass).click(function(e) {
+        e.preventDefault();
+        jQuery(LinkClass).removeClass('active');
+        jQuery(this).addClass('active');
+
+        if(jQuery(this).attr('data-type') == 'en'){
+            var redylink = window.location.protocol + "//" + window.location.host + '/en' + window.location.pathname;
+
+        }else{
+            var redylink = window.location.protocol + "//" + window.location.host;
+
+        }
+
+
+       window.location.href = redylink;
+    });
 
 }
 

@@ -5,7 +5,7 @@
 
 
 get_header(); ?>
-    <h1 class="hide-title">Главная страница</h1>
+    <h1 class="hide-title"><?php  _e('Главная страница', 'light'); ?></h1>
     <div id="pagepiling" class="content-area">
         <div class="section" id="section1">
             <div class="home-slider-walp">
@@ -22,15 +22,16 @@ get_header(); ?>
                     $the_query->the_post();
                     $post_id = $the_query->post->ID;
 
-                    $title_one  = get_field('title_one');
-                    $text_one   = get_field('text_one');
-                    $title_two  = get_field('title_two');
-                    $text_two   = get_field('text_two');
+                    $title_one  = returnTextLang('title-one');
+
+                    $text_one   = returnTextLang('text-one');
+                    $title_two  = returnTextLang('title-two');
+                    $text_two   = returnTextLang('text-two');
                     $video_mp4  = get_field('slider_video_mp4');
                     $video_webm = get_field('slider_video_webm');
 
-                    $link_one       = get_field('link_one');
-                    $link_two       = get_field('link_two');
+                    $link_one       = returnTextLang('link-one');
+                    $link_two       = returnTextLang('link-two');
 
                     if(empty($video_mp4)){
 
@@ -123,8 +124,8 @@ get_header(); ?>
             </div>
         </div>
         <div class="section" id="section2">
-             <a href="/atmosfera" class="one-type-link"  >
-                 Атмосфера заведения
+             <a href="<?=ChangeUrlForPages('atmosfera');?>" class="one-type-link"  >
+                 <?php  _e('Атмосфера заведения', 'light'); ?>
              </a>
         </div>
         <div class="section" id="section3">
@@ -132,10 +133,11 @@ get_header(); ?>
                 <div class="third-blocks">
                     <div>
                         <h2 class="center-flex">
-                            Меню
+                            <?php  _e('Меню', 'light'); ?>
                         </h2>
                         <a href="http://batler.lightxdesign.ru/wp-content/uploads/2019/04/Menyu_mr_Batler.pdf" class="two-type-link">
-                            посмотреть
+
+                            <?php  _e('посмотреть', 'light'); ?>
                         </a>
                     </div>
                 </div>
@@ -144,11 +146,13 @@ get_header(); ?>
                 <div class="third-blocks">
                     <div>
                         <h2 class="center-flex">
-                            Барная
-                            карта
+
+                            <?php  _e('Барная
+                            карта', 'light'); ?>
                         </h2>
                         <a href="#" class="two-type-link">
-                            посмотреть
+
+                            <?php  _e('посмотреть', 'light'); ?>
                         </a>
                     </div>
                 </div>

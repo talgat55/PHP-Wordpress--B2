@@ -1100,6 +1100,12 @@ header {
 .page-template-page-contacts .site-footer .wrap {
   position: absolute; }
 
+.en_US .pp-tableCell .bg-block:last-child .third-blocks > div {
+  width: 135px; }
+
+.en_US .third-blocks > div {
+  width: 164px; }
+
 .close-preloader {
   display: table;
   text-align: center;
@@ -1167,9 +1173,6 @@ header {
       font-family: "Calibri Light"; }
       .success-modal .content .close-modal:hover {
         color: red; }
-
-.switcher-lang li:last-child {
-  pointer-events: none; }
 
 @media (max-width: 1590px) {
   header .menu-link {

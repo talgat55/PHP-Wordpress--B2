@@ -49,13 +49,13 @@ get_header(); ?>
                                 <div class="about-content">
                                    <ul class="navigation-tabs">
                                         <li>
-                                           <a href="#"   data-url="about"   class="item-tab about <?=$tab['0']; ?>">
-                                               О ресторане
+                                           <a href="#"   data-url="about"   class="item-tab about <?=$tab['0']; ?>"> 
+                                               <?php  _e('О ресторане', 'light'); ?>
                                            </a>
                                         </li>
                                         <li>
                                            <a href="#"  data-url="chief" class="item-tab shef <?=$tab['1']; ?>">
-                                               шеф повар
+                                               <?php  _e('шеф повар', 'light'); ?>
                                            </a>
                                         </li>
 
