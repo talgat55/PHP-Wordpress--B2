@@ -513,3 +513,28 @@ function returnTextLang($type)
 
     return $value;
 }
+
+/**
+ * Add new user
+ * @param $contact_form
+ */
+//function wpcf7_cstm_function($contact_form)
+//{
+//    $submission = WPCF7_Submission::get_instance();
+//    $form_id = $contact_form->posted_data['_wpcf7'];
+//    if ($form_id =='76' || $form_id =='283') {
+//        $posted_data = $submission->get_posted_data();
+//        if($posted_data['accept-subscribe']){
+//            $name = isset($posted_data['text-name']) ? $posted_data['text-name'] : '';
+//            $email = isset($posted_data['email-490']) ? $posted_data['email-490'] : '';
+//
+//            $random_password = wp_generate_password( 12 );
+//            wp_create_user( $name, $random_password, $email );
+//
+//        }
+//
+//    }
+//
+//}
+//add_action("wpcf7_before_send_mail", "wpcf7_cstm_function");
+
