@@ -202,7 +202,7 @@ body.home {
       height: 100%;
       z-index: 9; }
     .home-slider .item .overlay-color {
-      background: rgba(0, 0, 0, 0.4); }
+      background: rgba(0, 0, 0, 0.1); }
     .home-slider .item .overlay-img {
       background: url(../images/gridtile.png); }
 
@@ -241,7 +241,7 @@ body.home {
     opacity: 0; }
     .home-slider-walp .content-slider .second-block h3,
     .home-slider-walp .content-slider .first-block h3 {
-      font-size: 1em;
+      font-size: 1.3em;
       color: #c4a669;
       font-family: "Blacker-Text-Bold";
       margin-top: 0;
@@ -378,7 +378,7 @@ body.home {
     background: url("../images/right-bg.png") no-repeat !important;
     background-position: center center !important; }
 
-.page-template-page-atmosfera .site-content-contain {
+.page-template-page-atmosfera .atmosfera-block {
   margin-top: 140px; }
 
 .page-template-page-atmosfera .controll.center {
@@ -1213,7 +1213,7 @@ header {
     top: 1px; }
   .page-template-default .content-custom,
   .content-area .content-custom,
-  .page-template-page-atmosfera .site-content-contain {
+  .page-template-page-atmosfera .atmosfera-block {
     margin-top: 75px; }
   .page-template-page-about .cont-mains,
   .page-template-page-booking .cont-mains {

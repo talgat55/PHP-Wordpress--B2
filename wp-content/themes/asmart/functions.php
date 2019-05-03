@@ -538,3 +538,8 @@ function returnTextLang($type)
 //}
 //add_action("wpcf7_before_send_mail", "wpcf7_cstm_function");
 
+add_filter('upload_mimes', 'custom_upload_mimes');
+function custom_upload_mimes ( $existing_mimes=array() ) {
+    $existing_mimes['svg'] = 'image/svg+xml';
+    return $existing_mimes;
+}

@@ -54,12 +54,12 @@ function Preloader(){
                             jQuery('.content-slider .first-block').addClass('fadeInUp animated');
 
 
-                        }, 300);
+                        }, 15000);
                         setTimeout(function(){
 
                             jQuery('.content-slider .second-block').addClass('fadeInUp animated');
 
-                        }, 600);
+                        }, 15600);
                     }
                 })
             }
