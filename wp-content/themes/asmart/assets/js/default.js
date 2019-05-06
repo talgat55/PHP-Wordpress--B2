@@ -36,51 +36,61 @@ jQuery(window).resize(function() {
 function Preloader(){
     "use strict";
     let main_class = '#preloader';
-    if(jQuery(main_class).length){
-        jQuery('#preloader').velocity({
-            opacity : 0.1,
-        }, {
-            duration: 400,
-            complete: function(){
-                jQuery('#hola').velocity({
-                    translateY : "-100%"
-                }, {
-                    duration: 1000,
-                    easing: [0.7,0,0.3,1],
-                    complete: function(){
-                        jQuery('body').addClass('animate-done');
-                        setTimeout(function(){
+    if(jQuery(main_class).length  ){
 
-                            jQuery('.content-slider .first-block').addClass('fadeInUp animated');
-
-
-                        }, 15000);
-                        setTimeout(function(){
-
-                            jQuery('.content-slider .second-block').addClass('fadeInUp animated');
-
-                        }, 15600);
-                    }
-                })
-            }
-        });
-        jQuery('.close-preloader').click(function(e) {
-            e.preventDefault();
-            jQuery('#hola').velocity({
-                translateY : "-100%"
+        if(!jQuery('#hola').hasClass('addtransition')) {
+            jQuery('#preloader').velocity({
+                opacity: 0.1,
             }, {
-                duration: 1000,
-                easing: [0.7,0,0.3,1],
-                complete: function(){
-                    jQuery('body').addClass('animate-done');
+                duration: 400,
+                complete: function () {
+                    jQuery('#hola').velocity({
+                        translateY: "-100%"
+                    }, {
+                        duration: 1000,
+                        easing: [0.7, 0, 0.3, 1],
+                        complete: function () {
+                            jQuery('body').addClass('animate-done');
+                            showNewsBlokcs();
+
+                        }
+                    })
                 }
-            })
-        });
+            });
+        }else{
+            showNewsBlokcs();
+        }
+
+        // jQuery('.close-preloader').click(function(e) {
+        //     e.preventDefault();
+        //     jQuery('#hola').velocity({
+        //         translateY : "-100%"
+        //     }, {
+        //         duration: 1000,
+        //         easing: [0.7,0,0.3,1],
+        //         complete: function(){
+        //             jQuery('body').addClass('animate-done');
+        //         }
+        //     })
+        // });
 
     }
 
 }
+function showNewsBlokcs(){
+    "use strict";
+    setTimeout(function () {
 
+        jQuery('.content-slider .first-block').addClass('fadeInUp animated');
+
+
+    }, 7000);
+    setTimeout(function () {
+
+        jQuery('.content-slider .second-block').addClass('fadeInUp animated');
+
+    }, 7600);
+}
 
 //------------------------
 // Home full page slider
@@ -585,3 +595,25 @@ document.addEventListener('wpcf7mailsent', function(event) {
 
 }, false);
 
+//
+// Close preload by click
+//
+document.addEventListener('click', function (event) {
+
+    // If the clicked element doesn't have the right selector, bail
+    if (!event.target.matches('.close-preloader')) return;
+
+    // Don't follow the link
+    event.preventDefault();
+
+    var hola = document.getElementById("hola");
+    var preloader = document.getElementById("preloader");
+
+    preloader.style.opacity = "0.2";
+    hola.classList.add("addtransition");
+    setTimeout(function(){
+        hola.classList.add("hide-preloader");
+    }, 200);
+
+
+}, false);

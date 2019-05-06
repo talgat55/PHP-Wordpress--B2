@@ -186,7 +186,6 @@ body.home {
     margin: 0 auto; }
 
 .home-slider {
-  max-width: 1920px !important;
   height: 100vh;
   width: 100%; }
   .home-slider .item {
@@ -212,7 +211,8 @@ body.home {
   position: absolute;
   z-index: 89;
   bottom: 100px;
-  right: 0; }
+  right: 0;
+  display: none; }
   .home-slider-walp .arr-slider li {
     list-style: none;
     display: inline-block; }
@@ -241,7 +241,7 @@ body.home {
     opacity: 0; }
     .home-slider-walp .content-slider .second-block h3,
     .home-slider-walp .content-slider .first-block h3 {
-      font-size: 1.3em;
+      font-size: 2em;
       color: #c4a669;
       font-family: "Blacker-Text-Bold";
       margin-top: 0;
@@ -1028,7 +1028,8 @@ header {
       padding: 5px 0;
       -webkit-transition: all .3s;
       -o-transition: all .3s;
-      transition: all .3s; }
+      transition: all .3s;
+      position: relative; }
     .top-main-container li a:hover {
       color: #c4a669; }
     .top-main-container li .sub-menu {
@@ -1039,7 +1040,10 @@ header {
           content: " ";
           display: block;
           position: absolute;
-          top: 17px;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+              -ms-transform: translateY(-50%);
+                  transform: translateY(-50%);
           left: -18px;
           width: 6px;
           height: 6px;
@@ -1178,6 +1182,15 @@ header {
       .success-modal .content .close-modal:hover {
         color: red; }
 
+.addtransition {
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s; }
+
+.hide-preloader {
+  opacity: 0;
+  visibility: hidden; }
+
 @media (max-width: 1590px) {
   header .menu-link {
     top: 40px; }
@@ -1185,8 +1198,6 @@ header {
     padding-top: 25px; }
   .home-slider-walp .arr-slider {
     right: 0; }
-  .home-slider {
-    max-width: 1368px !important; }
   .logo {
     margin-top: 30px;
     display: block; }
