@@ -11,13 +11,14 @@ get_header(); ?>
             <div class="home-slider-walp">
             <div class="home-slider swiper-container">
                 <?php
-                $args = array(
-                    'posts_per_page' => '-1',
-                    'post_type' => 'sliders',
-                    'post_status' => 'publish'
-                );
+                $args = [
+                    'posts_per_page'    => '-1',
+                    'post_type'         => 'sliders',
+                    'post_status'       => 'publish'
+                ];
+
                 $the_query = new WP_Query($args);
-                $detect = new Mobile_Detect();
+
                 while ($the_query->have_posts()) :
                     $the_query->the_post();
                     $post_id = $the_query->post->ID;
@@ -49,7 +50,6 @@ get_header(); ?>
                     if(!empty($video_mp4)) { ?>
                         <div class="overlay-img"></div>
                         <div class="overlay-color"></div>
-                        <?php if (!$detect->isMobile()) {   ?>
                             <div class="video-wrapper">
 
                                 <video autoplay loop controls="controls" poster="<?=wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "full")[0];?>"  preload="none" muted>
@@ -58,7 +58,6 @@ get_header(); ?>
                                 </video>
 
                             </div>
-                        <?php }  ?>
 
                     <?php } ?>
 

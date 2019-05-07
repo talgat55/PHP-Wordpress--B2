@@ -3,7 +3,6 @@
 load_theme_textdomain('light', get_template_directory() . '/languages');
 
 
-require_once "inc/Mobile_Detect.php";
 /*
 * Register nav menu
 */
