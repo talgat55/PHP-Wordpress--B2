@@ -599,17 +599,35 @@ function ChangeLangByClick(){
 // add modal success
 //------------------------------------
 document.addEventListener('wpcf7mailsent', function(event) {
+    let successModal    = jQuery('.success-modal');
+    let customModal     = jQuery('.custom-modal');
+    let menuOverlay     = jQuery('.menu-overlay');
+    let reserveText     = jQuery('.reserve-text');
+    let mainText        = jQuery('.main-text');
+    if (event.detail.contactFormId == "76" || event.detail.contactFormId == "283") {
 
+        reserveText.addClass('show-text');
 
-    jQuery('.success-modal').fadeIn();
-    jQuery('.menu-overlay').addClass('active');
+    }else{
+        mainText.addClass('show-text');
+        customModal.fadeOut();
+    }
+    successModal.fadeIn();
+    menuOverlay.addClass('active');
 
     setTimeout(function(){
-        jQuery('.success-modal').fadeOut();
-        jQuery('.custom-modal').fadeOut();
-        jQuery('.menu-overlay').removeClass('active');
 
+        successModal.fadeOut();
+
+        menuOverlay.removeClass('active');
     },2000);
+    // remove class  for text
+    setTimeout(function(){
+
+
+        reserveText.removeClass('show-text');
+        mainText.removeClass('show-text');
+    },2500);
 
 
 }, false);
@@ -617,6 +635,7 @@ document.addEventListener('wpcf7mailsent', function(event) {
 //
 // Close preload by click
 //
+
 document.addEventListener('click', function (event) {
 
     // If the clicked element doesn't have the right selector, bail

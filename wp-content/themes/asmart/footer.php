@@ -65,12 +65,19 @@
 <div class="menu-overlay"></div>
 <div class="success-modal">
     <div class="content">
-        <?php  _e('Спасибо за ваш выбор!', 'light'); ?>
-       <span></span>
 
-        <?php  _e('С вами свяжется наш<br>
-        менеджер для подтверждения<br>
-        бронирования!', 'light'); ?>
+        <div class="reserve-text">
+            <?php  _e('Вы забронировали столик в ресторане mr.Batler! <br>
+                    В ближайшее время наш менеджер свяжется с вами, чтобы подтвердить вашу бронь.  <br>
+                    До встречи в mr.Batler!', 'light');
+            ?>
+        </div>
+        <div class="main-text">
+
+            <?php  _e('Спасибо, что написали нам! <br>
+                            В ближайшее время наш менеджер свяжется с вами!', 'light');
+            ?>
+        </div>
         <a href="#" class="close-modal"><?php  _e('Закрыть', 'light'); ?></a>
     </div>
 </div>

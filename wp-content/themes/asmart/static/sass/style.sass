@@ -198,13 +198,8 @@ $main_color: #c4a669
   left: 50%
   transform: translateX(-50%) translateY(-50%)
   z-index: 99999
-  background: url(../images/success.jpg)
-  background-repeat: no-repeat!important
-  background-position:  center center!important
-  background-size: cover!important
-  padding: 130px 45px
   .content
-    padding: 20px 50px
+    padding: 20px 50px 30px
     font-size: 33px
     color: #fff
     font-family: $font_blacked_bold
@@ -217,13 +212,18 @@ $main_color: #c4a669
     .close-modal
       font-size: 16px
       position: absolute
-      bottom: 10px
+      bottom: 3px
       left: 50%
       margin-left: -34px
-      color: #a3a3a1
+      color: #fff
       font-family: $font_calibri_light
       &:hover
         color: red
+  .reserve-text,
+  .main-text
+    display: none
+    &.show-text
+      display: block!important
 
 
 .addtransition
