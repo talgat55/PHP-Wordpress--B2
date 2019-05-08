@@ -134,7 +134,13 @@ get_header(); ?>
                         <h2 class="center-flex">
                             <?php  _e('Меню', 'light'); ?>
                         </h2>
-                        <a href="http://batler.lightxdesign.ru/wp-content/uploads/2019/04/Menyu_mr_Batler.pdf" class="two-type-link">
+                        <?php
+                        $link_menu          = get_field('link_menu_home', 'option');
+                        $link_bar_menu      = get_field('link_menu_bar_home', 'option');
+                        $redyLinkMenu       = $link_menu ? $link_menu : '';
+                        $redyLinkMenuBar    = $link_bar_menu ? $link_bar_menu : '';
+                        ?>
+                        <a href="<?=$redyLinkMenu; ?>" target="_blank" class="two-type-link">
 
                             <?php  _e('посмотреть', 'light'); ?>
                         </a>
@@ -149,7 +155,7 @@ get_header(); ?>
                             <?php  _e('Барная
                             карта', 'light'); ?>
                         </h2>
-                        <a href="#" class="two-type-link">
+                        <a href="<?=$redyLinkMenuBar; ?>"  target="_blank" class="two-type-link">
 
                             <?php  _e('посмотреть', 'light'); ?>
                         </a>

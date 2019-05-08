@@ -337,6 +337,17 @@ $main_color: #c4a669
   .slider-atm
     width: 100%!important
 @media(max-width: 600px)
+  .home-slider
+    height: auto
+    overflow: hidden
+  .home-slider-walp .video-wrapper
+    left: 50%
+    transform: translateX(-50%)
+    opacity: 0
+    transition: all .3s
+  .show-video-block
+    opacity: 1!important
+
   .menu-bar .link-rezerv
     left: 0!important
   .success-modal

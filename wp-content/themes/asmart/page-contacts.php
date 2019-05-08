@@ -46,13 +46,13 @@ get_header(); ?>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="mailto:barbatler@yandex.ru">
+                                        <a href="mailto:info@batler-bar.ru">
                                             <div class="img">
                                             <img src="<?php echo get_theme_file_uri('/assets/images/email.png') ?>"
                                                  alt="иконка">
                                             </div>
                                             <p>
-                                                barbatler@yandex.ru
+                                                info@batler-bar.ru
                                             </p>
                                         </a>
                                     </li>

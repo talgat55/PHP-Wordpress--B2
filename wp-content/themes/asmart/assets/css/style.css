@@ -1287,6 +1287,14 @@ header {
     width: 100% !important; } }
 
 @media (max-width: 600px) {
+  .home-slider {
+    height: auto;
+    overflow: hidden; }
+  .home-slider-walp .video-wrapper {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
   .menu-bar .link-rezerv {
     left: 0 !important; }
   .success-modal {

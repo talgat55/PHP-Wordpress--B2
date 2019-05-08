@@ -25,11 +25,30 @@ jQuery(document).ready(function () {
 jQuery(window).load(function() {
     HomeSlider();
     Preloader();
+    showVideoBlock();
+
+
+
 });
 jQuery(window).resize(function() {
     HomeFullpageSlider();
 
 });
+//------------------------
+// Show video  block in home page afeter load
+//----------------------------------
+function showVideoBlock(){
+
+    let main_class = '.video-wrapper';
+    if(jQuery(main_class).length  ){
+        jQuery(main_class).addClass('show-video-block');
+    }
+
+}
+
+
+
+
 //------------------------
 // Preloader
 //----------------------------------
@@ -218,7 +237,7 @@ function Ymaps(){
            // Create the Google Map using our element and options defined above
            var map = new google.maps.Map(mapElement, mapOptions);
            var image = {
-               url: 'http://batler.lightxdesign.ru/wp-content/themes/asmart/assets/images/marker2.png',
+               url: 'http://batler-bar.ru/wp-content/themes/asmart/assets/images/marker2.png',
                size: new google.maps.Size(79, 108),
                // The origin for this image is (0, 0).
                origin: new google.maps.Point(0, 0),
@@ -554,24 +573,24 @@ function LightxBox(){
 //------------------------------------
 function ChangeLangByClick(){
     "use strict";
-    var LinkClass = '.switcher-lang a';
-    jQuery(LinkClass).click(function(e) {
-        e.preventDefault();
-        jQuery(LinkClass).removeClass('active');
-        jQuery(this).addClass('active');
+    var linkClass = '.switcher-lang a';
 
+    jQuery('body').on('click', linkClass,function(){
+        jQuery(linkClass).removeClass('active');
+        jQuery(this).addClass('active');
+        console.log(jQuery(this).attr('data-type'));
         if(jQuery(this).attr('data-type') == 'en'){
-            var redylink = window.location.protocol + "//" + window.location.host + '/en' + window.location.pathname;
+            var redylink = window.location.protocol + "//" + window.location.host + '/en';
+            //var redylink = window.location.protocol + "//" + window.location.host + '/en' + window.location.pathname;
 
         }else{
             var redylink = window.location.protocol + "//" + window.location.host;
 
         }
 
-
-       window.location.href = redylink;
+        window.location.href = redylink;
+        return false;
     });
-
 }
 
 
