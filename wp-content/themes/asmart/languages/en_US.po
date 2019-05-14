@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Light\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-02 16:06+0000\n"
-"PO-Revision-Date: 2019-05-02 16:07+0000\n"
+"POT-Creation-Date: 2019-05-08 17:25+0000\n"
+"PO-Revision-Date: 2019-05-14 15:34+0000\n"
 "Last-Translator: admin <lightx_design@yahoo.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -12,7 +12,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.2.2; wp-4.9.9"
+"X-Loco-Version: 2.2.2; wp-4.9.10"
+
+#: search.php:19
+#, php-format
+msgid "Результаты поиска: %s"
+msgstr ""
 
 #. Name of the template
 msgid "Страница контактов"
@@ -24,19 +29,58 @@ msgstr "Karl Marx Avenue, 16/1 - 3rd floor"
 
 #: page-contacts.php:66 page-contacts.php:82
 msgid "Написать нам"
-msgstr "Write to us"
+msgstr "Contact us"
 
 #. Name of the template
-msgid "Login Page"
+msgid "Домашняя страница"
+msgstr "Home page"
+
+#: front-page.php:8
+msgid "Главная страница"
+msgstr "Main page"
+
+#: front-page.php:127
+msgid "Атмосфера заведения"
+msgstr "atmosphere"
+
+#: front-page.php:135
+msgid "Меню"
+msgstr "Menu"
+
+#: front-page.php:145 front-page.php:160
+msgid "посмотреть"
+msgstr "view"
+
+#: front-page.php:155
+msgid ""
+"Барная\n"
+"                            карта"
+msgstr "Bar  card"
+
+#. Name of the template
+msgid "Страница меню"
 msgstr ""
 
-#: header.php:41
+#: header.php:42
 msgid "Закрыть прелоадер"
 msgstr "Close preloader"
 
-#: header.php:101
+#: header.php:109
 msgid "Зарезервировать"
-msgstr "Booking"
+msgstr "Reserve"
+
+#: 404.php:25
+msgid ""
+" Добро пожаловать на страницу 404! Вы находитесь здесь, потому что ввели "
+"адрес страницы, которая уже не существует или была перемещена по другому "
+"адресу"
+msgstr ""
+"Welcome to 404! You are here because you have entered the address of a page "
+"that no longer exists or has been moved to a different address."
+
+#. Name of the template
+msgid "Страница бронирования"
+msgstr ""
 
 #. Name of the template
 msgid "Страница о ресторане"
@@ -48,28 +92,11 @@ msgstr "About"
 
 #: page-about.php:58
 msgid "шеф повар"
-msgstr "Chief"
+msgstr "Chef"
 
 #. Name of the template
-msgid "Страница бронирования"
+msgid "Страница атмосфера"
 msgstr ""
-
-#. Name of the template
-msgid "Страница меню"
-msgstr ""
-
-#: search.php:19
-#, php-format
-msgid "Результаты поиска: %s"
-msgstr ""
-
-#: single.php:41 page-archive-news.php:39
-msgid "Актуальные"
-msgstr "Topical"
-
-#: single.php:46 page-archive-news.php:45
-msgid "Архив"
-msgstr "Archieve"
 
 #. Name of the template
 msgid "Страница новостей"
@@ -99,70 +126,49 @@ msgstr "Privacy policy"
 msgid "Сайт разработан IT-company"
 msgstr "Site developed by IT-company"
 
-#: footer.php:68
-msgid "Спасибо за ваш выбор!"
-msgstr "Thank you for your choice!"
-
-#: footer.php:71
+#: footer.php:70
 msgid ""
-"С вами свяжется наш<br>\n"
-"        менеджер для подтверждения<br>\n"
-"        бронирования!"
+"Вы забронировали столик в ресторане mr.Batler! <br>\n"
+"                    В ближайшее время наш менеджер свяжется с вами, чтобы "
+"подтвердить вашу бронь.  <br>\n"
+"                    До встречи в mr.Batler!"
 msgstr ""
-"You will be contacted by our <br>\n"
-"         manager for confirmation <br>\n"
-"         reservation!"
+"You booked a table in the restaurant mr.Batler! <br>\n"
+"In the near future, our manager will contact you to confirm your reservation."
+" <br>\n"
+" See you in mr.Batler!"
 
-#: footer.php:74
+#: footer.php:77
+msgid ""
+"Спасибо, что написали нам! <br>\n"
+"                            В ближайшее время наш менеджер свяжется с вами!"
+msgstr ""
+"Thanks for writing to us! <br>\n"
+"In the near future, our manager will contact you!"
+
+#: footer.php:81
 msgid "Закрыть"
 msgstr "Close"
 
 #. Name of the template
-msgid "Страница атмосфера"
+msgid "Login Page"
 msgstr ""
-
-#: 404.php:25
-msgid ""
-" Добро пожаловать на страницу 404! Вы находитесь здесь, потому что ввели "
-"адрес страницы, которая уже не существует или была перемещена по другому "
-"адресу"
-msgstr ""
-"Welcome to 404! You are here because you have entered the address of a page "
-"that no longer exists or has been moved to a different address."
 
 #. Name of the template
 msgid "Страница  архиа новостей"
 msgstr ""
 
+#: page-archive-news.php:39 single.php:41
+msgid "Актуальные"
+msgstr "News"
+
+#: page-archive-news.php:45 single.php:46
+msgid "Архив"
+msgstr "Archive"
+
 #: page-archive-news.php:90
 msgid "Записей не найдено"
 msgstr "No Records Found"
-
-#. Name of the template
-msgid "Домашняя страница"
-msgstr "Home page"
-
-#: front-page.php:8
-msgid "Главная страница"
-msgstr "Main page"
-
-#: front-page.php:127
-msgid "Атмосфера заведения"
-msgstr "Restaurant atmosphere"
-
-#: front-page.php:135
-msgid "Меню"
-msgstr "Menu"
-
-#: front-page.php:139 front-page.php:154
-msgid "посмотреть"
-msgstr "view"
-
-#: front-page.php:149
-msgid ""
-"Барная\n"
-"                            карта"
-msgstr "Bar  card"
 
 #: inc/gallery-media-fitrows.php:13 inc/video-media-masonry.php:26
 #: inc/video-media-fitrows.php:14

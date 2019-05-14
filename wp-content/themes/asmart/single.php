@@ -122,7 +122,10 @@ get_header(); ?>
                                                 <?php echo get_the_title($single_id); ?>
 
                                             </h1>
+                                            <div class="mobile-block-img" style="display: none;">
 
+                                                <img src="<?=$redy_url; ?>"  alt="Изображение" />
+                                            </div>
                                             <div class="text">
                                                 <?php   the_content(); ?>
 

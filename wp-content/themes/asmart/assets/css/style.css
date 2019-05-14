@@ -149,7 +149,7 @@ body.home {
   background: url(../images/slide.jpg) no-repeat !important; }
 
 #section2 {
-  background: url(../images/slide2_2.jpg) no-repeat !important; }
+  background: url(../images/bg-2.jpg) no-repeat !important; }
 
 #section3 .bg-block:first-child {
   background: url(../images/slide3.jpg) no-repeat !important; }
@@ -680,6 +680,20 @@ body.home {
   display: inline-block;
   padding-bottom: 15px;
   margin-bottom: 30px; }
+
+.page-template-page-about .mobile-block-img {
+  display: none; }
+  .page-template-page-about .mobile-block-img img {
+    width: 100%;
+    margin-bottom: 20px; }
+
+.page-template-page-archive-news .mobile-block-img,
+.single-post .mobile-block-img {
+  display: none; }
+  .page-template-page-archive-news .mobile-block-img img,
+  .single-post .mobile-block-img img {
+    width: 100%;
+    margin-bottom: 20px; }
 
 .page-template-page-archive-news .image-block-bg,
 .single-post .image-block-bg {
@@ -1284,7 +1298,23 @@ header {
     padding-left: 30px;
     padding-right: 30px; }
   .slider-atm {
-    width: 100% !important; } }
+    width: 100% !important; }
+  .atm-controllers {
+    z-index: 2; }
+    .atm-controllers .col-xs-12 {
+      display: inline-block;
+      width: auto; }
+    .atm-controllers .text-right {
+      position: absolute;
+      right: 0; }
+    .atm-controllers .text-left {
+      position: absolute;
+      left: 0; } }
+
+@media (max-width: 768px) {
+  .single-post .mobile-block-img,
+  .page-template-page-about .mobile-block-img {
+    display: block !important; } }
 
 @media (max-width: 600px) {
   .home-slider {
@@ -1353,15 +1383,6 @@ header {
     padding: 0 15px; }
   .page-template-page-atmosfera .atmosfera-block {
     margin: 0 15px; }
-  .atm-controllers .col-xs-12 {
-    display: inline-block;
-    width: auto; }
-  .atm-controllers .text-right {
-    position: absolute;
-    right: 0; }
-  .atm-controllers .text-left {
-    position: absolute;
-    left: 0; }
   .page-template-page-atmosfera .slider-atm .item img {
     height: auto;
     width: 100%; }
@@ -1443,7 +1464,9 @@ header {
   .active-menu .top-bar {
     background: transparent !important; }
   .active-menu .mobile-logo img {
-    opacity: 0; } }
+    opacity: 0; }
+  .page-template-page-atmosfera .site-content {
+    padding-top: 67px; } }
 
 @media (max-width: 390px) {
   .menu-bar .link-rezerv {

@@ -72,9 +72,16 @@ get_header(); ?>
 
                                             ?>
                                             <li class="about <?=$tab['0']; ?>"   data-url="<?=$img_about; ?>">
+                                                <div class="mobile-block-img" style="display: none;">
+
+                                                    <img src="<?=$img_about; ?>"  alt="Изображение" />
+                                                </div>
                                                     <?= $field_about; ?>
                                             </li>
                                             <li class="chief <?=$tab['1']; ?>"  data-url="<?=$image_chief; ?>">
+                                                <div class="mobile-block-img" style="display: none;">
+                                                    <img src="<?=$image_chief; ?>"  alt="Изображение" />
+                                                </div>
                                                     <?= $field_chief; ?>
                                             </li>
 

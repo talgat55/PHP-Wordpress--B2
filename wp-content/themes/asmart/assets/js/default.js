@@ -223,7 +223,7 @@ function Ymaps(){
                zoom: 17,
 
                // The latitude and longitude to center the map (always required)
-               center: new google.maps.LatLng(54.968454, 73.382231), // New York
+               center: new google.maps.LatLng(54.968446, 73.382010), // New York
 
                // How you would like to style the map.
                // This is where you would paste any style found on Snazzy Maps.
@@ -246,7 +246,7 @@ function Ymaps(){
            };
            // Let's also add a marker while we're at it
            var marker = new google.maps.Marker({
-               position: new google.maps.LatLng(54.968454, 73.382231),
+               position: new google.maps.LatLng(54.968446, 73.382010),
                map: map,
                icon: image,
                title: 'Батлер'
@@ -620,14 +620,14 @@ document.addEventListener('wpcf7mailsent', function(event) {
         successModal.fadeOut();
 
         menuOverlay.removeClass('active');
-    },2000);
+    },4000);
     // remove class  for text
     setTimeout(function(){
 
 
         reserveText.removeClass('show-text');
         mainText.removeClass('show-text');
-    },2500);
+    },4500);
 
 
 }, false);

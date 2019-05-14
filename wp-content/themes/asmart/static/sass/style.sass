@@ -336,6 +336,28 @@ $main_color: #c4a669
     padding-right: 30px
   .slider-atm
     width: 100%!important
+
+  .atm-controllers
+    z-index: 2
+    .col-xs-12
+      display: inline-block
+      width: auto
+    .text-right
+      position: absolute
+      right: 0
+    .text-left
+      position: absolute
+      left: 0
+
+@media(max-width: 768px)
+  .single-post .mobile-block-img,
+  .page-template-page-about .mobile-block-img
+    display: block!important
+  .page-template-page-booking-php
+    .en_US
+      h1.page-title
+        height: 0
+        overflow: hidden
 @media(max-width: 600px)
   .home-slider
     height: auto
@@ -402,16 +424,7 @@ $main_color: #c4a669
     padding: 0 15px
   .page-template-page-atmosfera .atmosfera-block
     margin: 0 15px
-  .atm-controllers
-    .col-xs-12
-      display: inline-block
-      width: auto
-    .text-right
-      position: absolute
-      right: 0
-    .text-left
-      position: absolute
-      left: 0
+
   .page-template-page-atmosfera .slider-atm .item img
     height: auto
     width: 100%
@@ -492,7 +505,9 @@ $main_color: #c4a669
     .mobile-logo
       img
         opacity: 0
-
+  .page-template-page-atmosfera
+    .site-content
+      padding-top: 67px
 
 
 @media(max-width: 390px)
