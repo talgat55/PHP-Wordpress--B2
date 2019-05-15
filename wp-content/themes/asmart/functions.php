@@ -4,6 +4,11 @@ load_theme_textdomain('light', get_template_directory() . '/languages');
 
 
 /*
+* Add mobile detect
+*/
+require_once "inc/Mobile_Detect.php";
+
+/*
 * Register nav menu
 */
 if (function_exists('register_nav_menus')) {
@@ -39,7 +44,7 @@ function th_scripts()
     }
 
     // Theme stylesheet.
-    wp_enqueue_style('bootstrapcdn', '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', array(), '');
+    wp_enqueue_style('bootstrapcdn', get_theme_file_uri('/assets/css/bootstrap.min.css'), array(), '');
     wp_enqueue_style('th-style', get_stylesheet_uri(), array(), '6');
 
 
@@ -48,7 +53,7 @@ function th_scripts()
         wp_enqueue_style('login-page', get_theme_file_uri('/assets/css/login-page.css'), array(), '');
     }
 
-    wp_enqueue_style('normalize', get_theme_file_uri('/assets/css/normalize.css'), array(), '');
+    wp_enqueue_style('normalize', get_theme_file_uri('/assets/css/normalize.min.css'), array(), '');
 
     if (is_home()) {
         wp_enqueue_style('jquery.pagepiling', get_theme_file_uri('/assets/css/jquery.pagepiling.css'), array(), '');

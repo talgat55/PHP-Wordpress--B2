@@ -18,7 +18,7 @@ get_header(); ?>
                 ];
 
                 $the_query = new WP_Query($args);
-
+                $detect = new Mobile_Detect();
                 while ($the_query->have_posts()) :
                     $the_query->the_post();
                     $post_id = $the_query->post->ID;
@@ -50,6 +50,8 @@ get_header(); ?>
                     if(!empty($video_mp4)) { ?>
                         <div class="overlay-img"></div>
                         <div class="overlay-color"></div>
+                        <?php if (!$detect->isMobile()) { ?>
+
                             <div class="video-wrapper">
 
                                 <video autoplay loop controls="controls" poster="<?=wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "full")[0];?>"  preload="none" muted>
@@ -59,6 +61,11 @@ get_header(); ?>
 
                             </div>
 
+                        <?php }else{  ?>
+
+                            <div class="mobile-img-background" style="background: url(<?=wp_get_attachment_image_src(get_post_thumbnail_id($post_id), "full")[0];?>); "></div>
+
+                        <?php } ?>
                     <?php } ?>
 
                         <div class="container  relative-slider">
@@ -109,7 +116,7 @@ get_header(); ?>
                                     <img   src="<?php echo get_theme_file_uri('/assets/images/arr.png') ?>" alt=" стрелка">
                                 </a>
                             </li>
-                                                        <li>
+                            <li>
                                 <a href="#"  class="next" >
                                     <img   src="<?php echo get_theme_file_uri('/assets/images/arr.png') ?>" alt=" стрелка">
                                 </a>
@@ -122,6 +129,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
+
         <div class="section" id="section2">
              <a href="<?=ChangeUrlForPages('atmosfera');?>" class="one-type-link"  >
                  <?php  _e('Атмосфера заведения', 'light'); ?>
