@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Light\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-05-08 17:25+0000\n"
-"PO-Revision-Date: 2019-05-14 15:34+0000\n"
+"PO-Revision-Date: 2019-05-16 05:05+0000\n"
 "Last-Translator: admin <lightx_design@yahoo.com>\n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -45,7 +45,7 @@ msgstr "atmosphere"
 
 #: front-page.php:135
 msgid "Меню"
-msgstr "Menu"
+msgstr "Kitchen menu"
 
 #: front-page.php:145 front-page.php:160
 msgid "посмотреть"
@@ -55,7 +55,7 @@ msgstr "view"
 msgid ""
 "Барная\n"
 "                            карта"
-msgstr "Bar  card"
+msgstr "Bar menu"
 
 #. Name of the template
 msgid "Страница меню"
