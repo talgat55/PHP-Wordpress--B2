@@ -29,6 +29,7 @@ if (function_exists('register_nav_menus')) {
 **/
 add_theme_support('post-thumbnails');
 add_image_size('product-item', 244, 300, true);
+add_image_size('event-image', 370, 310, true);
 
 /**
  * Enqueue scripts and styles.

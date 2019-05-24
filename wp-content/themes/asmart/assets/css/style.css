@@ -927,6 +927,72 @@ body.home {
   .custom-modal form {
     width: 500px; }
 
+#section4 {
+  background: url(../images/noise.jpg); }
+  #section4 .list-last-events {
+    margin: 0;
+    padding: 0; }
+    #section4 .list-last-events .item {
+      list-style: none;
+      display: inline-block; }
+      #section4 .list-last-events .item .img-block {
+        height: 250px;
+        overflow: hidden; }
+        #section4 .list-last-events .item .img-block img {
+          width: 100%; }
+      #section4 .list-last-events .item:first-child {
+        padding-left: 0 !important; }
+      #section4 .list-last-events .item:last-child {
+        padding-right: 0 !important; }
+      #section4 .list-last-events .item .date {
+        padding: 35px 0 20px;
+        font-size: 21px;
+        color: #fff;
+        font-family: "Calibri Regualar"; }
+        #section4 .list-last-events .item .date img {
+          vertical-align: text-top; }
+        #section4 .list-last-events .item .date p {
+          margin-bottom: 0;
+          padding-left: 20px;
+          display: inline-block; }
+      #section4 .list-last-events .item .title a,
+      #section4 .list-last-events .item .title {
+        margin: 0;
+        font-size: 30px;
+        color: #fff;
+        font-family: "Blacker-Text-Bold";
+        min-height: 99px;
+        text-decoration: none; }
+        #section4 .list-last-events .item .title a:hover,
+        #section4 .list-last-events .item .title:hover {
+          text-decoration: underline; }
+      #section4 .list-last-events .item .link-more {
+        display: inline-block;
+        color: #c7a96c;
+        font-family: "Calibri Regualar";
+        background: #fff;
+        padding: 10px 40px;
+        -webkit-border-radius: 20px;
+                border-radius: 20px;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s; }
+        #section4 .list-last-events .item .link-more:hover {
+          background-color: #c4a669;
+          color: #fff; }
+      #section4 .list-last-events .item .content {
+        font-size: 21px;
+        color: #fff;
+        font-family: "Calibri Light";
+        padding: 30px 0; }
+  #section4 .title-section {
+    font-size: 60px;
+    color: #fff;
+    font-family: "Blacker-Text-Bold";
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 0 !important; }
+
 header {
   position: fixed;
   left: 0;
@@ -1286,7 +1352,23 @@ header {
     padding: 150px 0; }
   #section3 .third-blocks h2 {
     font-size: 40px;
-    margin: 0 0 25px; } }
+    margin: 0 0 25px; }
+  #section4 {
+    height: auto !important;
+    padding: 40px 0 !important; }
+    #section4 .title-section {
+      margin-top: 30px;
+      margin-bottom: 30px; }
+    #section4 .list-last-events .item {
+      margin-bottom: 30px; }
+      #section4 .list-last-events .item .date {
+        padding: 20px 0 15px; }
+      #section4 .list-last-events .item:first-child {
+        padding-left: 15px !important; }
+    #section4 .list-last-events .item:last-child {
+      padding-right: 15px !important; }
+  body.home {
+    height: auto !important; } }
 
 @media (max-width: 800px) {
   .home-slider-walp .content-slider {
@@ -1325,7 +1407,17 @@ header {
     display: block !important; }
   .page-template-page-booking-php .en_US h1.page-title {
     height: 0;
-    overflow: hidden; } }
+    overflow: hidden; }
+  #section4 .list-last-events .item .img-block {
+    height: auto !important; }
+  #section4 .list-last-events .item .title {
+    min-height: auto !important; }
+    #section4 .list-last-events .item .title a {
+      font-size: 24px; }
+  #section4 .list-last-events .item .content {
+    font-size: 15px; }
+  #section4 .title-section {
+    font-size: 40px; } }
 
 @media (max-width: 600px) {
   .home-slider {

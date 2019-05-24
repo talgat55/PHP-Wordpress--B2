@@ -119,16 +119,15 @@ function HomeFullpageSlider(){
     let main_class = '#pagepiling';
     if(jQuery(main_class).length){
     if(jQuery(window).width() > 1024){
-
         jQuery(main_class).pagepiling({
-            sectionsColor: ['#bfda00', '#2ebe21', '#2C3E50', '#51bec4'],
+            sectionsColor: ['#333333', '#2ebe21', '#2C3E50', '#51bec4'],
             navigation: {
                 'position': 'right',
                 'tooltips': ['Слайд 1', 'Слайд 2', 'Слайд 3' ]
             },
             onLeave: function(index, nextIndex){
 
-                if(nextIndex == 3  ){
+                if(nextIndex == 3  || nextIndex == 4 ){
                   jQuery('body').removeClass('white').addClass('black');
                 }else{
                     jQuery('body').removeClass('black').addClass('white');

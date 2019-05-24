@@ -316,6 +316,23 @@ $main_color: #c4a669
     .third-blocks h2
       font-size: 40px
       margin: 0 0 25px
+  #section4
+    height: auto!important
+    padding: 40px 0!important
+    .title-section
+      margin-top: 30px
+      margin-bottom: 30px
+    .list-last-events
+      .item
+        margin-bottom: 30px
+        .date
+          padding: 20px 0 15px
+        &:first-child
+          padding-left: 15px!important
+    .list-last-events .item:last-child
+      padding-right: 15px!important
+  body.home
+    height: auto!important
 
 @media(max-width: 800px)
   .home-slider-walp .content-slider
@@ -358,6 +375,23 @@ $main_color: #c4a669
       h1.page-title
         height: 0
         overflow: hidden
+
+
+
+
+  #section4
+    .list-last-events
+      .item
+        .img-block
+          height: auto!important
+        .title
+          min-height: auto!important
+          a
+            font-size: 24px
+        .content
+          font-size: 15px
+    .title-section
+      font-size: 40px
 @media(max-width: 600px)
   .home-slider
     height: auto
