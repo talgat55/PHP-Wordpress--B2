@@ -5,33 +5,32 @@
 jQuery(document).ready(function () {
     "use strict";
 
-    AtmSlider();
-    FixwidthSlider();
-    HomeFullpageSlider();
-    MenuToggle();
-    Ymaps();
-    SliderMenu();
-    MaskFields();
-    ClickAboutPage();
-    ChangeUrlAboutPage();
-    ClickSingleNews();
+    atmSlider();
+    fixwidthSlider();
+    homeFullpageSlider();
+    menuToggle();
+    ymaps();
+    sliderMenu();
+    maskFields();
+    clickAboutPage();
+    changeUrlAboutPage();
+    clickSingleNews();
     footerBottom();
-    ModalContactPage();
-    CloseModalSuccess();
-    LightxBox();
-    ChangeLangByClick();
+    modalContactPage();
+    closeModalSuccess();
+    lightxBox();
+    changeLangByClick();
 // end redy function
 });
 jQuery(window).load(function() {
-    HomeSlider();
-    Preloader();
+
+    homeSlider();
+    preloader();
     showVideoBlock();
-
-
 
 });
 jQuery(window).resize(function() {
-    HomeFullpageSlider();
+    homeFullpageSlider();
 
 });
 //------------------------
@@ -52,7 +51,7 @@ function showVideoBlock(){
 //------------------------
 // Preloader
 //----------------------------------
-function Preloader(){
+function preloader(){
     "use strict";
     let main_class = '#preloader';
     if(jQuery(main_class).length  ){
@@ -114,11 +113,12 @@ function showNewsBlokcs(){
 //------------------------
 // Home full page slider
 //----------------------------------
-function HomeFullpageSlider(){
+function homeFullpageSlider(){
     "use strict";
     let main_class = '#pagepiling';
     if(jQuery(main_class).length){
     if(jQuery(window).width() > 1024){
+        // jQuery(main_class).detach();
         jQuery(main_class).pagepiling({
             sectionsColor: ['#333333', '#2ebe21', '#2C3E50', '#51bec4'],
             navigation: {
@@ -143,7 +143,7 @@ function HomeFullpageSlider(){
 //------------------------
 // Home    slider
 //----------------------------------
-function HomeSlider(){
+function homeSlider(){
     "use strict";
     let main_class = '.home-slider';
     if(jQuery(main_class).length){
@@ -166,7 +166,7 @@ function HomeSlider(){
 //------------------------
 //  Menu toggle  and click menu
 //----------------------------------
-function MenuToggle(){
+function menuToggle(){
     "use strict";
 
     jQuery('#menu-item-15 a  , #menu-item-271 a').click(function(e) {
@@ -192,7 +192,7 @@ function MenuToggle(){
 //------------------------
 //  Fix wdith slider
 //----------------------------------
-function FixwidthSlider(){
+function fixwidthSlider(){
     "use strict";
     let $width = jQuery(window).width();
    if( $width < 1369){
@@ -206,7 +206,7 @@ function FixwidthSlider(){
 //------------------------
 //  Maps
 //----------------------------------
-function Ymaps(){
+function ymaps(){
     "use strict";
     let $map = jQuery('#map');
 
@@ -259,7 +259,7 @@ function Ymaps(){
 //------------------------
 // Atmosfer    slider
 //----------------------------------
-function AtmSlider(){
+function atmSlider(){
     "use strict";
 
     let main_class = '.slider-atm';
@@ -287,7 +287,7 @@ function AtmSlider(){
 //------------------------
 // Menu    slider
 //----------------------------------
-function SliderMenu(){
+function sliderMenu(){
     "use strict";
 
     let main_class = '.slider-menu';
@@ -315,7 +315,7 @@ function SliderMenu(){
 
 
 
-function MaskFields(){
+function maskFields(){
     "use strict";
 
     let phone_class = '.phone-field';
@@ -360,7 +360,7 @@ function MaskFields(){
 // Click About page
 //----------------------------------
 
-function ClickAboutPage() {
+function clickAboutPage() {
     "use strict";
 
     var main_class  = '.item-tab' ;
@@ -410,7 +410,7 @@ function ClickAboutPage() {
 // Change Url About page
 //----------------------------------
 
-function ChangeUrlAboutPage() {
+function changeUrlAboutPage() {
     "use strict";
 
     var main_class = '.item-tab' ;
@@ -437,7 +437,7 @@ function ChangeUrlAboutPage() {
 // Single page news arrow
 //----------------------------------
 
-function ClickSingleNews() {
+function clickSingleNews() {
     "use strict";
 
     var main_class = '.nav-page.single a';
@@ -481,14 +481,14 @@ function footerBottom(){
             console.log( contentHeight+ headerHeight + footerHeight);
             console.log( jQuery(window).height());
 
-        if( contentHeight+ headerHeight + footerHeight  < jQuery(window).height()   ||   jQuery(AboutClass).length ){
+      //  if( contentHeight+ headerHeight + footerHeight  < jQuery(window).height()   ||   jQuery(AboutClass).length ){
             jQuery(classContent).css('min-height', (
                 jQuery(window).height()
                 - headerHeight
                 - footerHeight
                 + 147
             ));
-        }
+       // }
     }
 
 }
@@ -497,7 +497,7 @@ function footerBottom(){
 //----------------------------------
 //  Modal Contact page
 //------------------------------------
-function ModalContactPage(){
+function modalContactPage(){
     "use strict";
 
 
@@ -534,7 +534,7 @@ function ModalContactPage(){
 //----------------------------------
 //  Modal Contact page
 //------------------------------------
-function CloseModalSuccess(){
+function closeModalSuccess(){
     "use strict";
 
         let LayerClass       = '.menu-overlay ';
@@ -553,12 +553,12 @@ function CloseModalSuccess(){
 //----------------------------------
 //  Lightbox
 //------------------------------------
-function LightxBox(){
+function lightxBox(){
     "use strict";
-    let GalleryClass = '.slider-atm';
-    if(jQuery(GalleryClass).length  ) {
+    let galleryClass = '.slider-atm';
+    if(jQuery(galleryClass).length  ) {
 
-        jQuery(GalleryClass).lightGallery({
+        jQuery(galleryClass).lightGallery({
             download: false,
             selector: '.item a',
             thumbnail: false,
@@ -570,7 +570,7 @@ function LightxBox(){
 //----------------------------------
 //  Change lang by click
 //------------------------------------
-function ChangeLangByClick(){
+function changeLangByClick(){
     "use strict";
     var linkClass = '.switcher-lang a';
 

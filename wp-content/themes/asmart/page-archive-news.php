@@ -93,8 +93,10 @@ get_header(); ?>
                                             ?>
                                         </ul>
                                         <?php
+                                        $GLOBALS['wp_query'] = $the_query;
+                                        wpbeginner_numeric_posts_nav();
+                                        wp_reset_query();
 
-                                       echo  pagination_nav($the_query);
                                         ?>
                                     </div>
 

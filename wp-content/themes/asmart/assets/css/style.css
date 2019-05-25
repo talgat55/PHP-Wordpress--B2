@@ -1279,6 +1279,21 @@ header {
   opacity: 0;
   visibility: hidden; }
 
+.pagination ul {
+  margin: 0px;
+  padding: 0px; }
+  .pagination ul li {
+    display: inline-block; }
+    .pagination ul li a {
+      font-family: "Calibri Regualar";
+      color: #000;
+      text-decoration: none;
+      padding: 10px; }
+      .pagination ul li a:hover {
+        color: #c4a669; }
+    .pagination ul li.active a {
+      color: #c4a669; }
+
 @media (max-width: 1590px) {
   header .menu-link {
     top: 40px; }

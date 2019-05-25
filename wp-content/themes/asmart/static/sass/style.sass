@@ -232,6 +232,29 @@ $main_color: #c4a669
   opacity: 0
   visibility: hidden
 
+//
+// Pagination
+//
+.pagination
+  ul
+    margin: 0px
+    padding: 0px
+    li
+      display: inline-block
+      a
+        font-family: $font_calibri_regular
+        color: #000
+        text-decoration: none
+        padding: 10px
+        &:hover
+          color: $main_color
+
+      &.active
+        a
+          color: $main_color
+
+
+
 
 
 @media(max-width: 1590px)
