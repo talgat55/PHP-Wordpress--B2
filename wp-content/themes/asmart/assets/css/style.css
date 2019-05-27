@@ -1335,6 +1335,18 @@ header {
   .page-template-page-booking .page-title {
     margin-bottom: 40px; } }
 
+@media (max-width: 1370px) {
+  .title-section {
+    font-size: 45px !important;
+    margin-bottom: 20px !important; }
+  .list-last-events .item .date {
+    padding: 15px 0 10px !important; }
+  .list-last-events .item .title {
+    font-size: 27px !important;
+    min-height: 90px !important; }
+  .list-last-events .item .content {
+    padding: 10px 0 !important; } }
+
 @media (max-width: 1360px) {
   header .menu-link {
     left: 10px;
