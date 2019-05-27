@@ -471,7 +471,7 @@ function ChangeUrlForPages($type)
 
     if ($type == 'news') {
 
-        $addpath = $locale ? '/en/archive-news/' : '/arhiv-novostej/';
+        $addpath = $locale ? '/en/archive-news/page/2/' : '/arhiv-novostej/page/2/';
 
     } else if ($type == 'booking') {
 
