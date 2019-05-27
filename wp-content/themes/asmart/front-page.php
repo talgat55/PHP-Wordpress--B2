@@ -166,12 +166,15 @@ get_header(); ?>
                                         $the_query->the_post();
                                         $post_id = $the_query->post->ID;
                                         $img_url = wp_get_attachment_url(get_post_thumbnail_id($post_id), 'event-image');
+                                        $add_image = get_field('add_image_post', $post_id);
+                                        $redyImage =  $add_image ? $add_image["sizes"]["event-image"] : $img_url;
+
                                         ?>
-                                        <li class="item  col-md-4 col-sm-6 col-xs-12">
+                                        <li class="item  col-md-4 col-sm-6 col-xs-12"   >
                                             <div class="img-block">
                                                 <a href="<?= get_the_permalink($post_id); ?> "
                                                    title="Перейти на детальную страницу">
-                                                    <img src="<?= $img_url; ?>" alt="Изображение"/>
+                                                    <img src="<?= $redyImage; ?>" alt="Изображение"/>
                                                 </a>
                                             </div>
                                             <div class="date">
