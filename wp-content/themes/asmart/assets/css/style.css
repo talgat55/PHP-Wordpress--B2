@@ -962,10 +962,14 @@ body.home {
         color: #fff;
         font-family: "Blacker-Text-Bold";
         min-height: 99px;
-        text-decoration: none; }
+        text-decoration: none;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s; }
         #section4 .list-last-events .item .title a:hover,
         #section4 .list-last-events .item .title:hover {
-          text-decoration: underline; }
+          text-decoration: none;
+          color: #000; }
       #section4 .list-last-events .item .link-more {
         display: inline-block;
         color: #c7a96c;
@@ -978,8 +982,9 @@ body.home {
         -o-transition: all .3s;
         transition: all .3s; }
         #section4 .list-last-events .item .link-more:hover {
-          background-color: #c4a669;
-          color: #fff; }
+          background-color: #000;
+          color: #fff;
+          text-decoration: none; }
       #section4 .list-last-events .item .content {
         font-size: 21px;
         color: #fff;
@@ -1337,15 +1342,18 @@ header {
 
 @media (max-width: 1370px) {
   .title-section {
-    font-size: 45px !important;
+    font-size: 35px !important;
     margin-bottom: 20px !important; }
   .list-last-events .item .date {
-    padding: 15px 0 10px !important; }
+    padding: 10px 0 5px !important; }
   .list-last-events .item .title {
-    font-size: 27px !important;
-    min-height: 90px !important; }
+    font-size: 21px !important;
+    min-height: 79px !important; }
+    .list-last-events .item .title a {
+      font-size: 21px !important; }
   .list-last-events .item .content {
-    padding: 10px 0 !important; } }
+    padding: 10px 0 !important;
+    font-size: 15px !important; } }
 
 @media (max-width: 1360px) {
   header .menu-link {
