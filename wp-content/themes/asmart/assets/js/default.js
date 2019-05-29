@@ -29,10 +29,11 @@ jQuery(window).load(function() {
     showVideoBlock();
 
 });
-jQuery(window).resize(function() {
-    homeFullpageSlider();
+// jQuery(window).resize(function() {
+//     homeFullpageSlider();
+//
+// });
 
-});
 //------------------------
 // Show video  block in home page afeter load
 //----------------------------------
