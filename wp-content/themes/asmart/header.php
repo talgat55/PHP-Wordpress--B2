@@ -13,6 +13,9 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="yandex-verification" content="b19eaf226c9b90c0" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content="Ресторан современной авторской кухни — совершенно новый гастрономический эксперимент в Сибири. Сезонные, фермерские и локальные продукты в сочетании с элементами молекулярной техники превращаются в изысканные блюда разных кухонь мира. Полный цикл ресторанного производства, позволяет внедрять тему «плавающего» меню, в котором каждый найдёт что-то на свой вкус.">
+    <meta name="keywords" content="Батлер, Батлер омск, mr Batler, Рестораны в омске, Рестораны в сибире, Ресторан современной авторской кухни, ресторан">
+
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="shortcut icon" href="<?php echo get_theme_file_uri('favicon.png?v=1.1') ?>"  type="image/x-icon"/>
 
@@ -22,8 +25,31 @@
         var myajax = {"url":"<?=admin_url('admin-ajax.php'); ?>"};
         /* ]]> */
     </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141499059-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'UA-141499059-1');
+    </script>
 
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(53941918, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/53941918" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
 

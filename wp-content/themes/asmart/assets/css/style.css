@@ -1345,6 +1345,10 @@ header {
     font-size: 35px !important;
     margin-bottom: 20px !important; }
   .list-last-events .item .date {
+    padding: 18px 0 8px; }
+  .list-last-events .item .content {
+    padding: 8px 0; }
+  .list-last-events .item .date {
     padding: 10px 0 5px !important; }
   .list-last-events .item .title {
     font-size: 21px !important;
